@@ -111,11 +111,9 @@ def RC_MCPB(dbSchema, currentTableName, error_code_option, rule_code,
             temp_column[-1] = "`"+temp_column[-1]+"`"
             column = ".".join(temp_column)
             tempColumns.append(column)
-        tempQuery = []
+        tempMainQuery = main_query
         for i in range(len(mainColumns)):
-            tempQuery.append(main_query)
-            tempQuery[i] = tempQuery[i].replace("main_column"+i, mainColumns[i])
-        tempMainQuery = (" and ").join(tempQuery)
+            tempMainQuery = tempMainQuery.replace("main_column"+str(i+1), mainColumns[i])
     else:
         temp_column = mainColumn.split(".")
         temp_column[-1] = "`"+temp_column[-1]+"`"
@@ -134,10 +132,9 @@ def RC_MCPB(dbSchema, currentTableName, error_code_option, rule_code,
                 temp_column[-1] = "`"+temp_column[-1]+"`"
                 column = ".".join(temp_column)
                 tempColumns.append(column)
-            tempQuery = []
+            tempSubQuery = sub_query
             for i in range(len(subColumns)):
-                tempQuery.append(sub_query)
-                tempQuery[i] = tempQuery[i].replace("sub_column", subColumns[i])
+                tempQuery = tempQuery.replace("sub_column"+str(i+1), subColumns[i])
             tempSubQuery = (" and ").join(tempQuery)
         else:
             temp_column = subColumn.split(".")
@@ -151,7 +148,7 @@ def RC_MCPB(dbSchema, currentTableName, error_code_option, rule_code,
     mainQuery = tempMainQuery
     subQuery = tempSubQuery
     
-    conditionQuery = "("+mainQuery+")" if (subQuery != "" or dependencyQuery != "") else mainQuery
+    conditionQuery = "("+mainQuery+")" if (subQuery != "") else mainQuery
     if (len(subQuery) > 0): 
         conditionQuery += " and ("+subQuery+")" if "," in subColumn else " and "+subQuery 
 
