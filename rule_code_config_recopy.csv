@@ -1,0 +1,2672 @@
+﻿Source,"Product 
+Type",TableName,Source System FIeld Name,IMPACTED FIELD FOR RULE CODE (for DQ team reference),New_Rule_Code_Format,Data Field,Rule Description,Logic,main_table,main_column,sub_table,sub_column,dependency_table,dependency_column,rule_logic_desc
+AMS,_,"FLACM
+","FLACM.FLMBGC
+FLACM.FLMLA#","Entity Type
+Account Number",Acc_Number_1_AMS,Account Number,Acc Num <> BLANK or NULL,,"FLACM
+",FLACM.FLMLA#,,,,,Cannot be blank or null with Entity Type
+CLS,_,"CFMAST
+LNMAST","CFMAST.CFCOD2
+LNMAST.ACCTNO","Entity Type
+Account Number",Acc_Number_1_CLS,Account Number,Acc Num <> BLANK or NULL,,LNMAST,LNMAST.ACCTNO,,,,,Cannot be blank or null with Entity Type
+CPR,_,FTDWD605,FTDWD605.CB_INDIVIDUAL_ACCTNO,"Entity Type
+Account Number",Acc_Number_1_CPR,Account Number,Acc Num <> BLANK or NULL,,FTDWD605,FTDWD605.CB_INDIVIDUAL_ACCTNO,,,,,Cannot be blank or null with Entity Type
+LOC,_,"TB_LOC_ACCT
+TB_LOC_CUST_ACCT","TB_LOC_ACCT.ACCTNO
+TB_LOC_CUST_ACCT.CURTIDNO","Account Number
+Id number",Acc_Number_1_LOC,Account Number,Acc Num <> BLANK or NULL,,TB_LOC_ACCT,TB_LOC_ACCT.ACCTNO,,,,,Cannot be blank or null with Entity Type
+TCS,Loan,MIS006,MIS006.MI006_MEMB_CUST_AC,"Entity Type
+Account Number",Acc_Number_1_TCS_1,Account Number,Acc Num <> BLANK or NULL,,MIS006,MIS006.MI006_MEMB_CUST_AC,,,,,Cannot be blank or null with Entity Type
+TCS,Deposit,MIS007,MIS007.MI007_MEMB_CUST_AC,"Entity Type
+Account Number",Acc_Number_1_TCS_2,Account Number,Acc Num <> BLANK or NULL,,MIS007,MIS007.MI007_MEMB_CUST_AC,,,,,Cannot be blank or null with Entity Type
+Tomswin,_,"TMS_Accounts
+TMS_Transactions","TMS_Accounts.ACCOUNT_SOURCE_UNIQUE_ID
+TMS_Transactions.ACCOUNT_SOURCE_UNIQUE_ID",Account Number,Acc_Number_1_Tomswin,Account Number,Acc Num <> BLANK or NULL,,"TMS_Accounts,TMS_Transactions
+","TMS_Accounts.ACCOUNT_SOURCE_UNIQUE_ID,TMS_Transactions.ACCOUNT_SOURCE_UNIQUE_ID",,,,,Cannot be blank or null with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMOPD","Entity Type
+Account Opening Date",Acc_Open_Dt_1_AMS,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,FLACM,FLACM.FLMOPD,,,,,Cannot be blank and follow source date format with Entity Type
+CPR,_,FTDWD602,FTDWD602.CB_ANNIV_DATE,"Entity Type
+Account Opening Date",Acc_Open_Dt_1_CPR,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,FTDWD602,FTDWD602.CB_ANNIV_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+EAM,_,"CLMST
+DBCAM","CLMST.C1TYPE
+CLMST.C1JNDT","Entity Type
+Account Opening Date (Join Date)",Acc_Open_Dt_1_EAM,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,CLMST,CLMST.C1JNDT,,,,,Cannot be blank and follow source date format with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CREATION_DATE,"Entity Type
+Account Opening Date",Acc_Open_Dt_1_MRX,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CREATION_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+POR,_,"tblCustomers
+pmf","tblCustomers.fldEntityType
+tblCustomers.fldCreateDate","Entity Type
+Account Opening Date",Acc_Open_Dt_1_POR,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,tblCustomers,tblCustomers.fldCreateDate,,,,,Cannot be blank and follow source date format with Entity Type
+TCS,Loan,MIS006,MIS006.MI006_APPLIC_ISSUE_DATE,"Entity Type
+Account Opening Date",Acc_Open_Dt_1_TCS_1,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,MIS006,MIS006.MI006_APPLIC_ISSUE_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+TCS,Deposit,MIS007,MIS007.MI007_ACCT_OPEN_DT,"Entity Type
+Account Opening Date",Acc_Open_Dt_1_TCS_2,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,MIS007,MIS007.MI007_ACCT_OPEN_DT,,,,,Cannot be blank and follow source date format with Entity Type
+Tomswin,_,TMS_Accounts,TMS_Accounts.DATE_OPENED,Account Opening Date,Acc_Open_Dt_1_Tomswin,Opening Account Date,Acc Open Dt <> blank & must follow SRC Dt format,,TMS_Accounts,TMS_Accounts.DATE_OPENED,,,,,Cannot be blank and follow source date format with Entity Type
+AMS,_,"FLACM
+FATBM","FLACM.FLMBGC
+FATBM.FABREM","Entity Type
+RM Code",Acc_RM_Cd_1_EAM_1,Remisier Code,RM cd <> 'BLANK',,FATBM,FATBM.FABREM,,,,,Cannot be blank with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1RMCD","Entity Type
+RM Code",Acc_RM_Cd_1_EAM_2,Remisier Code,RM cd <> 'BLANK',,CLMST,CLMST.C1RMCD,,,,,Cannot be blank with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1RMCD","Entity Type
+RM Code",Acc_RM_Cd_1_MAS,Remisier Code,RM cd <> 'BLANK',,CLMST,CLMST.C1RMCD,,,,,Cannot be blank with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_RM_AMBANK,"Entity Type
+RM Code",Acc_RM_Cd_1_MRX,RM Code,RM cd <> 'BLANK',,TRN_CPDF_DBF,TRN_CPDF_DBF.M_RM_AMBANK,,,,,Cannot be blank with Entity Type
+TCS,Loan,MIS006,MI006_BORM_RM_CODE,"Entity Type
+RM Code",Acc_RM_Cd_1_TCS_1,RM Code,RM cd <> 'BLANK',,MIS006,MIS006.MI006_BORM_RM_CODE,,,,,Cannot be blank with Entity Type
+TCS,Deposit,MIS007,MI007_INVM_RM_CODE,"Entity Type
+RM Code",Acc_RM_Cd_1_TCS_2,RM Code,RM cd <> 'BLANK',,MIS007,MIS007.MI007_INVM_RM_CODE,,,,,Cannot be blank with Entity Type
+CLS,_,"CFADDR
+CFCOLD
+SSSTAT","CFADDR.CFNA2
+CFCOLD.CCCOUN
+SSSTAT.SSSTAC","Address Line 1
+Country Code
+State Code",Coll_Addr_Line1_1_CLS,Address_Line1,<> blank if Ctry/State cd hv a value for Prop Coll type,,CFADDR,CFADDR.CFNA2,"SSSTAT,CFCOLD","CFCOLD.CCCOUN,SSSTAT.SSSTAC",,,Cannot be blank if column 1 or column 2 has value with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_CPRO_ADDRESS_1
+MIS022.MI022_CPRO_COUNTRY_CODE
+MIS022.MI022_CTTL_STATE","Address Line 1
+Country Code
+State Code",Coll_Addr_Line1_1_TCS,Address_Line1,<> blank if Ctry/State cd hv a value for Prop Coll type,,MIS022,MIS022.MI022_CPRO_ADDRESS_1,MIS022,"MIS022.MI022_CPRO_COUNTRY_CODE,MIS022.MI022_CTTL_STATE",,,Cannot be blank if column 1 or column 2 has value with Collateral Type
+CLS,_,CFCOLD,CFCOLD.CCDCAT,Collateral Category,Coll_Category_Cd_1_CLS,Collateral Category Code,Coll Category _ Must be a valid cd as per the cd decode,,CFCOLD,CFCOLD.CCDCAT,,,,,Cannot be blank if column 1 or column 2 has value with Collateral Type
+CLS,_,CFCOLE,"CFCOLE.CCSDT6
+CFCOLE.CCDCOD
+CFCOLE.CCSLDC","Collateral Sale Date
+Collateral Sale Price 
+Collateral type",Coll_Sale_Dt_1_CLS,Collateral Sale Date,Coll Sale Dt <> null/blank if Coll Sale Price has value for Prop Coll type,,CFCOLE,CFCOLE.CCSDT6,CFCOLE,"CFCOLE.CCDCOD,CFCOLE.CCSLDC",,,Cannot be blank if column 1 or column 2 has value with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_COL_SOLD_DT
+MIS022.MI022_SALE_VALUE
+MIS022.MI022_COLM_TYPE","Collateral Sale Date
+Collateral Sale Price 
+Collateral type",Coll_Sale_Dt_1_TCS,Collateral Sale Date,Coll Sale Dt must be in valid Dt format & <> null/blank if Coll Sale Price has value,,MIS022,MIS022.MI022_GTEM_COL_SOLD_DT,MIS022,"MIS022.MI022_SALE_VALUE,MIS022.MI022_COLM_TYPE",,,Cannot be blank if column 1 or column 2 has value with Collateral Type
+CLS,_,CFCOLE,"CFCOLE.CCSDT6
+CFCOLE.CCDCOD
+CFCOLE.CCSLDC","Collateral Sale Date
+Collateral Sale Price 
+Collateral type",Coll_Sale_Dt_2_CLS,Collateral Sale Date,Coll Sale Dt _ Must be a valid Dt for Prop (YYYYMMDD),,CFCOLE,CFCOLE.CCSDT6,CFCOLE,"CFCOLE.CCDCOD,CFCOLE.CCSLDC",,,Must be in valid date format
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_COL_SOLD_DT
+MIS022.MI022_SALE_VALUE
+MIS022.MI022_COLM_TYPE","Collateral Sale Date
+Collateral Sale Price 
+Collateral type",Coll_Sale_Dt_2_TCS,Collateral Sale Date,Coll Sale Dt _ Must be in valid Dt format (YYYYMMDD),,MIS022,MIS022.MI022_GTEM_COL_SOLD_DT,MIS022,"MIS022.MI022_SALE_VALUE,MIS022.MI022_COLM_TYPE",,,Must be in valid date format
+CLS,_,CFCOLD,CFCOLD.CCLCD6,Collateral Start Date ,Coll_Start_Dt_1_CLS,Collateral Start Date,Coll Start Dt cannot greater/latest than Current Dt,,CFCOLD,CFCOLD.CCLCD6,,,,,"Date cannot be future date from current date, some with Entity Type"
+TCS,Loan,MIS022,MIS022.MI022_COLM_START_DATE,Collateral Start Date ,Coll_Start_Dt_1_TCS,Collateral Start Date,Coll Start Dt cannot greater/latest than Curr Dt & must be in valid Dt format,,MIS022,MIS022.MI022_COLM_START_DATE,,,,,"Date cannot be future date from current date, some with Entity Type"
+CLS,_,CFCOLD,CFCOLD.CCLCD6,Collateral Start Date ,Coll_Start_Dt_2_CLS,Collateral Start Date,Coll Start Dt _ Must be a valid Dt (YYYYMMDD),,CFCOLD,CFCOLD.CCLCD6,,,,,Must be in valid date format
+TCS,Loan,MIS022,MIS022.MI022_COLM_START_DATE,Collateral Start Date ,Coll_Start_Dt_2_TCS,Collateral Start Date,Coll Start Dt _ Must be a valid Dt (YYYYMMDD),,MIS022,MIS022.MI022_COLM_START_DATE,,,,,Must be in valid date format
+CLS,_,CFCOLD,"CFCOLD.CCLCD6
+CFCOLD.CCDCOD",Collateral Start Date ,Coll_Start_Dt_3_CLS,Collateral Start Date,Coll Start Dt _ Should not be blank for all Coll type,,CFCOLD,CFCOLD.CCLCD6,CFCOLD,CFCOLD.CCDCOD,,,Cannot be blank
+TCS,Loan,MIS022,"MIS022.MI022_COLM_START_DATE
+MI022_COLM_TYPE",Collateral Start Date ,Coll_Start_Dt_3_TCS,Collateral Start Date,Coll Start Dt _ Should not be blank for all Coll type & must be in valid Dt format,,MIS022,MIS022.MI022_COLM_START_DATE,MIS022,MI022_COLM_TYPE,,,Cannot be blank
+CLS,_,CFCOLD,CFCOLD.CCDSTS,Collateral Status,Coll_Sts_2_CLS,Collateral Status,Coll Sts _ Blank is not allowed.,,CFCOLD,CFCOLD.CCDSTS,,,,,Cannot be blank
+TCS,Loan,MIS022,MIS022.MI022_COLM_STATUS,Collateral Status,Coll_Sts_2_TCS,Collateral Status,Coll Sts _ Blank is not allowed.,,MIS022,MIS022.MI022_COLM_STATUS,,,,,Cannot be blank
+TCS,Loan,MIS022,"MIS022.MI022_CHPM_GOOD_STAT
+MIS022.MI022_COLM_TYPE","Collateral Status Vehicle
+Collateral type",Coll_Sts_Vehicle_1_TCS,Collateral Status Vehicle,Coll Sts should not be blank if Coll type is vehic,,MIS022,MIS022.MI022_CHPM_GOOD_STAT,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be blank with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_COLM_SUB_TYPE
+MIS022.MI022_COLM_TYPE","Collateral Sub Type
+Collateral type",Coll_Sub_Type_2_TCS,Collateral Sub Type,Value <> 'Blank' except others Coll type (11),,MIS022,MIS022.MI022_COLM_SUB_TYPE,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be blank with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_CPRO_COLL_TOWN
+MIS022.MI022_COLM_TYPE","Collateral Town
+Collateral type",Coll_Property_Town_1_TCS,Collateral Town,Coll Town _ M&atory for Prop Coll type,,MIS022,MIS022.MI022_CPRO_COLL_TOWN,CFCOLD,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+CLS,_,CFCOLD,"CFCOLD.CCDCOD
+CFCOLD.CCDCOD","Collateral Sub Type
+Collateral type",Coll_Type_Cd_2_CLS,Collateral Type Code,Coll Type cd _ Blank is not allowed,,CFCOLD,CFCOLD.CCDCOD,,,,,Cannot be blank
+TCS,Loan,MIS022,MIS022.MI022_COLM_TYPE,Collateral Type Code,Coll_Type_Cd_2_TCS,Collateral Type Code,Coll Type cd _ Blank is not allowed,,MIS022,MIS022.MI022_COLM_TYPE,,,,,Cannot be blank
+CLS,_,LNBNMC,LNBNMC.BNCOUN,Country of Origin,Coll_Ctry_Ori_1_CLS,Country of Origin,ctry of Ori <> blank,,LNBNMC,LNBNMC.BNCOUN,,,,,Cannot be blank
+TCS,Loan,MIS022,MIS022.MI022_GTEM_COUNTRY_CODE,Country of Origin,Coll_Ctry_Ori_1_TCS,Country of Origin,ctry of Ori <> blank,,MIS022,MIS022.MI022_GTEM_COUNTRY_CODE,,,,,Cannot be blank
+CLS,_,CFCOLD,"CFCOLD.CCDCOD
+CFCOLD.CCDCOD","Date Collateral Expiration 
+Collateral type",Coll_Expiration_Dt_1_CLS,Date Collateral Expiration,Dt Coll Expiration _ M&atory for Coll type =s to deposit & letter of credit,,CFCOLD,CFCOLD.CCDCOD,,,,,Mandatory with collateral type
+CLS,_,CFCOLD,"CFCOLD.CCEXP6
+CFCOLD.CCDCOD
+CFCOLD.CCLCD6","Date Collateral Expiration 
+Collateral Start Date 
+Collateral type",Coll_Expiration_Dt_2_CLS,Date Collateral Expiration,Dt Coll Expiration must be greater/latest than Coll Start Dt for Coll type =s to deposit & letter of credit.,,CFCOLD,"CFCOLD.CCEXP6,CFCOLD.CCDCOD,CFCOLD.CCLCD6",,,,,Date must be greater than another date with Collateral Type
+CLS,_,CFCOLD,"CFCOLD.CCEXP6
+CFCOLD.CCDCOD
+CFCOLD.CCDSTS","Date Collateral Expiration 
+Collateral status
+Collateral type",Coll_Expiration_Dt_3_CLS,Date Collateral Expiration,"Dt Coll Expiration must be less than Curr Dt for Discharged Coll Sts. 
+Applicable for Coll type =s to deposit, general, letter of credit, guarantee & transfer contract.",,CFCOLD,CFCOLD.CCEXP6,CFCOLD,"CFCOLD.CCDCOD,CFCOLD.CCDSTS",,,"Date cannot be future date from current date, some with Entity Type"
+CLS,_,CFCOLD,"CFCOLD.CCEXP6
+CFCOLD.CCDCOD","Date Collateral Expiration 
+Collateral type",Coll_Expiration_Dt_4_CLS,Date Collateral Expiration,Dt Coll Expiration _ Must be a valid Dt for Coll type =s to deposit &letter of credit,,CFCOLD,CFCOLD.CCEXP6,CFCOLD,CFCOLD.CCDCOD,,,Valid date format with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_EXPIRY_DATE
+MIS022.MI022_COLM_TYPE","Date Maturity of Guarantee 
+Collateral type",Coll_Grntee_Maturaty_Dt_1_TCS,Date Maturity of Guarantee,Field is mandatory if Coll type is guarantee.,,MIS022,MIS022.MI022_GTEM_EXPIRY_DATE,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+TCS,Loan,MIS022,MIS022.MI022_GTEM_EXPIRY_DATE,Date Maturity of Guarantee,Coll_Grntee_Maturaty_Dt_2_TCS,Date Maturity of Guarantee,Dt Maturity of Guarantee _ Must be a valid Dt,,MIS022,MIS022.MI022_GTEM_EXPIRY_DATE,,,,,Must be in valid date format
+CLS,_,CFCOLD,"CFCOLD.CCEXP6
+CFCOLD.CCDCOD","Date Maturity of Guarantee 
+Collateral type",Coll_Grntee_Maturity_Dt_1_CLS,Date Maturity of Guarantee,"Dt Maturity of Guarantee _ M&atory for deposit, general, guarantee & transfer contract Coll type.",,CFCOLD,CFCOLD.CCEXP6,CFCOLD,CFCOLD.CCDCOD,,,
+CLS,_,CFCOLD,"CFCOLD.CCEXP6
+CFCOLD.CCDCOD","Date Maturity of Guarantee 
+Collateral type",Coll_Grntee_Maturity_Dt_2_CLS,Date Maturity of Guarantee,"Dt Maturity of Guarantee _ Must be a valid Dt for deposit, general, guarantee & transfer contract Coll type.",,CFCOLD,CFCOLD.CCEXP6,CFCOLD,CFCOLD.CCDCOD,,,Valid date format with Collateral Type
+CLS,_,CFMAST,CFMAST.CFBIR6,DOB,Coll_DOB_1_CLS,Date Of Birth,For IDV _ Dt Of Birth <> BLANK,,CFMAST,CFMAST.CFBIR6,,,,,Cannot be blank for IDV
+TCS,Loan,MIS004,MIS004.MI004_BIRTH_DATE_1,DOB,Coll_DOB_1_TCS,Date Of Birth,Value <> BLANK & must be in valid Dt format in src stm,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Cannot be blank and must be valid date format for IDV
+CLS,_,CFMAST,CFMAST.CFBIR6,DOB,Coll_DOB_2_CLS,Date Of Birth,Dt <> future Dt from current Dt,,CFMAST,CFMAST.CFBIR6,,,,,"Date cannot be future date from current date, some with Entity Type"
+TCS,Loan,MIS004,MIS004.MI004_BIRTH_DATE_1,DOB,Coll_DOB_2_TCS,Date Of Birth,Dt <> future Dt & must be in valid Dt format,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Date cannot be future date and must be valid date format
+CLS,_,CFCOLD,"CFCOLD.CCISS6
+CFCOLD.CCDCOD","Date Maturity of Guarantee 
+Collateral type",Coll_Grntee_Dt_1_CLS,Date of Guarantee,"Dt of Guarantee _ M&atory for letter of credit, guarantee & transfer contract Coll type.",,CFCOLD,CFCOLD.CCISS6,CFCOLD,CFCOLD.CCDCOD,,,Mandatory with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_START_DATE
+MIS022.MI022_COLM_TYPE","Date Maturity of Guarantee 
+Collateral type",Coll_Grntee_Dt_1_TCS,Date of Guarantee,Dt of Guarantee _ M&atory if Coll type is guarantee,,MIS022,MIS022.MI022_GTEM_START_DATE,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+CLS,_,CFCOLD,"CFCOLD.CCISS6
+CFCOLD.CCDCOD","Date Maturity of Guarantee 
+Collateral type",Coll_Grntee_Dt_2_CLS,Date of Guarantee,"Dt of Guarantee _ Must be a valid Dt  for letter of credit, guarantee & transfer contract Coll type.",,CFCOLD,CFCOLD.CCISS6,CFCOLD,CFCOLD.CCDCOD,,,Valid date format with Collateral Type
+TCS,Loan,MIS022,MIS022.MI022_GTEM_START_DATE,Date of Guarantee,Coll_Grntee_Dt_2_TCS,Date of Guarantee,Dt of Guarantee _ Must be a valid Dt (YYYYMMDD),,MIS022,MIS022.MI022_GTEM_START_DATE,,,,,Must be in valid date format
+TCS,Loan,MIS006,MIS006.MI006_BLDVLL_CIV_COD_DAT,Colalteral Latest Date,Coll_Latest_Sts_Dt_1_TCS,Date of Latest Status,Dt must be between the min Dt maintained by the Bank (01/01/1900) & today's Dt,,MIS006,MIS006.MI006_BLDVLL_CIV_COD_DAT,,,,,Date must be minimum date maintained 01/01/1900
+CLS,_,CFMAST,CFMAST.CFBIR6,DOR,Coll_DOR_1_CLS,Date Of Registration,For ORG _ Dt Of Registration <> BLANK,,CFMAST,CFMAST.CFBIR6,,,,,Cannot be blank for ORG
+TCS,Loan,MIS004,MIS004.MI004_BIRTH_DATE_1,DOR,Coll_DOR_1_TCS,Date Of Registration,For ORG _ Dt Of Registration <> BLANK,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Cannot be blank for ORG
+CLS,_,CFMAST,CFMAST.CFBIR6,DOR,Coll_DOR_2_CLS,Date Of Registration,Dt <> future Dt from current Dt,,CFMAST,CFMAST.CFBIR6,,,,,"Date cannot be future date from current date, some with Entity Type"
+TCS,Loan,MIS004,MIS004.MI004_BIRTH_DATE_1,DOR,Coll_DOR_2_TCS,Date Of Registration,Dt <> future Dt from current Dt,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,"Date cannot be future date from current date, some with Entity Type"
+CLS,_,CFCOLD,"CFCOLD.CCPUR6
+CFCOLD.CCDCOD
+CFCOLD.CCPAMT","Date Sales Purchase 
+Purchase Price value 
+Collateral type",Coll_Sale_Purchase_Dt_1_CLS,Date Sales Purchase,"Dt Sales Purc _ M&atory if Purc Price value is > 0 for Prop, vehic & aircraft Coll type.",,CFCOLD,CFCOLD.CCPUR6,CFCOLD,"CFCOLD.CCDCOD,CFCOLD.CCPAMT",,,Mandatory when another column > value with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_PURCHASE_DT
+MIS022.MI022_CSHR_TOTAL_VALUE",Date Sales Purchase,Coll_Sale_Purchase_Dt_1_TCS,Date Sales Purchase,Dt Sales Purc _ M&atory if Purc Price value is > 0,,MIS022,MIS022.MI022_PURCHASE_DT,MIS022,MIS022.MI022_CSHR_TOTAL_VALUE,,,Mandatory when another column > value with collateral type
+CLS,_,CFCOLD,"CFCOLD.CCPUR6
+CFCOLD.CCDCOD","Date Sales Purchase 
+Collateral type",Coll_Sale_Purchase_Dt_2_CLS,Date Sales Purchase,"Must be a valid Dt for Prop, vehic & aircraft Coll type",,CFCOLD,CFCOLD.CCPUR6,CFCOLD,CFCOLD.CCDCOD,,,Valid date format with Collateral Type
+TCS,Loan,MIS022,MIS022.MI022_PURCHASE_DT,Date Sales Purchase,Coll_Sale_Purchase_Dt_2_TCS,Date Sales Purchase,Dt Sales Purc _ Must be a valid Dt.,,MIS022,MIS022.MI022_PURCHASE_DT,,,,,Valid date format with Collateral Type
+CLS,_,"CFCOLE
+INBLPARKWF","CFCOLE.CCSDTE
+INBLPARKWF.LKFTYP","Date Sold to Cagamas
+Facility Type",Coll_Sold_Dt_1_CLS,Date Sold to Cagamas,Value <> '00000000' if the Fac Type <> '34320',,CFCOLE,CFCOLE.CCSDTE,INBLPARKWF,INBLPARKWF.LKFTYP,,,Date cannot be 00000000 when another column not equals value
+TCS,Loan,"MIS022
+MIS006","MIS022.MI022_GTEM_COL_SOLD_DT
+MIS006.MI006_BOIS_CCRIS_FCLTY_TYP","Date Sold to Cagamas
+Facility Type",Coll_Sold_Dt_1_TCS,Date Sold to Cagamas,Value <> '00000000' if the Fac Type <> '34320',,MIS022,MIS022.MI022_GTEM_COL_SOLD_DT,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,,,Date cannot be 00000000 when another column not equals value
+CLS,_,CFCOLD,"CFCOLD.CCOFF6
+CFCOLD.CCVALC","Valuation Date
+Valuer",Coll_Valuation_Dt_1_CLS,Date Valuation,Valuation Dt <> BLANK if Valuer have value,,CFCOLD,CFCOLD.CCOFF6,CFCOLD,CFCOLD.CCVALC,,,Cannot be blank if another column has value
+CLS,_,CFCOLD,"CFCOLD.CCDVA6
+CFCOLD.CCDCOD
+CFCOLD.CCDCMV","Date Valuation 
+Market Price
+Collateral type",Coll_Valuation_Dt_2_CLS,Date Valuation,"Dt Valuation _ M&atory if Market Price > 0 for Prop, vehic & aircraft Coll type.",,CFCOLD,CFCOLD.CCDVA6,CFCOLD,"CFCOLD.CCDCOD,CFCOLD.CCDCMV",,,Mandatory when another column > value with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_VALUATION_DATE
+MIS022.MI022_COLM_TYPE
+MIS022.MI022_APPRAISAL_VALUE","Date Valuation 
+Market Price
+Collateral type",Coll_Valuation_Dt_2_TCS,Date Valuation,"Dt Valuation _ M&atory if Market Price > 0 for Prop, vehic, Fixed Deposit & fin Guarantees Coll type",,MIS022,MIS022.MI022_VALUATION_DATE,MIS022,"MIS022.MI022_COLM_TYPE,MIS022.MI022_APPRAISAL_VALUE",,,Mandatory when another column > value with collateral type
+CLS,_,CFCOLD,"CFCOLD.CCDVA6
+CFCOLD.CCDCOD","Date Valuation 
+Collateral type",Coll_Valuation_Dt_3_CLS,Date Valuation,"Must be a valid Dt for Prop, vehic & aircraft Coll type",,CFCOLD,"CFCOLD.CCDVA6
+",CFCOLD,CFCOLD.CCDCOD,,,Valid date format with Collateral Type
+TCS,Loan,MIS022,MIS022.MI022_VALUATION_DATE,Date Valuation,Coll_Valuation_Dt_3_TCS,Date Valuation,Dt Valuation _ Must be a valid Dt (YYYYMMDD).,,MIS022,MIS022.MI022_VALUATION_DATE,,,,,Valid date format with Collateral Type
+CLS,_,CFMAST,CFMAST.CFCOD2,Entity_Type,Coll_Entity_Type_1_CLS,Entity Type,Entity Type <> BLANK,,CFMAST,CFMAST.CFCOD2,,,,,Cannot be blank
+TCS,Loan,MIS004,MIS004.MI004_CUSTOMER_TYPE,Entity_Type,Coll_Entity_Type_1_TCS,Entity Type,Entity Type <> BLANK,,MIS004,MIS004.MI004_CUSTOMER_TYPE,,,,,Cannot be blank
+CLS,_,"INBLPARKWF
+INL131WF","INBLPARKWF.LKFTYP
+INL131WF.BNMPCD","Facility Type 
+Purpose of Loan",Coll_Fac_Type_2_CLS,Facility Type,"If Fac Type= 34320 then PurposeofLoan <> 2110,2210,2310",,INBLPARKWF,INBLPARKWF.LKFTYP,INL131WF,"
+BNMPCD",,,Not equals some values if another column = value
+TCS,Loan,"TCS_JFALON
+MIS006","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS006.MI006_BOIS_CCRIS_FCLTY_TYP","Facility Type 
+Purpose of Loan",Coll_Fac_Type_2_TCS,Facility Type,"If Fac Type= 34320 then PurposeofLoan <> 2110,2210,2310",,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,,,Not equals some values if another column = value
+CLS,_,"INBLPARKWF
+INL131WF","INBLPARKWF.LKFTYP
+INL131WF.BNMPCD","Facility Type 
+Purpose of Loan",Coll_Fac_Type_3_CLS,Facility Type,"If Facility Type = '34333' then PurposeofLoan <> '3110','3120','3300','3200','3900'",,INBLPARKWF,"INBLPARKWF.LKFTYP
+",INL131WF,INL131WF.BNMPCD,,,Not equals some values if another column = value
+TCS,Loan,"TCS_JFALON
+MIS006","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS006.MI006_BOIS_CCRIS_FCLTY_TYP","Facility Type 
+Purpose of Loan",Coll_Fac_Type_3_TCS,Facility Type,"If Facility Type = '34333' then PurposeofLoan <> '3110','3120','3300','3200','3900'",,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,,,Not equals some values if another column = value
+CLS,_,"INBLPARKWF
+INL131WF","INBLPARKWF.LKFTYP
+INL131WF.BNMPCD","Facility Type 
+Purpose of Loan",Coll_Fac_Type_4_CLS,Facility Type,"If Fac Type = 34334 then PurposeofLoan <> '5200','5100'",,INBLPARKWF,INBLPARKWF.LKFTYP,INL131WF,INL131WF.BNMPCD,,,Not equals some values if another column = value
+TCS,Loan,"TCS_JFALON
+MIS006","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS006.MI006_BOIS_CCRIS_FCLTY_TYP","Facility Type 
+Purpose of Loan",Coll_Fac_Type_4_TCS,Facility Type,"If Fac Type = '34334' then PurposeofLoan <> 5200, 5100",,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,,,Not equals some values if another column = value
+CLS,_,"INBLPARKWF
+INL131WF","INBLPARKWFLKFTYP
+INL131WF.BNMPCD","Facility Type 
+Purpose of Loan",Coll_Fac_Type_5_CLS,Facility Type,If Facility Type = 34320 then Ori Tenure > 420 mth,,INBLPARKWF,INBLPARKWFLKFTYP,INL131WF,INL131WF.BNMPCD,,,Larger than a value when another column = value
+TCS,Loan,"MIS006
+TCS_JFADEP","MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+TCS_JFADEP.JFADEP_N_TERM_DAY","Facility Type 
+Purpose of Loan",Coll_Fac_Type_5_TCS,Facility Type,If Facility Type = '34320' then Ori Tenure > 420 mth,,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,TCS_JFADEP,TCS_JFADEP.JFADEP_N_TERM_DAY,,,Larger than a value when another column = value
+CLS,_,"INBLPARKWF
+CFCOLD","INBLPARKWF.LKFTYP
+CFCOLD.CCTENT","Facility Type
+OriginalTenure",Coll_Fac_Type_6_CLS,Facility Type,If Facility Type = '34333' then Ori Tenure > 108 mth,,INBLPARKWF,"INBLPARKWF.LKFTYP
+",CFCOLD,CFCOLD.CCTENT,,,Larger than a value when another column = value
+TCS,Loan,"MIS006
+TCS_JFADEP","MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+TCS_JFADEP.JFADEP_N_TERM_DAY","Facility Type
+OriginalTenure",Coll_Fac_Type_6_TCS,Facility Type,If Facility Type = '34333' then Ori Tenure > 108 mth,,MIS006,"MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+",TCS_JFADEP,TCS_JFADEP.JFADEP_N_TERM_DAY,,,Larger than a value when another column = value
+TCS,Loan,"MIS006
+TCS_JFADEP","MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+TCS_JFADEP.JFADEP_N_TERM_DAY","Facility Type
+OriginalTenure",Coll_Fac_Type_7_TCS,Facility Type,If Facility Type = '34392' then Ori Tenure > 120 mth,,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,TCS_JFADEP,TCS_JFADEP.JFADEP_N_TERM_DAY,,,Larger than a value when another column = value
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+MIS004.MI004_CUSTOMER_TYPE","Facility Type
+Entity Type",Coll_Fac_Type_8_TCS,Facility Type,If Facility Type = '34320' then Entity Type MUST be 11,,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,,,,,Equals value if another column = value
+CLS,_,"INBLPARKWF
+CFMAST
+INL131WF","INBLPARKWF.LKFTYP
+CFMAST.CFCIFT
+INL131WF.BNMPCD","Facility Type
+Entity Type
+Purpose of Loan",Coll_Fac_Type_9_CLS,Facility Type,If Facility Type = 34510 (Credit Card) & EntityType = '11' then Purpose of Loan <> 4500 (personal use),,INBLPARKWF,"INBLPARKWF.LKFTYP
+",INL131WF,INL131WF.BNMPCD,,,Not equals value if column 1 = value 1 & column 2 = value 2
+TCS,Loan,"MIS006
+MIS004
+TCS_JFALON","MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS004.MI004_CUSTOMER_TYPE","Facility Type
+Purpose of Loan
+Entity Type",Coll_Fac_Type_9_TCS,Facility Type,If Facility Type = 34510 (Credit Card) & EntityType = '11' then  Purpose of Loan <> 4500 (personal use),,MIS006,"MIS006.MI006_BOIS_CCRIS_FCLTY_TYP
+
+","MIS004,TCS_JFALON","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS004.MI004_CUSTOMER_TYPE",,,Not equals value if column 1 = value 1 & column 2 = value 2
+TCS,Loan,MIS022,"MIS022.MI022_FORCD_SALE_VAL_DT
+MIS022.MI022_COLM_TYPE
+MIS022.MI022_CPRO_FORCD_SALE_VALUE","Forced Sale Date
+Force Sale Value
+Collateral type property ",Coll_Forced_Sale_Val_Dt_1_TCS,Forced Sale Date,Force Sale Dt <> null/blank or 0 if Force Sale Value > 0 for Coll type Prop or vehic,,MIS022,MIS022.MI022_FORCD_SALE_VAL_DT,MIS022,"MIS022.MI022_COLM_TYPE,MIS022.MI022_CPRO_FORCD_SALE_VALUE",,,Cannot be null/blank or 0 if column 1 > value with Collateral Type
+TCS,Loan,MIS022,MIS022.MI022_FORCD_SALE_VAL_DT,Forced Sale Date,Coll_Forced_Sale_Val_Dt_2_TCS,Forced Sale Date,Forced Sale Dt _ Must be a valid Dt (YYYYMMDD),,MIS022,MIS022.MI022_FORCD_SALE_VAL_DT,,,,,Must be in valid date format
+CLS,_,CFCOLD,"CFCOLD.CCFSLV
+CFCOLD.CCDCOD","Forced Sale Value
+Collateral type",Coll_Forced_Sale_Val_1_CLS,Forced Sale Value,"Forced Sale Value _ amt <> negative for bond, deposit, general, guarantee, Prop, shares, transfer contract, vehic & aircraft Coll type.",,CFCOLD,CFCOLD.CCFSLV,CFCOLD,CFCOLD.CCDCOD,,,Cannot be negative with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_CPRO_FORCD_SALE_VALUE
+MIS022.MI022_COLM_TYPE","Force Sale Value
+Collateral type property ",Coll_Forced_Sale_Val_1_TCS,Forced Sale Value,Forced Sale Value <> neg(_) for Prop & vehic Coll type,,MIS022,MIS022.MI022_CPRO_FORCD_SALE_VALUE,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be negative with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_GUARANTEE_SCHME
+MIS022.MI022_COLM_TYPE","Guarantee Scheme
+Collateral type",Coll_Grntee_Scheme_1_TCS,Guarantee Scheme,Mandatory if colalteral type is under fin guaranteee.,,MIS022,MIS022.MI022_GTEM_GUARANTEE_SCHME,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+CLS,_,CFCOLD,CFCOLD.CCCIFN  ,Guarantor ID Number,Coll_Grntor_ID_2_CLS,Guarantor ID Number,Must not be any symbols or spaces in between the ID Num,,CFCOLD,CFCOLD.CCCIFN  ,,,,,Regex: Cannot have symbols or spaces in between
+TCS,Loan,MIS006,MIS006.MI006_GAURANTOR_ID_NO,Guarantor ID Number,Coll_Grntor_ID_2_TCS,Guarantor ID Number,Must not be any symbols or spaces in between the ID Num,,MIS006,MIS006.MI006_GAURANTOR_ID_NO,,,,,Regex: Cannot have symbols or spaces in between
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_GAURANTOR_ID_NO
+MIS004.MI004_ID_TYPE","Guarantor ID Number
+Id Type",Coll_Grntor_ID_3_TCS,Guarantor ID Number,"If ID Type = '0006' (NRIC), format is 12N",,MIS006,MIS006.MI006_GAURANTOR_ID_NO,MIS004,MIS004.MI004_ID_TYPE,,,Regex: digits if another column = value
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_GAURANTOR_ID_NO
+MIS004.MI004_ID_TYPE","Guarantor ID Number
+Id Type",Coll_Grntor_ID_4_TCS,Guarantor ID Number,"If ID Type = 0009 BNM Assigned ID, format is 2N+3A+7N",,MIS006,MIS006.MI006_GAURANTOR_ID_NO,MIS004,MIS004.MI004_ID_TYPE,,,Regex: alphanumerics if another column = value
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_GAURANTOR_ID_NO
+MIS004.MI004_ID_TYPE","Guarantor ID Number
+Id Type",Coll_Grntor_ID_5_TCS,Guarantor ID Number,"If ID Type = '0002' (SSM), format is 6N + 1A or 7N + 1A",,MIS006,MIS006.MI006_GAURANTOR_ID_NO,MIS004,MIS004.MI004_ID_TYPE,,,Regex: alphanumerics if another column = value
+CLS,_,CFCOLD,"CFCOLD.CCCIFN
+CFMAST.CFSSCD","Guarantor ID Number
+Id Type",Coll_Grntor_ID_6_CLS,Guarantor ID Number,"If ID Type ='0012' (Registered with East M'sia Dist), format is 2A+7N+1A or 9N+1A",,CFCOLD,CFCOLD.CCCIFN,CFMAST,CFMAST.CFSSCD,,,Regex: alphanumerics if another column = value
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_GAURANTOR_ID_NO
+MIS004.MI004_ID_TYPE","Guarantor ID Number
+Id Type",Coll_Grntor_ID_6_TCS,Guarantor ID Number,"If ID Type ='0012' (Registered with East M'sia Dist), format is 2A+7N+1A or 9N+1A",,MIS006,MIS006.MI006_GAURANTOR_ID_NO,MIS004,MIS004.MI004_ID_TYPE,,,
+CLS,_,CFCOLD,"CFCOLD.CCCIFN
+CFMAST.CFSSCD","Guarantor ID Number
+Id Type",Coll_Grntor_ID_7_CLS,Guarantor ID Number,"If ID Type ='0004' (Soc/ Ass/JPPM), format is 1A+1N+4N",,CFCOLD,CFCOLD.CCCIFN,CFMAST,CFMAST.CFSSCD,,,Regex: alphanumerics if another column = value
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_GAURANTOR_ID_NO
+MIS004.MI004_ID_TYPE","Guarantor ID Number
+Id Type",Coll_Grntor_ID_7_TCS,Guarantor ID Number,"If ID Type ='0004' (Soc/ Ass/JPPM), format is 1A+1N+4N",,MIS006,MIS006.MI006_GAURANTOR_ID_NO,MIS004,MIS004.MI004_ID_TYPE,,,Regex: alphanumerics if another column = value
+CLS,_,CFCOLD,"CFCOLD.CCCIFN
+CFMAST.CFSSCD","Guarantor ID Number
+Id Type",Coll_Grntor_ID_8_CLS,Guarantor ID Number,"If ID Type ='0013' (SKM/ Cooperatives Society), format is PPM + 3N + 2N + 8N",,CFCOLD,CFCOLD.CCCIFN,CFMAST,CFMAST.CFSSCD,,,Regex: alphanumerics if another column = value
+TCS,Loan,"MIS006
+MIS004","MIS006.MI006_GAURANTOR_ID_NO
+MIS004.MI004_ID_TYPE","Guarantor ID Number
+Id Type",Coll_Grntor_ID_8_TCS,Guarantor ID Number,"If ID Type ='0013' (SKM/ Cooperatives Society), format is PPM + 3N + 2N + 8N",,MIS006,MIS006.MI006_GAURANTOR_ID_NO,MIS004,MIS004.MI004_ID_TYPE,,,Regex: alphanumerics if another column = value
+CLS,_,CFCOLD,CFCOLD.CCDNAM,Guarantor Name,Coll_Grntor_Name_1_CLS,Guarantor Name,Guarantor Name <> blank,,CFCOLD,CFCOLD.CCDNAM,,,,,Cannot be blank
+TCS,Loan,MIS006,MIS006.MI006_BLDVTT_GUA1_NAME,Guarantor Name,Coll_Grntor_Name_1_TCS,Guarantor Name,Guarantor Name <> blank,,MIS006,MIS006.MI006_BLDVTT_GUA1_NAME,,,,,
+CLS,_,CFCOLD,CFCOLD.CCDNAM,Guarantor Name,Coll_Grntor_Name_2_CLS,Guarantor Name,Must contain at least one alpha character,,CFCOLD,CFCOLD.CCDNAM,,,,,Regex: alphabets
+TCS,Loan,MIS006,MIS006.MI006_BLDVTT_GUA1_NAME,Guarantor Name,Coll_Grntor_Name_2_TCS,Guarantor Name,Must contain at least one alpha character,,MIS006,MIS006.MI006_BLDVTT_GUA1_NAME,,,,,Regex: alphabets
+CLS,_,CFCOLD,CFCOLD.CCPTYP,Instrument of Claim,Coll_Instrument_Of_Claim_1_CLS,Instrument of Claim,Instrument of claim <> blank,,CFCOLD,CFCOLD.CCPTYP,,,,,
+TCS,Loan,MIS308,MIS308.MIS308_CHQM_INST_TYPE,Instrument of Claim,Coll_Instrument_Of_Claim_1_TCS,Instrument of Claim,Instrument of claim <> blank,,MIS308,MIS308.MIS308_CHQM_INST_TYPE,,,,,
+CLS,_,CFCOLD,CFCOLD.CCLUSE,Land Use,Coll_Land_Use_1_CLS,Land Use,L& Use <> blank,,CFCOLD,CFCOLD.CCLUSE,,,,,Cannot be blank
+TCS,Loan,MIS022,MIS022.MI022_CPRO_LAND_USE,Land Use,Coll_Land_Use_1_TCS,Land Use,L& Use <> blank,,MIS022,MIS022.MI022_CPRO_LAND_USE,,,,,Cannot be blank
+CLS,_,CFCOLD,CFCOLD.CCDCMV,Market Price,Coll_Market_Price_1_CLS,Market Price,Market Price _ Blank is not allowed,,CFCOLD,CFCOLD.CCDCMV,,,,,Cannot be blank
+TCS,Loan,MIS022,"MIS022.MI022_APPRAISAL_VALUE
+MIS022.MI022_COLM_TYPE","Market Price
+Collateral type",Coll_Market_Price_1_TCS,Market Price,Blank is not allowed for Prop & vehic Coll type,,MIS022,MIS022.MI022_APPRAISAL_VALUE,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory when another column = null/blank or zero
+CLS,_,CFCOLD,"CFCOLD.CCDCMV
+CFCOLD.CCPAMT","Market Price
+Purchase Price S&P",Coll_Market_Price_2_CLS,Market Price,Field is mandatory if Purc Price S&P = 0 or null/blank.,,CFCOLD,CFCOLD.CCDCMV,CFCOLD,CFCOLD.CCPAMT,,,Mandatory when another column = null/blank or zero
+TCS,Loan,MIS022,"MIS022.MI022_APPRAISAL_VALUE
+MIS022.MI022_CSHR_TOTAL_VALUE
+MIS022.MI022_RESERVD_VAL
+MIS022.MI022_COLM_TYPE","Market Price
+Purchase Price S&P
+Reserve Value 
+Collateral type",Coll_Market_Price_2_TCS,Market Price,Market Price _ M&atory if Purc Price S&P or Reserve Value is = 0 or null/blank for Prop & vehic Coll type,,MIS022,"MIS022.MI022_APPRAISAL_VALUE,MIS022.MI022_CSHR_TOTAL_VALUE,MIS022.MI022_RESERVD_VAL",MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory when another column = null/blank or zero with Collateral Type
+CLS,_,CFCOLD,CFCOLD.CCDCMV,Market Price,Coll_Market_Price_3_CLS,Market Price,Market Price _ amt <> in negative.,,CFCOLD,CFCOLD.CCDCMV,,,,,Cannot be negative
+TCS,Loan,MIS022,MIS022.MI022_APPRAISAL_VALUE,Market Price,Coll_Market_Price_3_TCS,Market Price,Market Price _ amt <> in negative.,,MIS022,MIS022.MI022_APPRAISAL_VALUE,,,,,Cannot be negative
+CLS,_,CFCOLD,"CFCOLD.CCDCMV
+CFCOLD.CCPAMT
+CFCOLD.CCRESV","Market Price
+Purchase Price S&P 
+Reserve Value",Coll_Market_Price_4_CLS,Market Price,If Purc Price S&P or Reserve Value = 0 or null/blank then Market Price <> blank,,CFCOLD,CFCOLD.CCDCMV,CFCOLD,"CFCOLD.CCPAMT,CFCOLD.CCRESV",,,Cannot be blank if column 1 or column 2 = value (including null/blank/0)
+CLS,_,CFCOLD,"CFCOLD.CCDCMV
+CFCOLD.CCGPCT","Market Price
+Percentage Guaranteed ",Coll_Market_Price_5_CLS,Market Price,If Percentage Guaranteed (PCT_GNT) = 0 or null/blank then Market Price <> blank,,CFCOLD,"CFCOLD.CCDCMV
+",CFCOLD,CFCOLD.CCGPCT,,,Cannot be blank if another column = value (including null/blank/0)
+CLS,_,LNACCT,LNACCT.ACRELP,Nature of Guarantee,Coll_Nature_Grntee_1_CLS,Nature of Guarantee,Nature of Guarantee <> blank,,LNACCT,LNACCT.ACRELP,,,,,Cannot be blank
+TCS,Loan,MIS022,MIS022.MI022_GTEM_NATURE_GAURANTEE,Nature of Guarantee,Coll_Nature_Grntee_1_TCS,Nature of Guarantee,Nature of Guarantee <> blank,,MIS022,MIS022.MI022_GTEM_NATURE_GAURANTEE,,,,,Mandatory and cannot be blank with Collateral Type
+CLS,_,CFCOLD,"CFCOLD.CCGPCT
+CFCOLD.CCDCOD","Percentage Guaranteed
+Collateral type",Coll_Percentage_Grnteed_1_CLS,Percentage Guaranteed,Percentage Guaranteed _ M&atory & Blank is not allowed if Coll type is guarantee,,CFCOLD,CFCOLD.CCGPCT,CFCOLD,CFCOLD.CCDCOD,,,Mandatory and cannot be blank with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_COVER_PERCENTAGE
+MIS022.MI022_COLM_TYPE","Percentage Guaranteed
+Collateral type",Coll_Percentage_Grnteed_1_TCS,Percentage Guaranteed,Percentage Guaranteed _ M&atory & Blank is not allowed if Coll typeis guarantee,,MIS022,MIS022.MI022_GTEM_COVER_PERCENTAGE,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory and cannot be blank with Collateral Type
+CLS,_,CFCOLD,"CFCOLD.CCGPCT
+CFCOLD.CCDCOD","Percentage Guaranteed
+Collateral type",Coll_Percentage_Grnteed_2_CLS,Percentage Guaranteed,Percentage Guaranteed _ amt <> negative for Personal/Institution Guarantee Coll type,,CFCOLD,CFCOLD.CCGPCT,CFCOLD,CFCOLD.CCDCOD,,,Cannot be negative with Collateral Type
+TCS,Loan,MIS022,MIS022.MI022_GTEM_COVER_PERCENTAGE,Percentage Guaranteed _ Amount ,Coll_Percentage_Grnteed_2_TCS,Percentage Guaranteed,Percentage Guaranteed _ amt <> in negative.,,MIS022,MIS022.MI022_GTEM_COVER_PERCENTAGE,,,,,Cannot be negative with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_CPRO_LAST_VALUE_DT
+MI022_COLM_TYPE
+MI022_APPRAISAL_VALUE","Property Last Valuation Dat
+Market Price",Coll_Property_Last_Val_Dt_1_TCS,Property Last Valuation Date,Prop Last Valuation Dt _ M&atory if Market Price > 0 for Coll type = Prop,,MIS022,MIS022.MI022_CPRO_LAST_VALUE_DT,MIS022,"MIS022.MI022_COLM_TYPE,MIS022.MI022_APPRAISAL_VALUE",,,Mandatory when another column > value with collateral type
+TCS,Loan,MIS022,MIS022.MI022_CPRO_LAST_VALUE_DT,Property Last Valuation Date,Coll_Property_Last_Val_Dt_2_TCS,Property Last Valuation Date,Prop Last Valuation Dt _ Must be a valid Dt (YYYYMMDD),,MIS022,MIS022.MI022_CPRO_LAST_VALUE_DT,,,,,Must be in valid date format
+CLS,_,CFCOLD,"CFCOLD.CCPCDE
+CFCOLD.CCDCOD","Property Location Postcode 
+Collateral type",Coll_Property_Postcode_1_CLS,Property Location Postcode,Prop Location Postcd <> null/blank if Coll type is Prop,,CFCOLD,"CFCOLD.CCPCDE
+",CFCOLD,CFCOLD.CCDCOD,,,Cannot be null/blank with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_CPRO_POST_CODE
+MIS022.MI022_COLM_TYPE","Property Location Postcode 
+Collateral type",Coll_Property_Postcode_1_TCS,Property Location Postcode,Prop Location Postcd <> null/blank if Coll type is Prop,,MIS022,MIS022.MI022_CPRO_POST_CODE,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be null/blank with collateral type
+CLS,_,CFCOLD,CFCOLD.CCPTYP,Property Type,Coll_Property_Type_1_CLS,Property Type,Prop Type <> blank,,CFCOLD,CFCOLD.CCPTYP,,,,,Cannot be blank
+TCS,Loan,MIS006,MIS006.MI006_PROPERTY_TYPE,Property Type,Coll_Property_Type_1_TCS,Property Type,Prop Type <> blank,,MIS006,MIS006.MI006_PROPERTY_TYPE,,,,,Cannot be blank
+CLS,_,CFCOLD,"CFCOLD.CCPAMT
+CFCOLD.CCDCOD
+CFCOLD.CCDCMV","Purchase Price
+Market Value
+Collateral type",Coll_Purchase_Price_1_CLS,Purchase Price,Purc Price _ M&atory if Market Value = 0 or null/blank for Prop & aircraft Coll type.,,CFCOLD,CFCOLD.CCPAMT,CFCOLD,"CFCOLD.CCDCOD,CFCOLD.CCDCMV",,,Mandatory when another column = null/blank or zero with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_CSHR_TOTAL_VALUE
+MI022_RESERVD_VAL
+MI022_APPRAISAL_VALUE","Purchase Price 
+Market Value or Reserve value ",Coll_Purchase_Price_1_TCS,Purchase Price,Purc Price _ M&atory if Market Value or Reserve value is blank/null or 0.,,MIS022,MIS022.MI022_CSHR_TOTAL_VALUE,MIS022,"MIS022.MI022_RESERVD_VAL,MIS022.MI022_APPRAISAL_VALUE",,,Mandatory when another column = null/blank or zero with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_CSHR_TOTAL_VALUE
+MIS022.MI022_COLM_TYPE","Purchase Price
+Collateral type ",Coll_Purchase_Price_2_TCS,Purchase Price,Purc Price Blank not allow for Prop & vehic Coll type,,MIS022,MIS022.MI022_CSHR_TOTAL_VALUE,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be blank with collateral type
+TCS,Loan,MIS022,MIS022.MI022_CSHR_TOTAL_VALUE,Purchase Price ,Coll_Purchase_Price_3_TCS,Purchase Price,Purc Price _ amt <> in negative.,,MIS022,MIS022.MI022_CSHR_TOTAL_VALUE,,,,,Cannot be negative
+CLS,_,INL131WF,INL131WF.BNMPCD,Purpose of Loan,Coll_Pur_Loan_1_CLS,Purpose Of Loan,Purpose of Loan <> blank,,INL131WF,INL131WF.BNMPCD,,,,,Cannot be blank
+TCS,Loan,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,Purpose of Loan,Coll_Pur_Loan_1_TCS,Purpose Of Loan,Purpose of Loan <> blank,,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,,,,,Cannot be blank
+CLS,_,"INL131WF
+CFMAST","INL131WF.BNMPCD
+CFMAST.CFCIFT","Purpose of Loan
+Entity Type",Coll_Pur_Loan_2_CLS,Purpose Of Loan,"If Purpose of Loan '2110','2122','2124','2121','2123','2129','5500''4100','4500', then EntityType <> '11'",,INL131WF,INL131WF.BNMPCD,,,,,Not equals value if another column = some values
+TCS,Loan,"TCS_JFALON
+MIS004","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS004.MI004_CUSTOMER_TYPE","Purpose of Loan
+Entity Type",Coll_Pur_Loan_2_TCS,Purpose Of Loan,"If Purpose of Loan '2110','2122','2124','2121','2123','2129','5500''4100','4500', then EntityType <> '11'",,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,,,,,Not equals value if another column = some values
+CLS,_,"INL131WF
+CFMAST","INL131WF.BNMPCD
+CFMAST.CFCIFT","Purpose of Loan
+Entity Type",Coll_Pur_Loan_3_CLS,Purpose Of Loan,"If Purpose of Loan '2210','2322','2324','2321','2323','2329','5300', then EntityType = '11'",,INL131WF,INL131WF.BNMPCD,,,,,Not equals value if another column = some values
+TCS,Loan,"TCS_JFALON
+MIS004","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS004.MI004_CUSTOMER_TYPE","Purpose of Loan
+Entity Type",Coll_Pur_Loan_3_TCS,Purpose Of Loan,"If Purpose of Loan '2210','2322','2324','2321','2323','2329','5300', then EntityType = '11'",,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,MIS004,MIS004.MI004_CUSTOMER_TYPE,,,Not equals value if another column = some values
+CLS,_,"INL131WF
+INBLPARKWF","INL131WF.BNMPCD
+INBLPARKWF.LKFTYP","Purpose of Loan
+FacilityType",Coll_Pur_Loan_4_CLS,Purpose Of Loan,"If Purpose of Loan '2110','2210','2310', then FacilityType <> '34391','34371',' 34320'",,INL131WF,INL131WF.BNMPCD,INBLPARKWF,INBLPARKWF.LKFTYP,,,Not equals some values when another value = some values
+TCS,Loan,"TCS_JFALON
+MIS006","TCS_JFALON.JFALON_N_LOAN_PURPOSE
+MIS006.MI006_BOIS_CCRIS_FCLTY_TYP","Facility Type 
+Purpose of Loan",Coll_Pur_Loan_4_TCS,Purpose Of Loan,"If Purpose of Loan '2110','2210','2310',then FacilityType <> '34391','34371',' 34320'",,TCS_JFALON,TCS_JFALON.JFALON_N_LOAN_PURPOSE,MIS006,MIS006.MI006_BOIS_CCRIS_FCLTY_TYP,,,Not equals some values when another value = some values
+TCS,Loan,MIS022,"MIS022.MI022_RESERVD_VAL
+MIS022.MI022_APPRAISAL_VALUE
+MIS022.MI022_COLM_TYPE","Reserve Value 
+Market Price or Purchase Price 
+Collateral type",Coll_Reserve_Val_1_TCS,Reserve Value,Reserve Value _ M&atory if Market Price or Purc Price is null/blank or 0 for Prop Coll,,MIS022,MIS022.MI022_RESERVD_VAL,MIS022,"MIS022.MI022_APPRAISAL_VALUE,MIS022.MI022_COLM_TYPE",,,Mandatory when column 1 or column 2 = null/blank or zero with Collateral Type
+CLS,_,CFCOLD,"CFCOLD.CCRESV
+CFCOLD.CCDCOD","Reserve Value 
+Collateral type",Coll_Reserve_Val_2_CLS,Reserve Value,Reserve Value _ amt <> in negative for vehic Coll type,,CFCOLD,CFCOLD.CCRESV,CFCOLD,CFCOLD.CCDCOD,,,Cannot be negative with Collateral Type
+TCS,Loan,MIS022,MIS022.MI022_RESERVD_VAL,Reserve Value ,Coll_Reserve_Val_2_TCS,Reserve Value,Reserve Value _ amt <> in negative.,,MIS022,MIS022.MI022_RESERVD_VAL,,,,,Cannot be negative
+TCS,Loan,MIS022,"MIS022.MI022_RESERVD_VAL_DT
+MI022_RESERVD_VAL","Reserve Value Date
+Reserve Value ",Coll_Reserve_Val_Dt_1_TCS,Reserve Value Date,Reserve Value Dt _ M&atory if Reserve Value is > 0,,MIS022,MIS022.MI022_RESERVD_VAL_DT,MIS022,MI022_RESERVD_VAL,,,Mandatory when another column > value
+TCS,Loan,MIS022,MIS022.MI022_RESERVD_VAL_DT,Reserve Value Date,Coll_Reserve_Val_Dt_2_TCS,Reserve Value Date,Reserve Value Dt _ Must be a valid Dt (YYYYMMDD),,MIS022,MIS022.MI022_RESERVD_VAL_DT,,,,,Must be in valid date format
+TCS,Loan,MIS022,"MIS022.MI022_CPRO_SFO
+MIS022.MI022_COLM_TYPE","Safe for Occupancy
+Collateral type",Coll_Safe_For_Occupancy_1_TCS,Safe for Occupancy,Field <> blank/null/zero if Coll type is Prop,,MIS022,MIS022.MI022_CPRO_SFO,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be blank/null or 0 with Collateral Type
+CLS,_,CFCOLD,"CFCOLD.CCDSID
+CFCOLD.CCDCOD","Share Counter Code
+Collateral type",Coll_Share_Counter_Cd_1_CLS,Share Counter Code,Share Counter cd _ <> null/zero for shares Coll type.,,CFCOLD,CFCOLD.CCDSID,CFCOLD,CFCOLD.CCDCOD,,,Coll_Share_Counter_Cd_1_CLS
+TCS,Loan,MIS022,"MIS022.MI022_CSHR_SHARE_COUNTR_CODE
+MIS022.MI022_COLM_TYPE","Share Counter Code
+Collateral type",Coll_Share_Counter_Cd_1_TCS,Share Counter Code,Value <> null/zero if the Coll type is share/equity,,MIS022,MIS022.MI022_CSHR_SHARE_COUNTR_CODE,MIS022,MIS022.MI022_COLM_TYPE,,,Cannot be null or 0 with Collateral Type
+CLS,_,CFCOLD,"CFCOLD.CCDSHR
+CFCOLD.CCDCOD
+CFCOLD.CCDSID","Share Quantity
+Collateral type",Coll_Share_Qty_1_CLS,Share Quantity,Share Quantity _ M&atory if share counter cd got value & also m&atory for bonds & shares Coll type.,,CFCOLD,CFCOLD.CCDSHR,CFCOLD,"CFCOLD.CCDSID,CFCOLD.CCDCOD",,,Mandatory when another column has value with Collateral Type
+TCS,Loan,MIS022,"MIS022.MI022_GTEM_NATURE_GAURANTEE
+MIS022.MI022_COLM_TYPE","Type of Guarantor
+Collateral type",Coll_Grntor_Type_1_TCS,Type of Guarantor,Type of Guarantor _ M&atory if Coll type is guarantor.,,MIS022,MIS022.MI022_GTEM_NATURE_GAURANTEE,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+CLS,_,CFCOLD,"CFCOLD.CCVALC
+CFCOLD.CCOFF6","Valuer
+Valuation Date",Coll_Valuer_1_CLS,Valuer,Valuer <> BLANK if Valuation Dt have value,,CFCOLD,CFCOLD.CCVALC,CFCOLD,CFCOLD.CCOFF6,,,Cannot be blank if another column has value
+TCS,Loan,MIS022,"MIS022.MI022_GOOD_MAKE
+MIS022.MI022_COLM_TYPE","Vehicle Make 
+Collateral type",Coll_Vehicle_Make_1_TCS,Vehicle Make,Vehicle Make _ M&atory for Coll type is vehicle,,MIS022,"MIS022.MI022_GOOD_MAKE
+",MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+TCS,Loan,MIS022,"MIS022.MI022_GOOD_YEAR
+MIS022.MI022_COLM_TYPE","Year Make 
+Collateral type",Coll_Make_Yr_1_TCS,Year Make,Year Make _ M&atory if Coll type vehicle,,MIS022,MIS022.MI022_GOOD_YEAR,MIS022,MIS022.MI022_COLM_TYPE,,,Mandatory with collateral type
+TCS,Loan,MIS022,MIS022.MI022_GOOD_YEAR,Year Make,Coll_Make_Yr_2_TCS,Year Make,Year Make _ Must be a valid year,,MIS022,MIS022.MI022_GOOD_YEAR,,,,,Must be a valid year
+TCS,Loan,MIS022,MIS022.MI022_GOOD_YEAR,Year Make,Coll_Make_Yr_3_TCS,Year Make,Year Make _Year cannot > current operations year,,MIS022,MIS022.MI022_GOOD_YEAR,,,,,Year cannot be larger than current year
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD1","Entity Type
+Address Line 1",Address_Line1_Rule_1_AMS,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,FLACM,FLACM.FLMAD1,,,,,Regex: Allow specific symbols with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR1
+FTDWM601.CB_CO_ADDR1 FTDWM601.CB_ALT1_BILL_ADDR1
+FTDWM601.CB_ALT2_BILL_ADDR1","Entity Type
+Billing Addr Alt 1 Line 1
+Billing Addr Alt 2 Line 1
+Resident Addr Line 1
+Company Addr Line 1",Address_Line1_Rule_1_CPR_1,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR1
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR1
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR1
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR1",FTDWM601,"FTDWM601.CB_HOME_ADDR1,FTDWM601.CB_CO_ADDR1,FTDWM601.CB_ALT1_BILL_ADDR1,FTDWM601.CB_ALT2_BILL_ADDR1",,,,,Regex: Allow specific symbols with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1
+FTDWD613.CO_REG_ADD_LINE1.
+FTDWD613.CO_OPR_ADD_LINE1.
+FTDWD613.CO_PAR_ADD_LINE1.
+FTDWD613.CO_MAINBK_ADD_LINE1 .","Entity Type
+Mailing Addr Line 1
+Registered Addr Line 1
+Operation Addr Line 1
+Parent Addr Line 1
+Main Banker Addr Line 1",Address_Line1_Rule_1_CPR_2,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,","Mailing address, map to FTDWD613.CO_MAIL_ADD_LINE1.
+Registred address, map to FTDWD613.CO_REG_ADD_LINE1.
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE1.
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE1.
+Main banker address, map to CO_MAINBK_ADD_LINE1 .",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1,FTDWD613.CO_REG_ADD_LINE1,FTDWD613.CO_OPR_ADD_LINE1,FTDWD613.CO_PAR_ADD_LINE1,FTDWD613.CO_MAINBK_ADD_LINE1 ",,,,,Regex: Allow specific symbols with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1","Entity Type
+Address Line 1",Address_Line1_Rule_1_EAM,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,CLMST,CLMST.C1AD1,,,,,Regex: Allow specific symbols with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1","Entity Type
+Address Line 1",Address_Line1_Rule_1_MAS,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,CLMST,CLMST.C1AD1,,,,,Regex: Allow specific symbols with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS0,"Entity Type
+Address Line 1",Address_Line1_Rule_1_MRX,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS0,,,,,Regex: Allow specific symbols with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress1
+tblCustomers.fldPermAddress1","Entity Type
+Correspondence Address Line 1
+Permenant Address Line 1",Address_Line1_Rule_1_POR,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,tblCustomers,"tblCustomers.fldCorrAddress1,tblCustomers.fldPermAddress1",,,,,Regex: Allow specific symbols with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_ADD1
+MI004_TEMP_ADD1","Entity Type
+Address Line 1 (Postal)
+Address Line 1 (Permenant)",Address_Line1_Rule_1_TCS,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,MIS004,"MIS004.MI004_ADD1,MIS004.MI004_TEMP_ADD1",,,,,Regex: Allow specific symbols with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE1
+TMS_Accounts.AM_ADR_LINE1",Address Line 1,Address_Line1_Rule_1_Tomswin,Address_Line1,"Only allow symbols @, (, ), _, ', /, &, ., :, #, ,",,"TMS_Customers,TMS_Accounts","TMS_Customers.AM_ADR_LINE1,TMS_Accounts.AM_ADR_LINE1",,,,,Regex: Allow specific symbols with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD1","Entity Type
+Address Line 1",Address_Line1_Rule_2_AMS,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,FLACM,FLACM.FLMAD1,,,,,Cannot equal to some values with Entity Type
+CLS,_,CFADDR,CFADDR.CFNA2,"Entity Type
+Address Line 1",Address_Line1_Rule_2_CLS,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CFADDR,CFADDR.CFNA2,,,,,Cannot equal to some values with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR1
+FTDWM601.CB_CO_ADDR1 
+FTDWM601.CB_ALT1_BILL_ADDR1
+FTDWM601.CB_ALT2_BILL_ADDR1","Entity Type
+Billing Addr Alt 1 Line 1
+Billing Addr Alt 2 Line 1
+Resident Addr Line 1
+Company Addr Line 1",Address_Line1_Rule_2_CPR_1,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR1
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR1
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR1
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR1",FTDWM601,"FTDWM601.CB_HOME_ADDR1,FTDWM601.CB_CO_ADDR1,FTDWM601.CB_ALT1_BILL_ADDR1,FTDWM601.CB_ALT2_BILL_ADDR1",,,,,Cannot equal to some values with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1
+FTDWD613.CO_REG_ADD_LINE1
+FTDWD613.CO_OPR_ADD_LINE1
+FTDWD613.CO_PAR_ADD_LINE1
+FTDWD613.CO_MAINBK_ADD_LINE1","Entity Type
+Mailing Addr Line 1
+Registered Addr Line 1
+Operation Addr Line 1
+Parent Addr Line 1
+Main Banker Addr Line 1",Address_Line1_Rule_2_CPR_2,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","Mailing address, map to FTDWD613.CO_MAIL_ADD_LINE1.
+Registred address, map to FTDWD613.CO_REG_ADD_LINE1.
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE1.
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE1.
+Main banker address, map to CO_MAINBK_ADD_LINE1 .",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1,FTDWD613.CO_REG_ADD_LINE1,FTDWD613.CO_OPR_ADD_LINE1,FTDWD613.CO_PAR_ADD_LINE1,FTDWD613.CO_MAINBK_ADD_LINE1",,,,,Cannot equal to some values with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1","Entity Type
+Address Line 1",Address_Line1_Rule_2_EAM,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CLMST,CLMST.C1AD1,,,,,Cannot equal to some values with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1","Entity Type
+Address Line 1",Address_Line1_Rule_2_MAS,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CLMST,CLMST.C1AD1,,,,,Cannot equal to some values with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS0,"Entity Type
+Address Line 1",Address_Line1_Rule_2_MRX,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS0,,,,,Cannot equal to some values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress1
+tblCustomers.fldPermAddress1","Entity Type
+Correspondence Address Line 1
+Permenant Address Line 1",Address_Line1_Rule_2_POR,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,tblCustomers,"tblCustomers.fldCorrAddress1,tblCustomers.fldPermAddress1",,,,,Cannot equal to some values with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_ADD1
+MIS004.MI004_TEMP_ADD1","Entity Type
+Address Line 1 (Postal)
+Address Line 1 (Permenant)",Address_Line1_Rule_2_TCS,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,MIS004,"MIS004.MI004_ADD1,MIS004.MI004_TEMP_ADD1",,,,,Cannot equal to some values with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE1
+TMS_Accounts.AM_ADR_LINE1",Address Line 1,Address_Line1_Rule_2_Tomswin,Address_Line1,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,"TMS_Customers,TMS_Accounts
+","TMS_Customers.AM_ADR_LINE1,TMS_Accounts.AM_ADR_LINE1",,,,,Cannot equal to some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD1
+FLACM.FLMSTC
+FLACM.FLMCTY","Entity Type
+Address Line 1
+State Code
+Country",Address_Line1_Rule_3_AMS,Address_Line1,<> blank if Ctry cd or State cd have a value,,FLACM,"FLACM.FLMAD1,FLACM.FLMCTY,FLACM.FLMSTC",,,,,Cannot be blank if column 1 or column 2 has value with Entity Type
+CLS,_,"CFADDR
+CFMAST","CFADDR.CFNA2
+CFMAST.CFBNMI","Entity Type
+Address Line 1
+Country/State Code",Address_Line1_Rule_3_CLS,Address_Line1,<> blank if Ctry cd or State cd have a value,,CFADDR,CFADDR.CFNA2,CFMAST,CFMAST.CFBNMI,,,Cannot be blank if column 1 or column 2 has value with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR1
+FTDWM601.CB_CO_ADDR1
+FTDWM601.CB_ALT1_BILL_ADDR1
+FTDWM601.CB_ALT2_BILL_ADDR1
+FTDWM601.CB_HOME_STATE
+FTDWM601.CB_CO_STATE
+FTDWM601.CB_ALT1_BILL_STATE
+FTDWM601.CB_ALT2_BILL_STATE  
+FTDWM601.CB_HOME_CNTRY_CD
+FTDWM601.CB_CO_CNTRY_CD
+FTDWM601.CB_ALT1_BILL_CNTRY_CD
+FTDWM601.CB_ALT2_BILL_CNTRY_CD ","Entity Type
+Billing Addr Alt 1 Line 1
+Billing Addr Alt 2 Line 1
+Resident Addr Line 1
+Company Addr Line 1
+Billing Addr Alt 1 State Code
+Billing Addr Alt 2  State Code
+Resident Addr State Code
+Company Addr State Code
+Billing Addr Alt 1 Country Cd
+Billing Addr Alt 2 Country Cd
+Resident Addr Country Cd
+Company Addr Country Cd",Address_Line1_Rule_3_CPR_1,Address_Line1,<> blank if Ctry cd or State cd have a value,"to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR1, FTDWM601.CB_HOME_CNTRY_CD, FTDWM601.CB_HOME_STATE
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR1, FTDWM601.CB_CO_CNTRY_CD, FTDWM601.CB_CO_STATE
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR1, FTDWM601.CB_ALT1_BILL_CNTRY_CD, FTDWM601.CB_ALT1_BILL_STATE
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR1, FTDWM601.CB_ALT2_BILL_CNTRY_CD, FTDWM601.CB_ALT2_BILL_STATE","FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD,FTDWM601.CB_HOME_ADDR1,FTDWM601.CB_CO_ADDR1,FTDWM601.CB_ALT1_BILL_ADDR1,FTDWM601.CB_ALT2_BILL_ADDR1
+",FTDWM601,"FTDWM601.CB_HOME_STATE,FTDWM601.CB_CO_STATE,FTDWM601.CB_ALT1_BILL_STATE,FTDWM601.CB_ALT2_BILL_STATE ,FTDWM601.CB_HOME_CNTRY_CD,FTDWM601.CB_CO_CNTRY_CD,FTDWM601.CB_ALT1_BILL_CNTRY_CD,FTDWM601.CB_ALT2_BILL_CNTRY_CD ",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1, FTDWD613.CO_MAIL_CNTRY_CD, FTDWD613.CO_MAIL_STATE,
+FTDWD613.CO_REG_ADD_LINE1, FTDWD613.CO_REG_CNTRY_CD,  FTDWD613.CO_REG_STATE,
+FTDWD613.CO_OPR_ADD_LINE1, FTDWD613.CO_OPR_CNTRY_CD, FTDWD613.CO_OPR_STATE,
+FTDWD613.CO_PAR_ADD_LINE1, FTDWD613.CO_PAR_CNTRY_CD, FTDWD613.CO_PAR_STATE
+FTDWD613.CO_MAINBK_ADD_LINE1, FTDWD613.CO_MAINBK_CNTRY_CD, FTDWD613.CO_MAINBK_STATE","Entity Type
+Mailing Addr Line 1
+Registered Addr Line 1
+Operation Addr Line 1
+Parent Addr Line 1
+Main Banker Addr Line 1
+Mailing Addr State  Cd
+Registered Addr State Cd
+Operation Addr State Cd
+Parent Addr State Cd
+Main Banker Addr State Cd
+Mailing Addr Country Cd
+Registered Addr Country Cd
+Operation Addr Country Cd
+Parent Addr Country Cd
+Main Banker Addr Country Cd",Address_Line1_Rule_3_CPR_2,Address_Line1,<> blank if Ctry cd or State cd have a value,"Mailing address, map to FTDWD613.CO_MAIL_ADD_LINE1, FTDWD613.CO_MAIL_CNTRY_CD, CO_MAIL_STATE
+Registred address, map to FTDWD613.CO_REG_ADD_LINE1, FTDWD613.CO_REG_CNTRY_CD,  CO_REG_STATE
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE1, FTDWD613.CO_OPR_CNTRY_CD, CO_OPR_STATE
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE1, FTDWD613.CO_PAR_CNTRY_CD, CO_PAR_STATE
+Main banker address, map to FTDWD613.CO_MAINBK_ADD_LINE1, FTDWD613.CO_MAINBK_CNTRY_CD, FTDWD613.CO_MAINBK_STATE",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1,FTDWD613.CO_REG_ADD_LINE1,FTDWD613.CO_OPR_ADD_LINE1,FTDWD613.CO_PAR_ADD_LINE1,FTDWD613.CO_MAINBK_ADD_LINE1",FTDWD613,"FTDWD613.CO_MAIL_CNTRY_CD,FTDWD613.CO_MAIL_STATE,FTDWD613.CO_REG_CNTRY_CD,FTDWD613.CO_REG_STATE,FTDWD613.CO_OPR_CNTRY_CD,FTDWD613.CO_OPR_STATE,FTDWD613.CO_PAR_CNTRY_CD,FTDWD613.CO_PAR_STATE,FTDWD613.CO_MAINBK_CNTRY_CD,FTDWD613.CO_MAINBK_STATE",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1
+CLMST.C1NLTY
+CLMST.C1RSCD
+CLMST.C1FIL1 ","Entity Type
+Address Line 1
+Country
+State Code",Address_Line1_Rule_3_EAM,Address_Line1,<> blank if Ctry cd or State cd have a value,,CLMST,CLMST.C1AD1,CLMST,"CLMST.C1NLTY,CLMST.C1RSCD,CLMST.C1FIL1 ",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1
+CLFIL1
+CLRSCD","Entity Type
+Address Line 1
+Country/State Code",Address_Line1_Rule_3_MAS,Address_Line1,<> blank if Ctry cd or State cd have a value,,CLMST,CLMST.C1AD1,CLMST,"CLMST.CLFIL1,CLMST.CLRSCD",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ADDRESS0
+TRN_CPDF_DBF.M_COUNTRY
+TRN_CPDF_DBF.M_STCODE","Entity Type
+Address Line 1
+Country
+State Code",Address_Line1_Rule_3_MRX,Address_Line1,<> blank if Ctry cd or State cd have a value,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS0,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_COUNTRY,TRN_CPDF_DBF.M_STCODE",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress1
+tblCustomers.fldPermAddress1
+tblCustomers.fldCorrCountry
+tblCustomers.fldPermCountry
+tblCustomers.fldCorrState
+tblCustomers.fldPermState","Entity Type
+Correspondence Address Line 1
+Permenant Address Line 1
+Correspondence Country
+Permenant County
+Correspondence State code
+Permenant State code",Address_Line1_Rule_3_POR,Address_Line1,<> blank if Ctry cd or State cd have a value,,tblCustomers,"tblCustomers.fldCorrAddress1,tblCustomers.fldPermAddress1",tblCustomers,"tblCustomers.fldCorrCountry,tblCustomers.fldPermCountry,tblCustomers.fldCorrState,tblCustomers.fldPermState",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_ADD1
+MIS004.MI004_TEMP_ADD1
+MIS004.MI004_CUSVAA_STATE_CODE
+MIS004.MI004_TEMP_STATE_CODE
+MIS004.MI004_CORR_ADD_COUNTRY_CD
+MIS004.MI004_PERM_ADD_COUNTRY_CD","Entity Type
+Address Line 1 (Postal)
+Address Line 1 (Permenant)
+State Code (Permenant)
+State Code (Postal)
+Country (Postal)
+Country (Permenant)",Address_Line1_Rule_3_TCS,Address_Line1,<> blank if Ctry cd or State cd have a value,,MIS004,"MIS004.MI004_ADD1,MIS004.MI004_TEMP_ADD1",MIS004,"MIS004.MI004_CUSVAA_STATE_CODE,MIS004.MI004_TEMP_STATE_CODE,MIS004.MI004_CORR_ADD_COUNTRY_CD,MIS004.MI004_PERM_ADD_COUNTRY_CD",,,Cannot be blank if column 1 or column 2 has value with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE1
+TMS_Accounts.AM_ADR_LINE1
+TMS_Customers.NATIONALITY_CODE",Address Line 1,Address_Line1_Rule_3_Tomswin,Address_Line1,<> blank if Ctry cd or State cd have a value,,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE1,TMS_Accounts.AM_ADR_LINE1",TMS_Customers,TMS_Customers.NATIONALITY_CODE,,,Cannot be blank if column 1 or column 2 has value with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD1
+FLACM.FLMAD2
+FLACM.FLMAD3","Entity Type
+Address Line 1
+Address Line 2
+Address Line 3",Address_Line1_Rule_4_AMS,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,FLACM,"FLACM.FLMAD1,FLACM.FLMAD2,FLACM.FLMAD3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+CLS,_,CFADDR,"CFADDR.CFNA2
+CFADDR.CFNA3
+CFADDR.CFNA4","Entity Type
+Address Line 1
+Address Line 2 
+Address Line 3",Address_Line1_Rule_4_CLS,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,CFADDR,"CFADDR.CFNA2CFADDR.CFNA3,CFADDR.CFNA4",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_ALT1_BILL_ADDR1
+FTDWM601.CB_ALT2_BILL_ADDR1
+FTDWM601.CB_HOME_ADDR1
+FTDWM601.CB_CO_ADDR1
+FTDWM601.CB_ALT1_BILL_ADDR2
+FTDWM601.CB_ALT2_BILL_ADDR2
+FTDWM601.CB_HOME_ADDR2
+FTDWM601.CB_CO_ADDR12
+FTDWM601.CB_ALT1_BILL_ADDR3
+FTDWM601.CB_ALT2_BILL_ADDR3
+FTDWM601.CB_HOME_ADDR3
+FTDWM601.CB_CO_ADDR3
+","Entity Type
+Billing Addr Alt 1 Line 1
+Billing Addr Alt 2 Line 1
+Resident Addr Line 1
+Company Addr Line 1
+Billing Addr Alt 1 Line 2
+Billing Addr Alt 2 Line 2
+Resident Addr Line 2
+Company Addr Line 2
+Billing Addr Alt 1 Line 3
+Billing Addr Alt 2 Line 3
+Resident Addr Line 3
+Company Addr Line 3",Address_Line1_Rule_4_CPR_1,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),"to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR1, FTDWM601.CB_HOME_ADDR2, FTDWM601.CB_HOME_ADDR3
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR1, FTDWM601.CB_CO_ADDR2, FTDWM601.CB_CO_ADDR3
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR1, FTDWM601.CB_ALT1_BILL_ADDR2, FTDWM601.CB_ALT1_BILL_ADDR3
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR1, FTDWM601.CB_ALT2_BILL_ADDR2, FTDWM601.CB_ALT2_BILL_ADDR3",FTDWM601,"FTDWD602.CB_BILL_ADDR_CD,FTDWM601.CB_HOME_ADDR1,FTDWM601.CB_HOME_ADDR2,FTDWM601.CB_HOME_ADDR3,FTDWM601.CB_CO_ADDR1,FTDWM601.CB_CO_ADDR2,FTDWM601.CB_CO_ADDR3,FTDWM601.CB_ALT1_BILL_ADDR1,FTDWM601.CB_ALT1_BILL_ADDR2,FTDWM601.CB_ALT1_BILL_ADDR3,FTDWM601.CB_ALT2_BILL_ADDR1,FTDWM601.CB_ALT2_BILL_ADDR2,FTDWM601.CB_ALT2_BILL_ADDR3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1
+FTDWD613.CO_REG_ADD_LINE1
+FTDWD613.CO_OPR_ADD_LINE1
+FTDWD613.CO_PAR_ADD_LINE1
+FTDWD613.CO_MAINBK_ADD_LINE1
+FTDWD613.CO_MAIL_ADD_LINE2
+FTDWD613.CO_REG_ADD_LINE2
+FTDWD613.CO_OPR_ADD_LINE2
+FTDWD613.CO_PAR_ADD_LINE2
+FTDWD613.CO_MAINBK_ADD_LINE2
+FTDWD613.CO_MAIL_ADD_LINE3
+FTDWD613.CO_REG_ADD_LINE3
+FTDWD613.CO_OPR_ADD_LINE3
+FTDWD613.CO_PAR_ADD_LINE3
+FTDWD613.CO_MAINBK_ADD_LINE3","Entity Type
+Mailing Addr Line 1
+Registered Addr Line 1
+Operation Addr Line 1
+Parent Addr Line 1
+Main Banker Addr Line 1
+Mailing Addr Line 2
+Registered Addr Line 2
+Operation Addr Line 2
+Parent Addr Line 2
+Main Banker Addr Line 2
+Mailing Addr Line 3
+Registered Addr Line 3
+Operation Addr Line 3
+Parent Addr Line 3
+Main Banker Addr Line 3",Address_Line1_Rule_4_CPR_2,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),"Mailing address, map to FTDWD613.CO_MAIL_ADD_LINE1, FTDWD613.CO_MAIL_ADD_LINE2, FTDWD613.CO_MAIL_ADD_LINE3
+Registred address, map to FTDWD613.CO_REG_ADD_LINE1, FTDWD613.CO_REG_ADD_LINE2, FTDWD613.CO_REG_ADD_LINE3
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE1, FTDWD613.CO_OPR_ADD_LINE2, FTDWD613.CO_OPR_ADD_LINE3
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE1, FTDWD613.CO_PAR_ADD_LINE2, FTDWD613.CO_PAR_ADD_LINE3
+Main banker address, map to CO_MAINBK_ADD_LINE1, CO_MAINBK_ADD_LINE2, CO_MAINBK_ADD_LINE3",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE1,FTDWD613.CO_MAIL_ADD_LINE2,FTDWD613.CO_MAIL_ADD_LINE3,FTDWD613.CO_REG_ADD_LINE1,FTDWD613.CO_REG_ADD_LINE2,FTDWD613.CO_REG_ADD_LINE3,FTDWD613.CO_PAR_ADD_LINE1,FTDWD613.CO_PAR_ADD_LINE2,FTDWD613.CO_PAR_ADD_LINE3,FTDWD613.CO_OPR_ADD_LINE1,FTDWD613.CO_OPR_ADD_LINE2,FTDWD613.CO_OPR_ADD_LINE3,FTDWD613.CO_MAINBK_ADD_LINE1,FTDWD613.CO_MAINBK_ADD_LINE2,FTDWD613.CO_MAINBK_ADD_LINE3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1
+CLMST.C1AD2
+CLMST.C1AD3","Entity Type
+Address Line 1
+Address Line 2
+Address Line 3",Address_Line1_Rule_4_EAM,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,CLMST,"CLMST.C1AD1,CLMST.C1AD2,CLMST.C1AD3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD1
+CLMST.C1AD2
+CLMST.C1AD3","Entity Type
+Address Line 1, Address Line 2, Address Line 3",Address_Line1_Rule_4_MAS,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,CLMST,"CLMST.C1AD1,CLMST.C1AD2,CLMST.C1AD3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ADDRESS0
+TRN_CPDF_DBF.M_ADDRESS1
+TRN_CPDF_DBF.M_ADDRESS2","Address Line 1
+Address Line 2
+Address Line 3",Address_Line1_Rule_4_MRX,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ADDRESS0,TRN_CPDF_DBF.M_ADDRESS1,TRN_CPDF_DBF.M_ADDRESS2",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress1
+tblCustomers.fldPermAddress1
+tblCustomers.fldCorrAddress2
+tblCustomers.fldPermAddress2
+tblCustomers.fldCorrAddress3
+tblCustomers.fldPermAddress3","Entity Type
+Correspondence Address Line 1
+Permenant Address Line 1
+Correspondence Address Line 2
+Permenant Address Line2
+Correspondence Address Line 3
+Permenant Address Line 3",Address_Line1_Rule_4_POR,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,tblCustomers,"tblCustomers.fldCorrAddress1,tblCustomers.fldPermAddress1,tblCustomers.fldCorrAddress2,tblCustomers.fldPermAddress2,tblCustomers.fldCorrAddress3,tblCustomers.fldPermAddress3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_ADD1
+MIS004.MI004_ADD2
+MIS004.MI004_ADD3
+MIS004.MI004_TEMP_ADD1
+MIS004.MI004_TEMP_ADD2
+MIS004.MI004_TEMP_ADD3","Entity Type
+Address Line 1 (Postal)
+Address Line 2 (Postal)
+Address Line 3 (Postal)
+Address Line 1 (Permenant)
+Address Line 2 (Permenant)
+Address Line 3 (Permenant)",Address_Line1_Rule_4_TCS,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,MIS004,"MIS004.MI004_ADD1,MIS004.MI004_ADD2,MIS004.MI004_ADD3,MIS004.MI004_TEMP_ADD1,MIS004.MI004_TEMP_ADD2,MIS004.MI004_TEMP_ADD3",,,,,Regex: Concat some columns must larger than n characters with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE1
+TMS_Accounts.AM_ADR_LINE1
+TMS_Customers.AM_ADR_LINE2
+TMS_Accounts.AM_ADR_LINE2
+TMS_Customers.AM_ADR_LINE3
+TMS_Accounts.AM_ADR_LINE3","Address Line 1
+Address Line 2
+Address Line 3",Address_Line1_Rule_4_Tomswin,Address_Line1,Addr line 1+ line 2+ line 3 > 8 char (either 1 Addr),,TMS_Customers,"TMS_Customers.AM_ADR_LINE1,TMS_Customers.AM_ADR_LINE2,TMS_Customers.AM_ADR_LINE3,TMS_Accounts.AM_ADR_LINE1,TMS_Accounts.AM_ADR_LINE2,TMS_Accounts.AM_ADR_LINE3",TMS_Accounts,,,,Regex: Concat some columns must larger than n characters with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD2","Entity Type
+Address Line 2",Address_Line2_Rule_1_AMS,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,",,FLACM,FLACM.FLMAD2,,,,,Regex: Allow specific symbols with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR2
+FTDWM601.CB_CO_ADDR2
+FTDWM601.CB_ALT1_BILL_ADDR2
+FTDWM601.CB_ALT2_BILL_ADDR2","Entity Type
+Billing Addr Alt 1 Line 2
+Billing Addr Alt 2 Line 2
+Resident Addr Line 2
+Company Addr Line 2",Address_Line2_Rule_1_CPR_1,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR2
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR2
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR2
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR2",FTDWM601,"FTDWM601.CB_HOME_ADDR2,FTDWM601.CB_CO_ADDR2,FTDWM601.CB_ALT1_BILL_ADDR2,FTDWM601.CB_ALT2_BILL_ADDR2",,,,,Regex: Allow specific symbols with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE2
+FTDWD613.CO_REG_ADD_LINE2
+FTDWD613.CO_OPR_ADD_LINE2
+FTDWD613.CO_PAR_ADD_LINE2
+FTDWD613.CO_MAINBK_ADD_LINE2","Entity Type
+Mailing Addr Line 2
+Registered Addr Line 2
+Operation Addr Line 2
+Parent Addr Line 2
+Main Banker Addr Line 2",Address_Line2_Rule_1_CPR_2,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,","Mailing address, map toFTDWD613.CO_MAIL_ADD_LINE2.
+Registred address, map to FTDWD613.CO_REG_ADD_LINE2.
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE2.
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE2.
+Main banker address, map to CO_MAINBK_ADD_LINE2.",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE2,FTDWD613.CO_REG_ADD_LINE2,FTDWD613.CO_OPR_ADD_LINE2,FTDWD613.CO_PAR_ADD_LINE2,FTDWD613.CO_MAINBK_ADD_LINE2",,,,,Regex: Allow specific symbols with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD2","Entity Type
+Address Line 2",Address_Line2_Rule_1_EAM,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,",,CLMST,CLMST.C1AD2,,,,,Regex: Allow specific symbols with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD2","Entity Type
+Address Line 2",Address_Line2_Rule_1_MAS,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,",,CLMST,CLMST.C1AD2,,,,,Regex: Allow specific symbols with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress2
+tblCustomers.fldPermAddress2","Entity Type
+Correspondence Address Line 2 Permenant Address Line 2",Address_Line2_Rule_1_POR,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,",,tblCustomers,"tblCustomers.fldCorrAddress2,tblCustomers.fldPermAddress2",,,,,Regex: Allow specific symbols with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_ADD2
+MI004_TEMP_ADD2","Entity Type
+Address Line 2 (Postal)
+Address Line 2 (Permenant)",Address_Line2_Rule_1_TCS,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,",,MIS004,"MIS004.MI004_ADD2,MIS004.MI004_TEMP_ADD2",,,,,Regex: Allow specific symbols with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE2
+TMS_Accounts.AM_ADR_LINE2
+",Address Line 2,Address_Line2_Rule_1_Tomswin,Address_Line2,"Only allow symbols @, (, ), _, ' , /, &, ., :, #, ,",,"TMS_Customers,TMS_Accounts","TMS_Customers.AM_ADR_LINE2,TMS_Accounts.AM_ADR_LINE2
+",,,,,Regex: Allow specific symbols with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD2","Entity Type
+Address Line 2",Address_Line2_Rule_2_AMS,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,FLACM,FLACM.FLMAD2,,,,,Cannot equal to some values with Entity Type
+CLS,_,CFADDR,CFADDR.CFNA3,"Entity Type
+Address Line 2",Address_Line2_Rule_2_CLS,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CFADDR,CFADDR.CFNA3,,,,,Cannot equal to some values with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR2
+FTDWM601.CB_CO_ADDR2
+FTDWM601.CB_ALT1_BILL_ADDR2
+FTDWM601.CB_ALT2_BILL_ADDR2","Entity Type
+Billing Addr Alt 1 Line 2
+Billing Addr Alt 2 Line 2
+Resident Addr Line 2
+Company Addr Line 2",Address_Line2_Rule_2_CPR_1,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR3
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR2
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR2
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR2",FTDWM601,"FTDWM601.CB_HOME_ADDR2,FTDWM601.CB_CO_ADDR2,FTDWM601.CB_ALT1_BILL_ADDR2,FTDWM601.CB_ALT2_BILL_ADDR2",,,,,Cannot equal to some values with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE2
+FTDWD613.CO_REG_ADD_LINE2
+FTDWD613.CO_OPR_ADD_LINE2
+FTDWD613.CO_PAR_ADD_LINE2
+FTDWD613.CO_MAINBK_ADD_LINE2","Entity Type
+Mailing Addr Line 2
+Registered Addr Line 2
+Operation Addr Line 2
+Parent Addr Line 2
+Main Banker Addr Line 2",Address_Line2_Rule_2_CPR_2,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","Mailing address, map toFTDWD613.CO_MAIL_ADD_LINE2.
+Registred address, map to FTDWD613.CO_REG_ADD_LINE2.
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE2.
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE2.
+Main banker address, map to CO_MAINBK_ADD_LINE2.",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE2,FTDWD613.CO_REG_ADD_LINE2,FTDWD613.CO_OPR_ADD_LINE2,FTDWD613.CO_PAR_ADD_LINE2,FTDWD613.CO_MAINBK_ADD_LINE2",,,,,Cannot equal to some values with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD2","Entity Type
+Address Line 2",Address_Line2_Rule_2_EAM,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CLMST,CLMST.C1AD2,,,,,Cannot equal to some values with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD2","Entity Type
+Address Line 2",Address_Line2_Rule_2_MAS,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CLMST,CLMST.C1AD2,,,,,Cannot equal to some values with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS1,"Entity Type
+Address Line 2",Address_Line2_Rule_2_MRX,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS1,,,,,Cannot equal to some values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress2
+tblCustomers.fldPermAddress2","Entity Type
+Correspondence Address Line 2 Permenant Address Line 2",Address_Line2_Rule_2_POR,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,tblCustomers,"tblCustomers.fldCorrAddress2,tblCustomers.fldPermAddress2",,,,,Cannot equal to some values with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_ADD2
+MIS004.MI004_TEMP_ADD2","Entity Type
+Address Line 2 (Postal)
+Address Line 2 (Permenant)",Address_Line2_Rule_2_TCS,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,MIS004,"MIS004.MI004_ADD2,MIS004.MI004_TEMP_ADD2",,,,,Cannot equal to some values with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE2
+TMS_Accounts.AM_ADR_LINE2
+",Address Line 2,Address_Line2_Rule_2_Tomswin,Address_Line2,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,"TMS_Customers,TMS_Accounts
+","TMS_Customers.AM_ADR_LINE2,TMS_Accounts.AM_ADR_LINE2
+",,,,,Cannot equal to some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD3","Entity Type
+Address Line 3",Address_Line3_Rule_1_AMS,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,FLACM,FLACM.FLMAD3,,,,,Regex: Allow specific symbols with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR3
+FTDWM601.CB_CO_ADDR3
+FTDWM601.CB_ALT1_BILL_ADDR3
+FTDWM601.CB_ALT2_BILL_ADDR3","Entity Type
+Billing Addr Alt 1 Line 3
+Billing Addr Alt 2 Line 3
+Resident Addr Line 3
+Company Addr Line 3",Address_Line3_Rule_1_CPR_1,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR3
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR3
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR3
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR3",FTDWM601,"FTDWM601.CB_HOME_ADDR3,FTDWM601.CB_CO_ADDR3,FTDWM601.CB_ALT1_BILL_ADDR3,FTDWM601.CB_ALT2_BILL_ADDR3",,,,,Regex: Allow specific symbols with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE3
+FTDWD613.CO_REG_ADD_LINE3
+FTDWD613.CO_OPR_ADD_LINE3
+FTDWD613.CO_PAR_ADD_LINE3
+FTDWD613.CO_MAINBK_ADD_LINE3","Entity Type
+Mailing Addr Line 3
+Registered Addr Line 3
+Operation Addr Line 3
+Parent Addr Line 3
+Main Banker Addr Line 3",Address_Line3_Rule_1_CPR_2,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""","Mailing address, map toFTDWD613.CO_MAIL_ADD_LINE3
+Registred address, map to FTDWD613.CO_REG_ADD_LINE3
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE3
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE3
+Main banker address, map to CO_MAINBK_ADD_LINE3",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE3,FTDWD613.CO_REG_ADD_LINE3,FTDWD613.CO_OPR_ADD_LINE3,FTDWD613.CO_PAR_ADD_LINE3,FTDWD613.CO_MAINBK_ADD_LINE3",,,,,Regex: Allow specific symbols with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD3","Entity Type
+Address Line 3",Address_Line3_Rule_1_EAM,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,CLMST,CLMST.C1AD3,,,,,Regex: Allow specific symbols with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD3","Entity Type
+Address Line 3",Address_Line3_Rule_1_MAS,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,CLMST,CLMST.C1AD3,,,,,Regex: Allow specific symbols with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS2,"Entity Type
+Address Line 3",Address_Line3_Rule_1_MRX,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS2,,,,,Regex: Allow specific symbols with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress3
+tblCustomers.fldPermAddress3","Entity Type
+Correspondence Address Line 3
+Permenant Address Line 3",Address_Line3_Rule_1_POR,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,tblCustomers,"tblCustomers.fldCorrAddress3,tblCustomers.fldPermAddress3",,,,,Regex: Allow specific symbols with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_ADD3
+MI004_TEMP_ADD3","Entity Type
+Address Line 3 (Postal)
+Address Line 3 (Permenant)",Address_Line3_Rule_1_TCS,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,MIS004,"MIS004.MI004_ADD3,MIS004.MI004_TEMP_ADD3",,,,,Regex: Allow specific symbols with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE3
+TMS_Accounts.AM_ADR_LINE3
+",Address Line 3,Address_Line3_Rule_1_Tomswin,Address_Line3,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,"TMS_Customers,TMS_Accounts
+","TMS_Customers.AM_ADR_LINE3,TMS_Accounts.AM_ADR_LINE3
+",,,,,Regex: Allow specific symbols with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMAD3","Entity Type
+Address Line 3",Address_Line3_Rule_2_AMS,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,FLACM,FLACM.FLMAD3,,,,,Cannot equal to some values with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR3
+FTDWM601.CB_CO_ADDR3
+FTDWM601.CB_ALT1_BILL_ADDR3
+FTDWM601.CB_ALT2_BILL_ADDR3","Entity Type
+Billing Addr Alt 1 Line 3
+Billing Addr Alt 2 Line 3
+Resident Addr Line 3
+Company Addr Line 3",Address_Line3_Rule_2_CPR_1,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR3
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR3
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR3
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR3",FTDWM601,"FTDWM601.CB_HOME_ADDR3,FTDWM601.CB_CO_ADDR3,FTDWM601.CB_ALT1_BILL_ADDR3,FTDWM601.CB_ALT2_BILL_ADDR3",,,,,Cannot equal to some values with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE3
+FTDWD613.CO_REG_ADD_LINE3
+FTDWD613.CO_OPR_ADD_LINE3
+FTDWD613.CO_PAR_ADD_LINE3
+FTDWD613.CO_MAINBK_ADD_LINE3","Entity Type
+Mailing Addr Line 3
+Registered Addr Line 3
+Operation Addr Line 3
+Parent Addr Line 3
+Main Banker Addr Line 3",Address_Line3_Rule_2_CPR_2,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","Mailing address, map toFTDWD613.CO_MAIL_ADD_LINE3
+Registred address, map to FTDWD613.CO_REG_ADD_LINE3
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE3
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE3
+Main banker address, map to CO_MAINBK_ADD_LINE3",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE3,FTDWD613.CO_REG_ADD_LINE3,FTDWD613.CO_OPR_ADD_LINE3,FTDWD613.CO_PAR_ADD_LINE3,FTDWD613.CO_MAINBK_ADD_LINE3",,,,,Cannot equal to some values with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD3","Entity Type
+Address Line 3",Address_Line3_Rule_2_EAM,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CLMST,CLMST.C1AD3,,,,,Cannot equal to some values with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1AD3","Entity Type
+Address Line 3",Address_Line3_Rule_2_MAS,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CLMST,CLMST.C1AD3,,,,,Cannot equal to some values with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS2,"Entity Type
+Address Line 3",Address_Line3_Rule_2_MRX,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS2,,,,,Cannot equal to some values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrAddress3
+tblCustomers.fldPermAddress3","Entity Type
+Address Line 3",Address_Line3_Rule_2_POR,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,tblCustomers,"tblCustomers.fldCorrAddress3,tblCustomers.fldPermAddress3",,,,,Cannot equal to some values with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_ADD3
+MIS004.MI004_TEMP_ADD3","Entity Type
+Address Line 3 (Postal)
+Address Line 3 (Permenant)",Address_Line3_Rule_2_TCS,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,MIS004,"MIS004.MI004_ADD3,MIS004.MI004_TEMP_ADD3",,,,,Cannot equal to some values with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE3
+TMS_Accounts.AM_ADR_LINE3
+",Address Line 3,Address_Line3_Rule_2_Tomswin,Address_Line3,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,"TMS_Customers,TMS_Accounts
+","TMS_Customers.AM_ADR_LINE3,TMS_Accounts.AM_ADR_LINE3
+",,,,,Cannot equal to some values with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR4
+FTDWM601.CB_CO_ADDR4
+FTDWM601.CB_ALT1_BILL_ADDR4
+FTDWM601.CB_ALT2_BILL_ADDR4","Entity Type
+Billing Addr Alt 1 Line 4
+Billing Addr Alt 2 Line 4
+Resident Addr Line 4
+Company Addr Line 4",Address_Line4_Rule_1_CPR_1,Address_Line4,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR4
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR4
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR4
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR4",FTDWM601,"FTDWM601.CB_HOME_ADDR4,FTDWM601.CB_CO_ADDR4,FTDWM601.CB_ALT1_BILL_ADDR4,FTDWM601.CB_ALT2_BILL_ADDR4",,,,,Cannot equal to some values with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE4
+FTDWD613.CO_REG_ADD_LINE4
+FTDWD613.CO_OPR_ADD_LINE4
+FTDWD613.CO_PAR_ADD_LINE4
+FTDWD613.CO_MAINBK_ADD_LINE4","Entity Type
+Mailing Addr Line 4
+Registered Addr Line 4
+Operation Addr Line 4
+Parent Addr Line 4
+Main Banker Addr Line 4",Address_Line4_Rule_1_CPR_2,Address_Line4,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""","Mailing address, map toFTDWD613.CO_MAIL_ADD_LINE4
+Registred address, map to FTDWD613.CO_REG_ADD_LINE4
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE4
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE4
+Main banker address, map to CO_MAINBK_ADD_LINE4",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE4,FTDWD613.CO_REG_ADD_LINE4,FTDWD613.CO_OPR_ADD_LINE4,FTDWD613.CO_PAR_ADD_LINE4,FTDWD613.CO_MAINBK_ADD_LINE4",,,,,Cannot equal to some values with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_ADD4
+MI004_TEMP_ADD4","Address Line 4 (Postal)
+Address Line 4 (Permenant)",Address_Line4_Rule_1_TCS,Address_Line4,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,MIS004,"MIS004.MI004_ADD4,MIS004.MI004_TEMP_ADD4",,,,,Cannot equal to some values with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE4
+TMS_Accounts.AM_ADR_LINE4
+",Address Line 4,Address_Line4_Rule_1_Tomswin,Address_Line4,"Only allow symbols ""@"", ""("", "")"", ""_"", "" ' "", ""/"", ""&"", ""."","":"",""#"", "",""",,"TMS_Customers,TMS_Accounts
+","TMS_Customers.AM_ADR_LINE4,TMS_Accounts.AM_ADR_LINE4
+",,,,,Cannot equal to some values with Entity Type
+CLS,_,CFADDR,CFADDR.CFNA5,"Entity Type
+Address Line 4",Address_Line4_Rule_2_CLS,Address_Line4,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,CFADDR,CFADDR.CFNA5,,,,,Cannot equal to some values with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_ADDR4
+FTDWM601.CB_CO_ADDR4
+FTDWM601.CB_ALT1_BILL_ADDR4
+FTDWM601.CB_ALT2_BILL_ADDR4","Entity Type
+Billing Addr Alt 1 Line 4
+Billing Addr Alt 2 Line 4
+Resident Addr Line 4
+Company Addr Line 4",Address_Line4_Rule_2_CPR_1,Address_Line4,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","to check FTDWD602.CB_BILL_ADDR_CD first as below :_
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_ADDR4
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_ADDR4
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_ADDR4
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_ADDR4",FTDWM601,"FTDWM601.CB_HOME_ADDR4,FTDWM601.CB_CO_ADDR4,FTDWM601.CB_ALT1_BILL_ADDR4,FTDWM601.CB_ALT2_BILL_ADDR4",,,,,Cannot equal to some values with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE4
+FTDWD613.CO_REG_ADD_LINE4
+FTDWD613.CO_OPR_ADD_LINE4
+FTDWD613.CO_PAR_ADD_LINE4
+FTDWD613.CO_MAINBK_ADD_LINE4","Entity Type
+Mailing Addr Line 4
+Registered Addr Line 4
+Operation Addr Line 4
+Parent Addr Line 4
+Main Banker Addr Line 4",Address_Line4_Rule_2_CPR_2,Address_Line4,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”","Mailing address, map toFTDWD613.CO_MAIL_ADD_LINE4
+Registred address, map to FTDWD613.CO_REG_ADD_LINE4
+Operating address, map to FTDWD613.CO_OPR_ADD_LINE4
+Parent address, map to FTDWD613.CO_PAR_ADD_LINE4
+Main banker address, map to CO_MAINBK_ADD_LINE4",FTDWD613,"FTDWD613.CO_MAIL_ADD_LINE4,FTDWD613.CO_REG_ADD_LINE4,FTDWD613.CO_OPR_ADD_LINE4,FTDWD613.CO_PAR_ADD_LINE4,FTDWD613.CO_MAINBK_ADD_LINE4",,,,,Cannot equal to some values with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS3,"Entity Type
+Address Line 4",Address_Line4_Rule_2_MRX,Address_Line4,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ADDRESS3,,,,,Cannot equal to some values with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_ADD4
+MIS004.MI004_TEMP_ADD4","Entity Type
+Address Line 4 (Postal)
+Address Line 4 (Permenant)",Address_Line4_Rule_2_TCS,Address_Line4,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,MIS004,"MIS004.MI004_ADD4,MIS004.MI004_TEMP_ADD4",,,,,Cannot equal to some values with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.AM_ADR_LINE4
+TMS_Accounts.AM_ADR_LINE4
+",Address Line 4,Address_Line4_Rule_2_Tomswin,Address_Line4,"Field content cannot = to “Addr”, “add”, “addr”, “na”, “n/a”, ‘’no Addr’, “no add”, “no addr”,“NIL”, “X”",,"TMS_Customers
+","TMS_Customers.AM_ADR_LINE4,TMS_Accounts.AM_ADR_LINE4
+",,,,,Cannot equal to some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMEML","Entity Type
+Email",Email_Rule_1_AMS,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,FLACM,FLACM.FLMEML,,,,,Complex email local and domain format with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_PGM_ADMIN_EMAIL1
+FTDWD613.CO_PGM_ADMIN_EMAIL2
+FTDWD613.CO_EMAIL_ADDRESS",Email,Email_Rule_1_CPR_1,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,FTDWD613,"FTDWD613.CO_PGM_ADMIN_EMAIL1,FTDWD613.CO_PGM_ADMIN_EMAIL2,FTDWD613.CO_EMAIL_ADDRESS",,,,,Complex email local and domain format with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1EMAI","Entity Type
+Email",Email_Rule_1_EAM,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,CLMST,CLMST.C1EMAI,,,,,Complex email local and domain format with Entity Type
+MAS,_,CLMST,CLMST.C1EMAI,"Entity Type
+Email",Email_Rule_1_MAS,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,CLMST,CLMST.C1EMAI,,,,,Complex email local and domain format with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMAIL,Email,Email_Rule_1_MRX,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMAIL,,,,,Complex email local and domain format with Entity Type
+POR,_,"tblCustomers
+","tblCustomers.fldEntityType
+tblCustomers.fldEmailAddress1
+tblCustomers.fldEmailAddress2","Entity Type
+Email",Email_Rule_1_POR,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,"tblCustomers
+","tblCustomers.fldEmailAddress1,tblCustomers.fldEmailAddress2",,,,,Complex email local and domain format with Entity Type
+TCS,Loan and Deposit,MIS004,MIS004.MI004_EMAIL_ADD1,"Entity Type
+Email",Email_Rule_1_TCS,Email,"Format of email: local_part@domain_part
+
+Requirements on local_part:
+1.	Email must hv local_part, not start with the @
+2.	Characters permitted: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Special characters !#$%&'*+_/=?^_`{|}~
+•	Dot/full stop (.), but not as starting or ending character or appearing consecutively, e.g. .John, John. or John..Lim not allowed. John.Lim is allowed.
+
+Requirements on domain_part: Made of one or more non_blank parts separated by dots. Permitted characters for each part: 
+•	All alphabet & digits (A_Z, a_z, 0_9)
+•	Hyphen (_) but not as starting or ending character
+
+e.g. ambank_home (one part only – no separation dots), gmail.com, yahoo.com.my etc.
+
+Note: @ allowed in email Addr only as the separator between local_part & domain_part, not allowed in either part
+",,MIS004,MIS004.MI004_EMAIL_ADD1,,,,,Complex email local and domain format with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMEML","Entity Type
+Email",Email_Rule_2_AMS,Email,Check if any email is same for different Custs,,FLACM,FLACM.FLMEML,,,,,Column value cannot be same for different customers
+CPR,_,FTDWM601,FTDWM601.CB_EMAIL,"Entity Type
+Email",Email_Rule_2_CPR_1,Email,Check if any email is same for different Custs,,FTDWM601,FTDWM601.CB_EMAIL,,,,,Column value cannot be same for different customers
+CPR,_,FTDWD613,"FTDWD613.CO_PGM_ADMIN_EMAIL1
+FTDWD613.CO_PGM_ADMIN_EMAIL2
+FTDWD613.CO_EMAIL_ADDRESS","Entity Type
+Email",Email_Rule_2_CPR_2,Email,Check if any email is same for different Custs,,FTDWD613,"FTDWD613.CO_PGM_ADMIN_EMAIL1,FTDWD613.CO_PGM_ADMIN_EMAIL2,FTDWD613.CO_EMAIL_ADDRESS",,,,,Column value cannot be same for different customers
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1EMAI","Entity Type
+Email",Email_Rule_2_EAM,Email,Check if any email is same for different Custs,,CLMST,CLMST.C1EMAI,,,,,Column value cannot be same for different customers
+MAS,_,CLMST,CLMST.C1EMAI,"Entity Type
+Email",Email_Rule_2_MAS,Email,Check if any email is same for different Custs,,CLMST,CLMST.C1EMAI,,,,,Column value cannot be same for different customers
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMAIL,"Entity Type
+Email",Email_Rule_2_MRX,Email,Check if any email is same for different Custs,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMAIL,,,,,Column value cannot be same for different customers
+POR,_,"tblCustomers
+pmf
+","tblCustomers.fldEntityType
+tblCustomers.fldEmailAddress1
+tblCustomers.fldEmailAddress2
+pmf.portfolio
+","Entity Type
+Email",Email_Rule_2_POR,Email,Check if any email is same for different Custs,,"tblCustomers
+","tblCustomers.fldEmailAddress1,tblCustomers.fldEmailAddress2",pmf,portfolio,,,Column value cannot be same for different customers
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMTL1
+FLACM.FLMTL2
+FLACM.FLMTL3
+FLACM.FLMFX2","Entity Type
+Residential Phone No,
+Office Phone No, 
+Mobile Phone No, 
+Telex No",Telephone_Number_Rule_1_AMS,Phone Number,At least 1 phone Num field should be populated,,FLACM,"FLACM.FLMTL1,FLACM.FLMTL2,FLACM.FLMTL3,FLACM.FLMFX2",,,,,At least one column value should be populated with Entity Type
+CLS,_,CFCONN,"CFCONN.CFEADC
+CFCONN.CFEADD","Entity Type
+All Phone Number",Telephone_Number_Rule_1_CLS,Phone Number,At least 1 phone Num field should be populated,"Contact No for Contact Code (CFCONN.CFEADC) :
+MP _ MOBILE PHONE NUMBER
+OP _ OFFICE PHONE NUMBER 
+OF _ OFFICE FAX NUMBER
+HF _ HOME FAX NUMBER
+HP _ HOME PHONE NUMBER
+OT _ OTHERS",CFCONN,"CFCONN.CFEADC,CFCONN.CFEADD",,,,,At least one column value should be populated with Entity Type
+CPR,_,CustAcc,"CustAcc.CP_CSTTBL.CB_CO_PHONE
+CustAcc.CP_CSTTBL.CB_HOME_PHONE
+CustAcc.CP_CSTTBL.CB_CO_PHONE","Entity Type
+All Phone Number",Telephone_Number_Rule_1_CPR_1,Phone Number,At least 1 phone Num field should be populated,"Contact No fields in FTDWM601 had been masked since day 1 for Fraud requirment.
+
+These are the contact fields are available in CustAcc file: _
+1. DocReqCode which mapped to CP_CSTTBL.CB_MOBILE_NO
+2. Home Phone which mapped to CP_CSTTBL.CB_HOME_PHONE
+3. Company Phone which mapped to CP_CSTTBL.CB_CO_PHONE ",CustAcc,"CustAcc.CP_CSTTBL.CB_CO_PHONE,CustAcc.CP_CSTTBL.CB_HOME_PHONE,CustAcc.CP_CSTTBL.CB_CO_PHONE ",,,,,At least one column value should be populated with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_REG_ADD_TEL
+FTDWD613.CO_OPR_ADD_TEL 
+FTDWD613.CO_MAIL_ADD_TEL
+FTDWD613.CO_PAR_ADD_TEL 
+FTDWD613.CO_MAINBK_ADD_TEL
+FTDWD613.CO_AUTH_SIGN_TEL
+FTDWD613.CO_PGM_ADMIN_TEL1
+FTDWD613.CO_PGM_ADMIN_TEL2
+FTDWD613.CO_REG_ADD_FAX
+FTDWD613.CO_OPR_ADD_FAX
+FTDWD613.CO_MAIL_ADD_FAX
+FTDWD613.CO_PAR_ADD_FAX
+FTDWD613.CO_MAINBK_ADD_FAX 
+FTDWD613.CO_PGM_ADMIN_FAX1 
+FTDWD613.CO_PGM_ADMIN_FAX2","Entity Type
+All Phone Number",Telephone_Number_Rule_1_CPR_2,Phone Number,At least 1 phone Num field should be populated,"CO_REG_ADD_TEL
+CO_OPR_ADD_TEL 
+CO_MAIL_ADD_TEL
+CO_PAR_ADD_TEL 
+CO_MAINBK_ADD_TEL
+CO_AUTH_SIGN_TEL
+CO_PGM_ADMIN_TEL1
+CO_PGM_ADMIN_TEL2
+CO_REG_ADD_FAX
+CO_OPR_ADD_FAX
+CO_MAIL_ADD_FAX
+CO_PAR_ADD_FAX
+CO_MAINBK_ADD_FAX 
+CO_PGM_ADMIN_FAX1 
+CO_PGM_ADMIN_FAX2",FTDWD613,"FTDWD613.CO_REG_ADD_TEL,FTDWD613.CO_OPR_ADD_TEL,FTDWD613.CO_MAIL_ADD_TEL,FTDWD613.CO_PAR_ADD_TEL,FTDWD613.CO_MAINBK_ADD_TEL,FTDWD613.CO_AUTH_SIGN_TEL,FTDWD613.CO_PGM_ADMIN_TEL1,FTDWD613.CO_PGM_ADMIN_TEL2,FTDWD613.CO_REG_ADD_FAX,FTDWD613.CO_OPR_ADD_FAX,FTDWD613.CO_MAIL_ADD_FAX,FTDWD613.CO_PAR_ADD_FAX,FTDWD613.CO_MAINBK_ADD_FAX,FTDWD613.CO_PGM_ADMIN_FAX1,FTDWD613.CO_PGM_ADMIN_FAX2",,,,,At least one column value should be populated with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1TL1
+CLMST.C1TL2
+CLMST.C1TL3
+CLMST.C1FAX","Residential Phone No
+Office Phone No
+Mobile No
+Fax phone No 1
+Fax Phone No 2
+Fax Phone No 3",Telephone_Number_Rule_1_EAM,Phone Number,At least 1 phone Num field should be populated,,CLMST,"CLMST.C1TL1,CLMST.C1TL2,CLMST.C1TL3,CLMST.C1FAX",,,,,At least one column value should be populated with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1TL1
+CLMST.C1TL2
+CLMST.C1TL3
+CLMST.C1FAX
+","Entity Type
+All Phone Number",Telephone_Number_Rule_1_MAS,Phone Number,At least 1 phone Num field should be populated,,CLMST,"CLMST.C1TL1,CLMST.C1TL2,CLMST.C1TL3,CLMST.C1FAX",,,,,At least one column value should be populated with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_PHONE_HOME
+TRN_CPDF_DBF.M_PHONE2
+TRN_CPDF_DBF.M_PHONE_MOBI
+TRN_CPDF_DBF.M_TEL
+TRN_CPDF_DBF.M_FAX","Entity Type
+All Phone Number",Telephone_Number_Rule_1_MRX,Phone Number,At least 1 phone Num field should be populated,,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_PHONE_HOME,TRN_CPDF_DBF.M_PHONE2,TRN_CPDF_DBF.M_PHONE_MOBI,TRN_CPDF_DBF.M_TEL,TRN_CPDF_DBF.M_FAX",,,,,At least one column value should be populated with Entity Type
+POR,_,"tblCustomers
+","tblCustomers.fldEntityType
+tblCustomers.fldContactNum1
+tblCustomers.fldContactNum2
+tblCustomers.fldContactNum3
+tblCustomers.fldContactNum4
+tblCustomers.fldContactNum5
+tblCustomers.fldFaxNum1
+tblCustomers.fldFaxNum2
+","Entity Type
+All Phone Number",Telephone_Number_Rule_1_POR,Phone Number,At least 1 phone Num field should be populated,,"tblCustomers
+","tblCustomers.fldContactNum1,tblCustomers.fldContactNum2,tblCustomers.fldContactNum3,tblCustomers.fldContactNum4,tblCustomers.fldContactNum5,tblCustomers.fldFaxNum1,tblCustomers.fldFaxNum2",,,,,At least one column value should be populated with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_MOBILE_NO
+MIS004.MI004_PHONE_NO_BUS
+MIS004.MI004_CUSVAA_FAX_NO
+MIS004.MI004_PHONE_NO_RES","Entity Type
+Mobile Phone Number
+Office Phone Number
+Fax Number
+Residential Phone Number",Telephone_Number_Rule_1_TCS,Phone Number,At least 1 phone Num field should be populated,,MIS004,"MIS004.MI004_MOBILE_NO,MIS004.MI004_PHONE_NO_BUS,MIS004.MI004_CUSVAA_FAX_NO,MIS004.MI004_PHONE_NO_RES",,,,,At least one column value should be populated with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.MBL_NUM
+TMS_Accounts.MBL_NUM
+",All Phone Number,Telephone_Number_Rule_1_Tomswin,Phone Number,At least 1 phone Num field should be populated,,"TMS_Customers
+",TMS_Customers.MBL_NUM,TMS_Accounts,TMS_Accounts.MBL_NUM,,,At least one column value should be populated with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMPSC
+FLACM.FLMCTY","Entity type
+Postcode
+Country for address",Postcode_Rule_1_AMS,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,FLACM,FLACM.FLMPSC,FLACM,FLACM.FLMCTY,,,Postcode regex and numbers check when another column = some values with Entity Type
+CLS,_,"LNA542WF
+CFADDR
+CFMAST","LNA542WF.INSTOV
+CFADDR.CFZIP
+CFMAST.CFCITZ","Entity Type
+Postcode
+Country /Nationality",Postcode_Rule_1_CLS,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,"CFADDR
+",CFADDR.CFZIP,CFMAST,CFMAST.CFCITZ,,,Postcode regex and numbers check when another column = some values with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_ALT1_BILL_ADDR_POSTCODE
+FTDWM601.CB_ALT2_BILL_ADDR_POSTCODE
+FTDWM601.CB_HOME_POSTCODE
+FTDWM601.CB_CO_POSTCODE
+FTDWM601.CB_ALT1_BILL_CNTRY_CD 
+FTDWM601.CB_ALT2_BILL_CNTRY_CD 
+FTDWM601.CB_HOME_CNTRY_CD 
+FTDWM601.CB_CO_CNTRY_CD","Entity Type
+Billing Addr Alt 1 Postcode
+Billing Addr Alt 2 Postcode
+Resident Addr Postcode
+Company Addr Postcode
+Billing Addr Alt 1 Country Cd
+Billing Addr Alt 2 Country Cd
+Resident Addr Country Cd
+Company Addr Country Cd",Postcode_Rule_1_CPR_1,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)","To check FTDWD602.CB_BILL_ADDR_CD first.
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_POSTCODE, FTDWM601.CB_HOME_CNTRY_CD
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_POSTCODE, FTDWM601.CB_CO_CNTRY_CD
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_POSTCODE, FTDWM601.CB_ALT1_BILL_CNTRY_CD
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_POSTCODE, FTDWM601.CB_ALT2_BILL_CNTRY_CD",FTDWM601,"CB_ALT1_BILL_ADDR_POSTCODE,CB_ALT2_BILL_ADDR_POSTCODE,CB_HOME_POSTCODE,CB_CO_POSTCODE,CB_ALT1_BILL_CNTRY_CD ,CB_ALT2_BILL_CNTRY_CD ,CB_HOME_CNTRY_CD ,CB_CO_CNTRY_CD",,,,,Postcode regex and numbers check when another column = some values with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_REG_ADD_POSTCODE
+FTDWD613.CO_OPR_ADD_POSTCODE
+FTDWD613.CO_MAIL_ADD_POSTCODE
+FTDWD613.CO_PAR_ADD_POSTCODE
+FTDWD613.CO_MAINBK_ADD_POSTCODE FTDWD613.CO_MAIL_CNTRY_CD
+FTDWD613.CO_REG_CNTRY_CD
+FTDWD613.CO_OPR_CNTRY_CD
+FTDWD613.CO_PAR_CNTRY_CD FTDWD613.CO_MAINBK_CNTRY_CD","Entity Type
+Mailing Addr Postcode
+Registered Addr Postcode
+Operation Addr Postcode
+Parent Addr Postcode
+Main Banker Addr Postcode
+Mailing Addr Country Cd
+Registered Addr Country Cd
+Operation Addr Country Cd
+Parent Addr Country Cd
+Main Banker Addr Country Cd",Postcode_Rule_1_CPR_2,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)","FTDWD613.CO_REG_ADD_POSTCODE, FTDWD613.CO_MAIL_CNTRY_CD
+FTDWD613.CO_OPR_ADD_POSTCODE, FTDWD613.CO_OPR_ADD_CNTRY_CD
+FTDWD613.CO_MAIL_ADD_POSTCODE, FTDWD613.CO_MAIL_ADD_CNTRY_CD
+FTDWD613.CO_PAR_ADD_POSTCODE, FTDWD613.CO_PAR_ADD_CNTRY_CD
+FTDWD613.CO_MAINBK_ADD_POSTCODE, FTDWD613.CO_MAINBK_ADD_CNTRY_CD",FTDWD613,"CO_REG_ADD_POSTCODE,CO_OPR_ADD_POSTCODE,CO_MAIL_ADD_POSTCODE,CO_PAR_ADD_POSTCODE,CO_MAINBK_ADD_POSTCODE,CO_MAIL_CNTRY_CD,CO_REG_CNTRY_CD,CO_OPR_CNTRY_CD,CO_PAR_CNTRY_CD ,CO_MAINBK_CNTRY_CD",,,,,Postcode regex and numbers check when another column = some values with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1PSCD
+CLMST.C1NLTY","Entity Type
+Postcode
+Country /Nationality",Postcode_Rule_1_EAM,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,CLMST,CLMST.C1PSCD,CLMST,CLMST.C1NLTY,,,Postcode regex and numbers check when another column = some values with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1PSCD
+CLMST.C1NLTY","Entity Type
+Postcode
+Country /Nationality",Postcode_Rule_1_MAS,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,CLMST,CLMST.C1PSCD,CLMST,CLMST.C1NLTY,,,Postcode regex and numbers check when another column = some values with Entity Type
+MRX,_,"TRN_CPDF_DBF
+MRX_TRANS_D","TRN_CPDF_DBF.M_POSTCODE
+MRX_TRANS_D.POSTCODE
+TRN_CPDF_DBF.M_COUNTRY","Entity Type
+Postcode
+Country /Nationality",Postcode_Rule_1_MRX,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,"TRN_CPDF_DBF
+","TRN_CPDF_DBF.M_POSTCODE,TRN_CPDF_DBF.M_COUNTRY",MRX_TRANS_D,MRX_TRANS_D.POSTCODE,,,Postcode regex and numbers check when another column = some values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrPostalCode
+tblCustomers.fldPermPostalCode
+tblCustomers.fldCorrCountry
+tblCustomers.fldPermCountry","Entity Type
+Correspondence Postcode
+Permenant Postcode
+Correspondence County
+Permenant County",Postcode_Rule_1_POR,Postcode,"If Ctry cd = 138 & 124 & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g. 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,tblCustomers,"tblCustomers.fldCorrPostalCode,tblCustomers.fldPermPostalCode",tblCustomers,"tblCustomers.fldCorrCountry,tblCustomers.fldPermCountry",,,Postcode regex and numbers check when another column = some values with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_POSTCODE
+MI004_CORR_ADD_COUNTRY_CD
+MI004_PERM_ADD_COUNTRY_CD","Entity Type
+Postcode
+Country (Postal)
+Country (Permenant)",Postcode_Rule_1_TCS,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,MIS004,"MIS004.MI004_POSTCODE,MIS004.MI004_CORR_ADD_COUNTRY_CD,MIS004.MI004_PERM_ADD_COUNTRY_CD",,,,,Postcode regex and numbers check when another column = some values with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.POSTAL_CODE
+TMS_Accounts.POSTAL_CODE
+TMS_Accounts.ACC_COUNTRY","Postcode
+Country",Postcode_Rule_1_Tomswin,Postcode,"If Ctry cd = MY & LN & Postcd must 5 digits numeric & cannot repeat all with same Num (e.g 11111,22222,33333,44444,55555, 66666, 77777, 88888, 99999)",,"TMS_Customers
+","TMS_Customers.POSTAL_CODE,TMS_Customers.ACC_COUNTRY",TMS_Accounts,TMS_Accounts.POSTAL_CODE,,,Postcode regex and numbers check when another column = some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMPSC
+FLACM.FLMSTC","Entity Type
+Postcode
+State Code",Postcode_Rule_2_AMS,Postcode,<> blank if State cd field have value.,,FLACM,FLACM.FLMPSC,FLACM,FLACM.FLMSTC,,,Cannot be blank if another column has value with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD
+FTDWM601.CB_ALT1_BILL_ADDR_POSTCODE
+FTDWM601.CB_ALT2_BILL_ADDR_POSTCODE
+FTDWM601.CB_HOME_POSTCODE
+FTDWM601.CB_CO_POSTCODE
+FTDWM601.CB_ALT1_BILL_STATE
+FTDWM601.CB_ALT2_BILL_STATE
+FTDWM601.CB_HOME_STATE
+FTDWM601.CB_CO_STATE","Entity Type
+Billing Addr Alt 1 Postcode
+Billing Addr Alt 2 Postcode
+Resident Addr Postcode
+Company Addr Postcode
+Billing Addr Alt 1 State Code
+Billing Addr Alt 2 State Code
+Resident Addr State Code
+Company Addr State Code",Postcode_Rule_2_CPR_1,Postcode,<> blank if State cd field have value.,"To check FTDWD602.CB_BILL_ADDR_CD first.
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_STATE,  FTDWM601.CB_HOME_POSTCODE
+if CB_BILL_ADDR_CD  = 'C', then FTDWM601.CB_CO_STATE, FTDWM601.CB_CO_POSTCODE
+if CB_BILL_ADDR_CD  = '1', then FTDWM601.CB_ALT1_BILL_STATE, FTDWM601.CB_ALT1_BILL_POSTCODE
+if CB_BILL_ADDR_CD  = '2', then FTDWM601.CB_ALT2_BILL_STATE, FTDWM601.CB_ALT2_BILL_POSTCODE",FTDWM601,"FTDWM601.CB_ALT1_BILL_ADDR_POSTCODE,FTDWM601.CB_ALT2_BILL_ADDR_POSTCODE,FTDWM601.CB_HOME_POSTCODE,FTDWM601.CB_CO_POSTCODE",FTDWM601,"FTDWM601.CB_ALT1_BILL_STATE,FTDWM601.CB_ALT2_BILL_STATE,FTDWM601.CB_HOME_STATE,FTDWM601.CB_CO_STATE",,,Cannot be blank if another column has value with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_REG_ADD_POSTCODE
+FTDWD613.CO_OPR_ADD_POSTCODE
+FTDWD613.CO_MAIL_ADD_POSTCODE
+FTDWD613.CO_PAR_ADD_POSTCODE
+FTDWD613.CO_MAINBK_ADD_POSTCODE FTDWD613.CO_MAIL_STATE
+FTDWD613.CO_REG_STATE
+FTDWD613.CO_MAIL_STATE
+FTDWD613.CO_PAR_STATE
+FTDWD613.CO_MAINBK_STATE","Entity Type
+Mailing Addr Postcode
+Registered Addr Postcode
+Operation Addr Postcode
+Parent Addr Postcode
+Main Banker Addr Postcode
+Mailing Addr State  Cd
+Registered Addr State Cd
+Operation Addr State Cd
+Parent Addr State Cd
+Main Banker Addr State Cd",Postcode_Rule_2_CPR_2,Postcode,<> blank if State cd field have value.,"FTDWD613.CO_REG_POSTCODE, FTDWD613.CO_REG_STATE
+FTDWD613.CO_OPR_POSTCODE, FTDWD613.CO_OPR_STATE
+FTDWD613.CO_MAIL_POSTCODE, FTDWD613.CO_MAIL_STATE
+FTDWD613.CO_PAR_POSTCODE, FTDWD613.CO_PAR_STATE
+FTDWD613.CO_MAINBK_POSTCODE, FTDWD613.CO_MAINBK_STATE",FTDWD613,"FTDWD613.CO_REG_ADD_POSTCODE,FTDWD613.CO_OPR_ADD_POSTCODE,FTDWD613.CO_MAIL_ADD_POSTCODE,FTDWD613.CO_PAR_ADD_POSTCODE,FTDWD613.CO_MAINBK_ADD_POSTCODE",FTDWD613,"FTDWD613.CO_MAIL_STATE,FTDWD613.CO_REG_STATE,FTDWD613.CO_MAIL_STATE,FTDWD613.CO_PAR_STATE,FTDWD613.CO_MAINBK_STATE",,,Cannot be blank if another column has value with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1PSCD
+CLMST.C1FIL1 ","Entity Type
+Postcode
+State Code",Postcode_Rule_2_EAM,Postcode,<> blank if State cd field have value.,,CLMST,CLMST.C1PSCD,CLMST,CLMST.C1FIL1 ,,,Cannot be blank if another column has value with Entity Type
+MAS,_,CLMST,"CLMST.CLPSCD
+CLMST.CLFIL1","Entity Type
+Postcode
+State Code",Postcode_Rule_2_MAS,Postcode,<> blank if State cd field have value.,,CLMST,CLMST.CLPSCD,CLMST,CLMST.CLFIL1,,,Cannot be blank if another column has value with Entity Type
+MRX,_,"TRN_CPDF_DBF
+MRX_TRANS_D","TRN_CPDF_DBF.M_POSTCODE
+TRN_CPDF_DBF.M_STCODE
+MRX_TRANS_D.POSTCODE","Entity Type
+Postcode
+State Code",Postcode_Rule_2_MRX,Postcode,<> blank if State cd field have value.,,"TRN_CPDF_DBF,MRX_TRANS_D","TRN_CPDF_DBF.M_POSTCODE,MRX_TRANS_D.POSTCODE",TRN_CPDF_DBF,TRN_CPDF_DBF.M_STCODE,,,Cannot be blank if another column has value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCorrPostalCode
+tblCustomers.fldPermPostalCode
+tblCustomers.fldCorrState
+tblCustomers.fldPermState","Entity Type
+Correspondence Postcode
+Permenant Postcode
+Correspondence State
+Permenant State",Postcode_Rule_2_POR,Postcode,<> blank if State cd field have value.,,tblCustomers,"tblCustomers.fldCorrPostalCode,tblCustomers.fldPermPostalCode",tblCustomers,"tblCustomers.fldCorrState,tblCustomers.fldPermState",,,Cannot be blank if another column has value with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_POSTCODE
+MIS004.MI004_CUSVAA_STATE_CODE
+MIS004.MI004_TEMP_STATE_CODE","Entity Type
+Postcode
+State Code (Permenant)
+State Code (Postal)",Postcode_Rule_2_TCS,Postcode,<> blank if State cd field have value.,,MIS004,MIS004.MI004_POSTCODE,MIS004,"MIS004.MI004_CUSVAA_STATE_CODE,MIS004.MI004_TEMP_STATE_CODE",,,Cannot be blank if another column has value with Entity Type
+CPR,_,"FTDWD602
+FTDWM601","FTDWD602.CB_BILL_ADDR_CD 
+FTDWM601.CB_HOME_STATE
+FTDWM601.CB_CO_STATE
+FTDWM601.CB_ALT1_BILL_STATE
+FTDWM601.CB_ALT2_BILL_STATE
+FTDWM601.CB_HOME_POSTCODE
+FTDWM601.CB_CO_POSTCODE
+FTDWM601.CB_ALT1_BILL_POSTCODE
+FTDWM601.CB_ALT2_BILL_POSTCODE","Entity Type
+Resident Addr State Code
+Company Addr State Code
+Mailing Addr State  Cd
+Registered Addr State Cd
+Operation Addr State Cd
+Billing Addr Alt 1 Postcode
+Billing Addr Alt 2 Postcode
+Resident Addr Postcode
+Company Addr Postcode
+Mailing Addr Postcode
+Registered Addr Postcode
+Operation Addr Postcode",State_Cd_Rule_1_CPR_1,State Code,<> blank if Postcd field have value.,"FTDWD602.CB_BILL_ADDR_CD 
+If CB_BILL_ADDR_CD = 'H', then FTDWM601.CB_HOME_STATE
+If CB_BILL_ADDR_CD = 'C', then FTDWM601.CB_CO_STATE
+If CB_BILL_ADDR_CD = '1', then FTDWM601.CB_ALT1_BILL_STATE
+If CB_BILL_ADDR_CD = '2', then FTDWM601.CB_ALT2_BILL_STATE",FTDWM601,"FTDWM601.CB_HOME_STATE,FTDWM601.CB_CO_STATE,FTDWM601.CB_ALT1_BILL_STATE,FTDWM601.CB_ALT2_BILL_STATE","FTDWM601,FTDWD602","FTDWD602.CB_BILL_ADDR_CD,FTDWM601.CB_HOME_POSTCODE,FTDWM601.CB_CO_POSTCODE,FTDWM601.CB_ALT1_BILL_POSTCODE,FTDWM601.CB_ALT2_BILL_POSTCODE",,,Cannot be blank if another column has value with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_REG_STATE
+FTDWD613.CO_OPR_STATE
+FTDWD613.CO_MAIL_STATE
+FTDWD613.CO_PAR_STATE
+FTDWD613.CO_MAINBK_STATE
+FTDWD613.CO_REG_ADD_POSTCODE
+FTDWD613.CO_OPR_ADD_POSTCODE
+FTDWD613.CO_MAIL_ADD_POSTCODE
+FTDWD613.CO_PAR_ADD_POSTCODE
+FTDWD613.CO_MAINBK_ADD_POSTCODE","Entity Type
+Resident Addr State Code
+Company Addr State Code
+Mailing Addr State  Cd
+Registered Addr State Cd
+Operation Addr State Cd
+Billing Addr Alt 1 Postcode
+Billing Addr Alt 2 Postcode
+Resident Addr Postcode
+Company Addr Postcode
+Mailing Addr Postcode
+Registered Addr Postcode
+Operation Addr Postcode",State_Cd_Rule_1_CPR_2,State Code,<> blank if Postcd field have value.,"FTDWD613.CO_REG_STATE
+FTDWD613.CO_OPR_STATE
+FTDWD613.CO_MAIL_STATE
+FTDWD613.CO_PAR_STATE
+FTDWD613.CO_MAINBK_STATE",FTDWD613,"FTDWD613.CO_REG_STATE,FTDWD613.CO_OPR_STATE,FTDWD613.CO_MAIL_STATE,FTDWD613.CO_PAR_STATE,FTDWD613.CO_MAINBK_STATE",FTDWD613,"FTDWD613.CO_REG_ADD_POSTCODE,FTDWD613.CO_OPR_ADD_POSTCODE,FTDWD613.CO_MAIL_ADD_POSTCODE,FTDWD613.CO_PAR_ADD_POSTCODE,FTDWD613.CO_MAINBK_ADD_POSTCODE",,,Cannot be blank if another column has value with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1FIL1
+CLMST.C1PSCD
+","Entity Type
+State code
+Postcode",State_Cd_Rule_1_EAM,State Code,<> blank if Postcd field have value.,,CLMST,CLMST.C1FIL1,CLMST,CLMST.C1PSCD,,,Cannot be blank if another column has value with Entity Type
+MAS,_,CLMST,"CLMST.CLPSCD
+CLMST.CLFIL1","Entity Type
+State code
+Postcode",State_Cd_Rule_1_MAS,State Code,<> blank if Postcd field have value.,,CLMST,CLMST.CLFIL1,CLMST,CLMST.CLPSCD,,,Cannot be blank if another column has value with Entity Type
+MRX,_,"TRN_CPDF_DBF
+MRX_TRANS_D","TRN_CPDF_DBF.M_POSTCODE
+TRN_CPDF_DBF.M_STCODE
+MRX_TRANS_D.POSTCODE","Entity Type
+State code
+Postcode",State_Cd_Rule_1_MRX,State Code,<> blank if Postcd field have value.,,TRN_CPDF_DBF,M_STCODE,"TRN_CPDF_DBF,RX_TRANS_D","TRN_CPDF_DBF.M_POSTCODE,MRX_TRANS_D.POSTCODE",,,Cannot be blank if another column has value with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_POSTCODE
+MIS004.MI004_CUSVAA_STATE_CODE
+MIS004.MI004_TEMP_STATE_CODE","Entity Type
+Postcode
+State Code (Permenant)
+State Code (Postal)",State_Cd_Rule_1_TCS,State Code,<> blank if Postcd field have value.,,MIS004,"MIS004.MI004_CUSVAA_STATE_CODE,MIS004.MI004_TEMP_STATE_CODE",MIS004,MIS004.MI004_POSTCODE,,,Cannot be blank if another column has value with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Accounts","TMS_Customers.ZONE
+TMS_Accounts.POSTAL_CODE
+","State code
+Postcode",State_Cd_Rule_1_Tomswin,State Code,<> blank if Postcd field have value.,,TMS_Customers,TMS_Customers.ZONE,TMS_Accounts,TMS_Accounts.POSTAL_CODE,,,Cannot be blank if another column has value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.ID","Entity Type
+Customer Number",Customer_No_Rule_1_POR,Acount Number,<> blank,,tblCustomers,tblCustomers.ID,,,,,Cannot be blank
+CPR,_,FTDWD613,"FTDWD613.CO_ENTITY_TYP
+FTDWD613.CO_BNM_ASG_ID","Entity Type
+Id number = (BNM Assign ID)",ORGID_Rule_2_CPR,Biz Reg No,"ID type = 0009 (BNM Assigned ID), valid format is 2Numeric, 3Alpha, 7Numeric (2N3A7N)",,FTDWD613,FTDWD613.CO_BNM_ASG_ID,,,,,Regex: alphanumerics if another column = value
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_REG","Entity Type
+Id Type (BNM Assign ID)
+Id number",ORGID_Rule_2_MRX,Biz Reg No,"ID type = 0009 (BNM Assigned ID), valid format is 2Numeric, 3Alpha, 7Numeric (2N3A7N)",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ID_TYPE,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CUST_REG,,,Regex: alphanumerics if another column = value
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_BNM_ASSIGNED_ID","Entity Type
+Id number = BNM Assign ID",ORGID_Rule_2_TCS,Biz Reg No,"ID type = 0009 (BNM Assigned ID), valid format is 2Numeric, 3Alpha, 7Numeric (2N3A7N)",,MIS004,MIS004.MI004_BNM_ASSIGNED_ID,,,,,Regex: alphanumerics if another column = value
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMCDT","Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_AMS,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,FLACM,FLACM.FLMCDT,,,,,Cannot be blank and follow source date format with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1JNDT","Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_EAM,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,CLMST,CLMST.C1JNDT,,,,,Cannot be blank and follow source date format with Entity Type
+MAS,_,CLMST,"FLACM.FLMBGC
+CLMST.C1JNDT","Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_MAS,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,CLMST,CLMST.C1JNDT,,,,,Cannot be blank and follow source date format with Entity Type
+CLS,_,"CFCOD2
+LNA542WF","CFMAST.CFCOD2
+LNA542WF.INORG6","Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_CLS,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,LNA542WF,LNA542WF.INORG6,,,,,Cannot be blank and follow source date format with Entity Type
+CPR,_,FTDWM601,FTDWM601.CB_CREATION_DATE,"Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_CPR,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,FTDWM601,FTDWM601.CB_CREATION_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CREATION_DATE,"Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_MRX,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CREATION_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldCreateDate","Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_POR,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,tblCustomers,tblCustomers.fldCreateDate,,,,,Cannot be blank and follow source date format with Entity Type
+TCS,Loan and Deposit,MIS004,MIS004.MI004_CREATE_DATE,"Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_TCS,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,MIS004,MIS004.MI004_CREATE_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+Tomswin,_,"TMS_Customers
+TMS_Account","TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Accounts.DATE_OPENED","Entity Type
+CIF Creation Date",CIF_CreationDT_Rule1_Tomswin,CIF Creation Date,CIF Creation Dt <> BLANK & follow SRC Dt format,,TMS_Account,TMS_Accounts.DATE_OPENED,,,,,Cannot be blank and follow source date format with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNAM","Entity Type
+Name",Name_Rule_1_AMS,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,FLACM,FLACM.FLMNAM,,,,,Name specific check with length check and unallowed values with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFNA1 
+CFMAST.CFNA1A","Entity Type
+Name Line 1
+Name Line 2",Name_Rule_1_CLS,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,CFMAST,"CFMAST.CFNA1 ,CFMAST.CFNA1A",,,,,Name specific check with length check and unallowed values with Entity Type
+CPR,_,FTDWM601,FTDWM601.CB_CARDHOLDER_NAME,"Entity Type
+Name",Name_Rule_1_CPR_1,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,FTDWM601,FTDWM601.CB_CARDHOLDER_NAME,,,,,Name specific check with length check and unallowed values with Entity Type
+CPR,_,FTDWD613,FTDWD613.CO_COMPANY_NAME,"Entity Type
+Name",Name_Rule_1_CPR_2,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,FTDWD613,FTDWD613.CO_COMPANY_NAME,,,,,Name specific check with length check and unallowed values with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1NM4","Entity Type
+Name Line 1
+Name Line 2",Name_Rule_1_EAM,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,CLMST,CLMST.C1NM4,,,,,Name specific check with length check and unallowed values with Entity Type
+MAS,_,CLMST,"CLMST.C1NLTY
+CLMST.C1NM4","Entity Type
+Name Line 1
+Name Line 2",Name_Rule_1_MAS,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,CLMST,CLMST.C1NM4,,,,,Name specific check with length check and unallowed values with Entity Type
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_LEGAL_NAME,"Entity Type
+Name",Name_Rule_1_MRX,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,TRN_CPDF_DBF,TRN_CPDF_DBF.M_LEGAL_NAME,,,,,Name specific check with length check and unallowed values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldName","Entity Type
+Name",Name_Rule_1_POR,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,tblCustomers,tblCustomers.fldName,,,,,Name specific check with length check and unallowed values with Entity Type
+TCS,Loan and Deposit,MIS004,MI004_CUSM_NAME,"Entity Type
+Name",Name_Rule_1_TCS,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,MIS004,MIS004.MI004_CUSM_NAME,,,,,Name specific check with length check and unallowed values with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUSTOMER_NAME","Entity Type
+Name",Name_Rule_1_Tomswin,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,TMS_Customers,TMS_Customers.CUSTOMER_NAME,,,,,Name specific check with length check and unallowed values with Entity Type
+WMS,_,DL_CIF,DL_CIF.CIF_CLEINT_NAME,Name,Name_Rule_1_WMS,Customer Name,Name <> 'BLANK' or min len > 3 char or like 'DUMMY',,DL_CIF,DL_CIF.CIF_CLEINT_NAME,,,,,Name specific check with length check and unallowed values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNAM","Entity Type
+Name",Name_Rule_2_AMS,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,FLACM,FLACM.FLMNAM,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFNA1 
+CFMAST.CFNA1A","Entity Type
+Name Line 1
+Name Line 2",Name_Rule_2_CLS,Customer Name,"Name valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,CFMAST,"CFMAST.CFNA1,CFMAST.CFNA1A",,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_CARDHOLDER_NAME","Entity Type
+Name",Name_Rule_2_CPR,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,FTDWM601,FTDWM601.CB_CARDHOLDER_NAME,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+MAS,_,CLMST,"CLMST.C1NLTY
+CLMST.C1NM4","Entity Type
+Name 1
+Name 2",Name_Rule_2_MAS,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,CLMST,"CLMST.C1NLTY,CLMST.C1NM4",,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_LEGAL_NAME","Entity Type
+Name",Name_Rule_2_MRX,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_LEGAL_NAME,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldName","Entity Type
+Name",Name_Rule_2_POR,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,tblCustomers,tblCustomers.fldName,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_CUSM_NAME","Entity Type
+Name",Name_Rule_2_TCS,Customer Name,"Name valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,MIS004,MIS004.MI004_CUSM_NAME,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUSTOMER_NAME","Entity Type
+Name",Name_Rule_2_Tomswin,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,TMS_Customers,TMS_Customers.CUSTOMER_NAME,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+WMS,_,DL_CIF,DL_CIF.CIF_CLEINT_NAME,"Entity Type = IDV
+Name",Name_Rule_2_WMS,Customer Name,"Valid value are (A to Z & a to z) & allowed symbols only are ""@"", ""_"", "" ' "", ""/"", ""."", ""("", "")""",,DL_CIF,DL_CIF.CIF_CLEINT_NAME,,,,,Regex: allow specific symbols with Uppercase/lowercase alphabets with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNAM","Entity Type
+Name",Name_Rule_3_AMS,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,FLACM,FLACM.FLMNAM,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFNA1 
+CFMAST.CFNA1A","Entity Type
+Name Line 1
+Name Line 2",Name_Rule_3_CLS,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,CFMAST,"CFMAST.CFNA1,CFMAST.CFNA1A",,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_ENTITY_TYP
+FTDWD613.CO_COMPANY_NAME","Entity Type
+Name",Name_Rule_3_CPR,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,FTDWD613,FTDWD613.CO_COMPANY_NAME,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1NM4","Entity Type
+Name 1
+Name 2",Name_Rule_3_EAM,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,CLMST,CLMST.C1NM4,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+MAS,_,CLMST,"CLMST.C1NLTY
+CLMST.C1NM4","Entity Type
+Name 1
+Name 2",Name_Rule_3_MAS,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,CLMST,CLMST.C1NM4,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_LEGAL_NAME","Entity Type
+Legal Name
+Long Name",Name_Rule_3_MRX,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_LEGAL_NAME,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldName","Entity Type
+Name",Name_Rule_3_POR,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,tblCustomers,tblCustomers.fldName,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_CUSM_NAME","Entity Type
+Name",Name_Rule_3_TCS,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,MIS004,MIS004.MI004_CUSM_NAME,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUSTOMER_NAME","Entity Type
+Name",Name_Rule_3_Tomswin,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,TMS_Customers,TMS_Customers.CUSTOMER_NAME,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+WMS,_,DL_CIF,DL_CIF.CIF_CLEINT_NAME,"Entity Type = ORG
+Name",Name_Rule_3_WMS,Customer Name,"No special character allowed except for ""@"", ""_"", "" ' "", ""/"", ""."", "","" ,""("","")"",""&"", alpha & numeric characters are allowed",,DL_CIF,DL_CIF.CIF_CLEINT_NAME,,,,,Regex: Cannot allow special characters except for specific symbols and alphanumeric with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMBRN+FLMPRD+FLMLA#+FLMCHK","Entity Type
+Customer Number",Customer_No_Rule_1_AMS,Customer Number,<> blank,,FLACM,"FLACM.FLMBRN,FLACM.FLMPRD,FLACM.FLMLA#,FLACM.FLMCHK",,,,,Cannot be blank
+CLS,_,"LNMAST
+CFMAST
+LNDHIS","CFMAST.CFCOD2
+LNDHIS.LHDORC
+LNMAST.CIFNO","Entity Type
+Customer Number",Customer_No_Rule_1_CLS,Customer Number,Cust Num <> blank,,"LNDHIS,LNMAST",LNMAST.CIFNO,,,,,Cannot be blank
+CPR,_,FTDWM601,FTDWM601.CB_CIF_NO,"Entity Type
+Customer Number",Customer_No_Rule_1_CPR,Customer Number,<> blank,,FTDWM601,FTDWM601.CB_CIF_NO.CB_CIF_NO,,,,,Cannot be blank
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1CD","Entity Type
+Customer Number",Customer_No_Rule_1_EAM,Customer Number,<> blank,,CLMST,CLMST.C1CD,,,,,Cannot be blank
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1CD","Entity Type
+Customer Number",Customer_No_Rule_1_MAS,Customer Number,<> blank,,CLMST,CLMST.C1CD,,,,,Cannot be blank
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ID
+TRN_CPDF_DBF.M_LABEL","Entity Type
+Customer Number",Customer_No_Rule_1_MRX,Customer Number,<> blank,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_LABEL,,,,,Cannot be blank
+TCS,Loan and Deposit,MIS004,MIS004.MI004_ACCT_NO,Customer Number,Customer_No_Rule_1_TCS,Customer Number,Cust Num <> blank,,MIS004,MIS004.MI004_ACCT_NO,,,,,Cannot be blank
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1
+FLACM.FLMDB2
+FLACM.FLMNI1
+FLACM.FLMNI2
+FLACM.FLMTT1
+FLACM.FLMTT2","Entity Type
+Date of Birth
+ID Type = New IC
+Id Number",DOB_Rule_1_AMS,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (06) available then no validation needed","DOB/ ID type/ID Number detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB/ ID type/ID Number
+
+Id type is stored in FLMTT1/FLMTT2 in char 3_4 (it's a shared field in source system)",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",FLACM,"FLACM.FLMNI1,FLACM.FLMNI2,FLACM.FLMTT1,FLACM.FLMTT2",,,Birthdate specific check with NRIC with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6
+CFMAST.CFSSCD
+CFMAST.CFSSNO","Entity Type
+Date of Birth
+Id Type = 'AMK'
+Id Number",DOB_Rule_1_CLS,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits 
+Note: if New ic (AMK or APR) no validation needed",,CFMAST,CFMAST.CFBIR6,CFMAST,"CFMAST.CFSSCD,CFMAST.CFSSNO",,,Birthdate specific check with NRIC with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY _TYPE 
+FTDWM601.CB_DOB
+FTDWM601.CB_NEW_IC_NO","Entity Type
+Date of Birth
+Id Number = New IC",DOB_Rule_1_CPR,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,FTDWM601,FTDWM601.CB_DOB,FTDWM601,FTDWM601.CB_NEW_IC_NO,,,Birthdate specific check with NRIC with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT
+CLMST.C1IDTP
+CLMST.C1ICP#","Entity Type
+Date of Birth
+Id Type
+Id Number = New IC",DOB_Rule_1_EAM,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,CLMST,CLMST.C1BHDT,CLMST,"CLMST.C1IDTP,CLMST.C1ICP#",,,Birthdate specific check with NRIC with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.MC1TYP
+CLMST.C1ICP#
+CLMST.C1BHDT","Entity Type
+Id Type = New IC (0006)
+Id Number
+Date of Birth",DOB_Rule_1_MAS,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,CLMST,CLMST.C1BHDT,CLMST,"CLMST.MC1TYP,CLMST.C1ICP#",,,Birthdate specific check with NRIC with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_IC","Entity Type
+Date of Birth
+Id Type = New IC
+Id Number = New IC",DOB_Rule_1_MRX,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ID_TYPE,TRN_CPDF_DBF.M_CUST_IC",,,Birthdate specific check with NRIC with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldDOB
+tblCustomers.fldNewNRICNum","Entity Type
+Date of Birth
+Id Number = New IC",DOB_Rule_1_POR,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,tblCustomers,tblCustomers.fldDOB,tblCustomers,tblCustomers.fldNewNRICNum,,,Birthdate specific check with NRIC with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_BIRTH_DATE_1
+MIS004.MI004_ID_TYPE
+MIS004.MI004_CUSVDD_ID1","Entity Type
+Date of Birth
+Id type = New IC
+Id Number",DOB_Rule_1_TCS,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,MIS004,MIS004.MI004_BIRTH_DATE_1,MIS004,"MIS004.MI004_ID_TYPE,MIS004.MI004_CUSVDD_ID1",,,Birthdate specific check with NRIC with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.DATE_OF_BIRTH
+TMS_Customers.CUS_ID_TYP","Entity Type
+Date of Birth
+Id Number = New IC",DOB_Rule_1_Tomswin,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,TMS_Customers,TMS_Customers.DATE_OF_BIRTH,TMS_Customers,TMS_Customers.CUS_ID_TYP,,,Birthdate specific check with NRIC with Entity Type
+WMS,_,DL_CIF,"DL_CIF.CIF_DOB
+DL_CIF.CIF_CLIENT_ID","Entity Type = IDV
+Date of Birth
+Id Number = New IC",DOB_Rule_1_WMS,Date Of Birth,"BirthDt <> 'BLANK' & should cross checked against NRIC first 6 digits
+Note: if New ic (0006) unavailable, then no validation needed",,DL_CIF,DL_CIF.CIF_DOB,DL_CIF,DL_CIF.CIF_CLIENT_ID,,,Birthdate specific check with NRIC with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1/FLMDB2","Entity Type
+Date of Birth",DOB_Rule_2_AMS,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,"DOB detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",,,,,Date must be minimum date maintained 01/01/1900
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6","Entity Type
+Date of Birth",DOB_Rule_2_CLS,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,CFMAST,CFMAST.CFBIR6,,,,,Date must be minimum date maintained 01/01/1900
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_DOB","Entity Type
+Date of Birth",DOB_Rule_2_CPR,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,FTDWM601,FTDWM601.CB_DOB,,,,,Date must be minimum date maintained 01/01/1900
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date of Birth",DOB_Rule_2_EAM,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,CLMST,CLMST.C1BHDT,,,,,Date must be minimum date maintained 01/01/1900
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date of Birth",DOB_Rule_2_MAS,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,CLMST,CLMST.C1BHDT,,,,,Date must be minimum date maintained 01/01/1900
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE","Entity Type
+Date of Birth",DOB_Rule_2_MRX,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,,,,,Date must be minimum date maintained 01/01/1900
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldDOB","Entity Type
+Date of Birth",DOB_Rule_2_POR,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,tblCustomers,tblCustomers.fldDOB,,,,,Date must be minimum date maintained 01/01/1900
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_BIRTH_DATE_1","Entity Type
+Date of Birth",DOB_Rule_2_TCS,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Date must be minimum date maintained 01/01/1900
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.DATE_OF_BIRTH","Entity Type
+Date of Birth",DOB_Rule_2_Tomswin,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,TMS_Customers,TMS_Customers.DATE_OF_BIRTH,,,,,Date must be minimum date maintained 01/01/1900
+WMS,_,DL_CIF,DL_CIF.CIF_DOB,"Entity Type = IDV
+Date of Birth",DOB_Rule_2_WMS,Date Of Birth,Minimum Dt for DOB maintained by BNM is 01/01/1900.,,DL_CIF,DL_CIF.CIF_DOB,,,,,Date must be minimum date maintained 01/01/1900
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1/FLMDB2","Entity Type
+Date of Birth",DOB_Rule_3_AMS,Date Of Birth,Dt <> future Dt from St&ard current Dt,"DOB detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",,,,,"Date cannot be future date from current date, some with Entity Type"
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6","Entity Type
+Date of Birth",DOB_Rule_3_CLS,Date Of Birth,Dt <> future Dt from St&ard current Dt,,CFMAST,CFMAST.CFBIR6,,,,,"Date cannot be future date from current date, some with Entity Type"
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_DOB","Entity Type
+Date of Birth",DOB_Rule_3_CPR,Date Of Birth,Dt <> future Dt from St&ard current Dt,,FTDWM601,FTDWM601.CB_DOB,,,,,"Date cannot be future date from current date, some with Entity Type"
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date of Birth",DOB_Rule_3_EAM,Date Of Birth,Dt <> future Dt from St&ard current Dt,,CLMST,CLMST.C1BHDT,,,,,"Date cannot be future date from current date, some with Entity Type"
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date of Birth",DOB_Rule_3_MAS,Date Of Birth,Dt <> future Dt from St&ard current Dt,,CLMST,CLMST.C1BHDT,,,,,"Date cannot be future date from current date, some with Entity Type"
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE","Entity Type
+Date of Birth",DOB_Rule_3_MRX,Date Of Birth,Dt <> future Dt from St&ard current Dt,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,,,,,"Date cannot be future date from current date, some with Entity Type"
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldDOB","Entity Type
+Date of Birth",DOB_Rule_3_POR,Date Of Birth,Dt <> future Dt from St&ard current Dt,,tblCustomers,tblCustomers.fldDOB,,,,,"Date cannot be future date from current date, some with Entity Type"
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_BIRTH_DATE_1","Entity Type
+Date of Birth",DOB_Rule_3_TCS,Date Of Birth,Dt <> future Dt,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,"Date cannot be future date from current date, some with Entity Type"
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.DATE_OF_BIRTH","Entity Type
+Date of Birth",DOB_Rule_3_Tomswin,Date Of Birth,Dt <> future Dt from St&ard current Dt,,TMS_Customers,TMS_Customers.DATE_OF_BIRTH,,,,,"Date cannot be future date from current date, some with Entity Type"
+WMS,_,DL_CIF,DL_CIF.CIF_DOB,"Entity Type = IDV
+Date of Birth",DOB_Rule_3_WMS,Date Of Birth,Dt <> future Dt from St&ard current Dt,,DL_CIF,DL_CIF.CIF_DOB,,,,,"Date cannot be future date from current date, some with Entity Type"
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1
+FLACM.FLMDB2","Entity Type
+Date of Birth",DOB_Rule_4 _AMS,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,"DOB detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",,,,,Standard date validation rules must follow source date format with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6","Entity Type
+Date of Birth",DOB_Rule_4 _CLS,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,CFMAST,CFMAST.CFBIR6,,,,,Standard date validation rules must follow source date format with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_DOB","Entity Type
+Date of Birth",DOB_Rule_4 _CPR,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,FTDWM601,FTDWM601.CB_DOB,,,,,Standard date validation rules must follow source date format with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date of Birth",DOB_Rule_4 _EAM,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,CLMST,CLMST.C1BHDT,,,,,Standard date validation rules must follow source date format with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date of Birth",DOB_Rule_4 _MAS,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,CLMST,CLMST.C1BHDT,,,,,Standard date validation rules must follow source date format with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE","Entity Type
+Date of Birth",DOB_Rule_4 _MRX,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,,,,,Standard date validation rules must follow source date format with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldDOB","Entity Type
+Date of Birth",DOB_Rule_4 _POR,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,tblCustomers,tblCustomers.fldDOB,,,,,Standard date validation rules must follow source date format with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_BIRTH_DATE_1","Entity Type
+Date of Birth",DOB_Rule_4 _TCS,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Standard date validation rules must follow source date format with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.DATE_OF_BIRTH","Entity Type
+Date of Birth",DOB_Rule_4 _Tomswin,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,TMS_Customers,TMS_Customers.DATE_OF_BIRTH,,,,,Standard date validation rules must follow source date format with Entity Type
+WMS,_,DL_CIF,DL_CIF.CIF_DOB,"Entity Type = IDV
+Date of Birth",DOB_Rule_4 _WMS,Date Of Birth,St&ard Dt validation rules must follow SRC Dt format,,DL_CIF,DL_CIF.CIF_DOB,,,,,Standard date validation rules must follow source date format with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1
+FLACM.FLMDB2","Entity Type
+Date Of Registration",DOR_Rule_1_AMS,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,"DOB detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",,,,,Cannot be blank and follow source date format with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6","Entity Type
+Date Of Registration",DOR_Rule_1_CLS,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,CFMAST,CFMAST.CFBIR6,,,,,Cannot be blank and follow source date format with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_ENTITY_TYP
+FTDWD613.CO_REGISTRATION_DATE","Entity Type
+Date Of Registration",DOR_Rule_1_CPR,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,FTDWD613,FTDWD613.CO_REGISTRATION_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date Of Registration",DOR_Rule_1_EAM,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,CLMST,CLMST.C1BHDT,,,,,Cannot be blank and follow source date format with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date Of Registration",DOR_Rule_1_MAS,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,CLMST,CLMST.C1BHDT,,,,,Cannot be blank and follow source date format with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE","Entity Type
+Date Of Registration",DOR_Rule_1_MRX,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldIncorporationDate","Entity Type
+Date Of Registration",DOR_Rule_1_POR,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,tblCustomers,tblCustomers.fldIncorporationDate,,,,,Cannot be blank and follow source date format with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_BIRTH_DATE_1","Entity Type
+Date Of Registration",DOR_Rule_1_TCS,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Cannot be blank and follow source date format with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.INCORPORATION_DATE","Entity Type
+Date Of Registration",DOR_Rule_1_Tomswin,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,TMS_Customers,TMS_Customers.INCORPORATION_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+WMS,_,DL_CIF,DL_CIF.CIF_DOB,"Entity Type = ORG
+Date Of Registration",DOR_Rule_1_WMS,Date Of Registration,Dt Of Reg <> 'BLANK' & must follow SRC Dt format,,DL_CIF,DL_CIF.CIF_DOB,,,,,Cannot be blank and follow source date format with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1
+FLACM.FLMDB2","Entity Type
+Date Of Registration",DOR_Rule_2_AMS,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,"DOB detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",,,,,Standard date validation rules must follow source date format with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6","Entity Type
+Date Of Registration",DOR_Rule_2_CLS,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,CFMAST,CFMAST.CFBIR6,,,,,Standard date validation rules must follow source date format with Entity Type
+CPR,_,FTDWD613,"FTDWD613.CO_ENTITY_TYP
+FTDWD613.CO_REGISTRATION_DATE","Entity Type
+Date Of Registration",DOR_Rule_2_CPR,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,FTDWD613,FTDWD613.CO_REGISTRATION_DATE,,,,,Standard date validation rules must follow source date format with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date Of Registration",DOR_Rule_2_EAM,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,CLMST,CLMST.C1BHDT,,,,,Standard date validation rules must follow source date format with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date Of Registration",DOR_Rule_2_MAS,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,CLMST,CLMST.C1BHDT,,,,,Standard date validation rules must follow source date format with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE","Entity Type
+Date Of Registration",DOR_Rule_2_MRX,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,,,,,Standard date validation rules must follow source date format with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldIncorporationDate","Entity Type
+Date Of Registration",DOR_Rule_2_POR,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,tblCustomers,tblCustomers.fldIncorporationDate,,,,,Standard date validation rules must follow source date format with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_BIRTH_DATE_1","Entity Type
+Date Of Registration",DOR_Rule_2_TCS,Date Of Registration,St&ard Dt validation rules must follow SRC Dt format,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,Standard date validation rules must follow source date format with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMDB1
+FLACM.FLMDB2","Entity Type
+Date Of Registration",DOR_Rule_3_AMS,Date Of Registration,Dt <> future Dt from St&ard current Dt,"DOB detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for DOB",FLACM,"FLACM.FLMDB1,FLACM.FLMDB2",,,,,"Date cannot be future date from current date, some with Entity Type"
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFBIR6","Entity Type
+Date Of Registration",DOR_Rule_3_CLS,Date Of Registration,Dt <> future Dt from St&ard current Dt,,CFMAST,CFMAST.CFBIR6,,,,,"Date cannot be future date from current date, some with Entity Type"
+CPR,_,FTDWD613,"FTDWD613.CO_ENTITY_TYP
+FTDWD613.CO_REGISTRATION_DATE","Entity Type
+Date Of Registration",DOR_Rule_3_CPR,Date Of Registration,Dt <> future Dt from St&ard current Dt,,FTDWD613,FTDWD613.CO_REGISTRATION_DATE,,,,,"Date cannot be future date from current date, some with Entity Type"
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date Of Registration",DOR_Rule_3_EAM,Date Of Registration,Dt <> future Dt from St&ard current Dt,,CLMST,CLMST.C1BHDT,,,,,"Date cannot be future date from current date, some with Entity Type"
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1BHDT","Entity Type
+Date Of Registration",DOR_Rule_3_MAS,Date Of Registration,Dt <> future Dt from St&ard current Dt,,CLMST,CLMST.C1BHDT,,,,,"Date cannot be future date from current date, some with Entity Type"
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_BRD_DATE","Entity Type
+Date Of Registration",DOR_Rule_3_MRX,Date Of Registration,Dt <> future Dt from St&ard current Dt,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_BRD_DATE,,,,,"Date cannot be future date from current date, some with Entity Type"
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldIncorporationDate","Entity Type
+Date Of Registration",DOR_Rule_3_POR,Date Of Registration,Dt <> future Dt from St&ard current Dt,,tblCustomers,tblCustomers.fldIncorporationDate,,,,,"Date cannot be future date from current date, some with Entity Type"
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_BIRTH_DATE_1","Entity Type
+Date Of Registration",DOR_Rule_3_TCS,Date Of Registration,Dt <> future Dt,,MIS004,MIS004.MI004_BIRTH_DATE_1,,,,,"Date cannot be future date from current date, some with Entity Type"
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.INCORPORATION_DATE","Entity Type
+Date Of Registration",DOR_Rule_3_Tomswin,Date Of Registration,Dt <> future Dt from St&ard current Dt,,TMS_Customers,TMS_Customers.INCORPORATION_DATE,,,,,"Date cannot be future date from current date, some with Entity Type"
+WMS,_,DL_CIF,DL_CIF.CIF_DOB,"Entity Type = ORG
+Date Of Registration",DOR_Rule_3_WMS,Date Of Registration,Dt <> future Dt from St&ard current Dt,,DL_CIF,DL_CIF.CIF_DOB,,,,,"Date cannot be future date from current date, some with Entity Type"
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_COMPANY_NAME
+FTDWM601.CB_EMP_TYPE
+FTDWM601.CB_OCCUPN
+FTDWM601.CB_EMP_SEC","Entity Type
+Employment Name
+Employment Type
+Occupation code
+Employment sector",Employer’s_Name_Rule_1_CPR,Employer’s Name,"Employer name must hv at least 3 chars & not consist of wholly numeric or wholly symbol
+If Empl type <> 200 or 120 or 003 or 116 &
+Occupation cd <> 'Blank' &
+Occupation cd <> U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999 & 
+Empl Sec <> 'Blank'",,FTDWM601,FTDWM601.CB_COMPANY_NAME,FTDWM601,"FTDWM601.CB_EMP_TYPE,FTDWM601.CB_OCCUPN,FTDWM601.CB_EMP_SEC",,,Multiple regex check when column 1 not equals some values and column 2 not equals some values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldEmployer
+tblCustomers.fldEmploymentType
+tblCustomers.fldOccupation
+tblCustomers.fldEmploymentSector","Entity Type
+Employment Name
+Employment Type
+Occupation code
+Employment sector",Employer’s_Name_Rule_1_POR,Employer’s Name,"Employer name must hv at least 3 chars & not consist of wholly numeric or wholly symbol
+If Empl type <> 200 or 120 or 003 or 116 &
+Occupation cd <> 'Blank' &
+Occupation cd <> U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999 & 
+Empl Sec <> 'Blank'",,tblCustomers,tblCustomers.fldEmployer,tblCustomers,"tblCustomers.fldEmploymentType,tblCustomers.fldOccupation,tblCustomers.fldEmploymentSector",,,Multiple regex check when column 1 not equals some values and column 2 not equals some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMEM1
+FLACM.FLMEM2
+FLACM.FLMOC1
+FLACM.FLMOC2","Entity Type
+Employment Name
+Occupation",Employer’s_Name_Rule_2_AMS,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999","Employer Name/Occupation detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for Employer Name/Occupation",FLACM,"FLACM.FLMEM1,FLACM.FLMEM2",FLACM,"FLACM.FLMOC1,FLACM.FLMOC2",,,Equals some values when another column = some values
+CLS,_,"CFMAST
+CFEMPH","CFMAST.CFCOD2
+CFEMPH.CFENA1
+CFEMPH.CFEJCD","Entity Type
+Employment Name
+Occupation code",Employer’s_Name_Rule_2_CLS,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999",,CFEMPH,CFEMPH.CFENA1,CFEMPH,CFEMPH.CFEJCD,,,Equals some values when another column = some values
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_COMPANY_NAME
+FTDWM601.CB_OCCUPN","Entity Type
+Employment Name
+Occupation code",Employer’s_Name_Rule_2_CPR,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999",,FTDWM601,FTDWM601.CB_COMPANY_NAME,FTDWM601,FTDWM601.CB_OCCUPN,,,Equals some values when another column = some values
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.MC1EMP 
+CLMST.MC1OCC","Entity Type
+Employment Name
+Occupation code",Employer’s_Name_Rule_2_MAS,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999",,CLMST,CLMST.MC1EMP ,CLMST,CLMST.MC1OCC,,,Equals some values when another column = some values
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_EMP_NAME
+TRN_CPDF_DBF.M_OCCUPATION","Entity Type
+Employment Name
+Occupation code",Employer’s_Name_Rule_2_MRX,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMP_NAME,TRN_CPDF_DBF,TRN_CPDF_DBF.M_OCCUPATION,,,Equals some values when another column = some values
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldEmployer
+tblCustomers.fldOccupation","Entity Type
+Employment Name
+Occupation code",Employer’s_Name_Rule_2_POR,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999",,tblCustomers,tblCustomers.fldEmployer,tblCustomers,tblCustomers.fldOccupation,,,Equals some values when another column = some values
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_EMPLOYER_NAME
+MIS004.MI004_OCCUPATION_CODE","Entity Type
+Employer Name
+Occupation code",Employer’s_Name_Rule_2_TCS,Employer’s Name,"Employer name (case insensitive) can be NA, N/A, N.A, NULL, NIL or Blank If Occupation cd = U001, U002, U003, U00X,6503, 6504, 6502, 6506 & 6999",,MIS004,MIS004.MI004_EMPLOYER_NAME,MIS004,MIS004.MI004_OCCUPATION_CODE,,,Equals some values when another column = some values
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_EMP_SEC
+FTDWM601.CB_EMP_TYPE","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_1_CPR,Employment Sector,Empl Sec <> blank if Empl Type hv value EXCEPT for Empl type '200' or '120' or '116',,FTDWM601,FTDWM601.CB_EMP_SEC,FTDWM601,FTDWM601.CB_EMP_TYPE,,,"Cannot be blank if another column has value other than some values, otherwise blank"
+MAS,_,"CLMST
+MCGD1","CLMST.C1TYPE 
+MCGD1.MC1ESC
+MCGD1.MC1ETY","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_1_MAS,Employment Sector,Empl Sec <> blank if Empl Type hv value EXCEPT for Empl type '200' or '120' or '116',,MCGD1,MCGD1.MC1ESC,MCGD1,MCGD1.MC1ETY,,,"Cannot be blank if another column has value other than some values, otherwise blank"
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldEmploymentSector
+tblCustomers.fldEmploymentType","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_1_POR,Employment Sector,Empl Sec <> blank if Empl Type hv value EXCEPT for Empl type '200' or '120' or '116',,tblCustomers,tblCustomers.fldEmploymentSector,tblCustomers,tblCustomers.fldEmploymentType,,,"Cannot be blank if another column has value other than some values, otherwise blank"
+CLS,_,"CFMAST
+CFEMPH","CFMAST.CFCOD2
+CFEMPH.CFESEC
+CFEMPH.CFETCD","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_2_CLS,Employment Sector,"Empl Sec can be 88888 (Not Applicable) or Blank, if Empl type = to '200' or '120' or '116'",,CFEMPH,CFEMPH.CFESEC,CFEMPH,CFEMPH.CFETCD,,,Equals some values when another column = some values
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_EMPLOYMENT_SECTOR
+MIS004.MI004_EMPLOYMENT_TYPE","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_2_TCS,Employment Sector,"Empl Sec can be 88888 (Not Applicable) or Blank, if Empl type = to '200', '120' or '003' or '116'",,MIS004,MIS004.MI004_EMPLOYMENT_SECTOR,MIS004,MIS004.MI004_EMPLOYMENT_TYPE,,,Equals some values when another column = some values
+CLS,_,"CFMAST
+CFEMPH","CFMAST.CFCOD2
+CFEMPH.CFESEC","Entity Type
+Employment Sector",Employment_Sector_Rule_3_CLS,Employment Sector,"Empl Sec <> = ""S1000"" (Other Service Activities)",,CFEMPH,CFEMPH.CFESEC,,,,,Cannot equals to value with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_EMP_SEC
+FTDWM601.CB_EMP_TYPE","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_3_CPR,Employment Sector,"Empl Sec can be 88888 (Not Applicable) or Blank, if Empl type = to '200' or '120' or '116'",,FTDWM601,FTDWM601.CB_EMP_SEC,FTDWM601,FTDWM601.CB_EMP_TYPE,,,Equals some values when another column = some values
+MAS,_,"CLMST
+MCGD1","CLMST.C1TYPE 
+MCGD1.MC1ESC
+MCGD1.MC1ETY","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_3_MAS,Employment Sector,"Empl Sec can be 88888 (Not Applicable) or Blank, if Empl type = to '200' or '120' or '116'",,MCGD1,MCGD1.MC1ESC,MCGD1,MCGD1.MC1ETY,,,Equals some values when another column = some values
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_EMP_SECTOR
+TRN_CPDF_DBF.M_EMP_TYPE","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_3_MRX,Employment Sector,"Empl Sec can be 88888 (Not Applicable) or Blank, if Empl type = to '200' or '120' or '116'",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMP_SECTOR,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMP_TYPE,,,Equals some values when another column = some values
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldEmploymentSector
+tblCustomers.fldEmploymentType","Entity Type
+Employment Sector
+Employment Type",Employment_Sector_Rule_3_POR,Employment Sector,"Empl Sec can be 88888 (Not Applicable) or Blank, if Empl type = to '200' or '120' or '116'",,tblCustomers,tblCustomers.fldEmploymentSector,tblCustomers,tblCustomers.fldEmploymentType,,,Equals some values when another column = some values
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_EMPLOYMENT_SECTOR","Entity Type
+Employment Sector",Employment_Sector_Rule_3_TCS,Employment Sector,"Empl Sec <> = ""S1000"" (Other Service Activities)",,MIS004,MIS004.MI004_EMPLOYMENT_SECTOR,,,,,Cannot equals to value with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMTT1
+FLACM.FLMTT2","Entity Type
+Employment Sector",Employment_Sector_Rule_4_AMS,Employment Sector,"Empl Sec <> = ""S1000"" (Other Service Activities)","Employment Sector detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for Employment Sector
+
+Employment Sector shared field FLMTT1/FLMTT2 at char 8_12",FLACM,"FLACM.FLMTT1,FLACM.FLMTT2",,,,,Cannot equals to value with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_EMP_SEC","Entity Type
+Employment Sector",Employment_Sector_Rule_4_CPR,Employment Sector,"Empl Sec <> = ""S1000"" (Other Service Activities)",,FTDWM601,FTDWM601.CB_EMP_SEC,,,,,Cannot equals to value with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_EMP_SECTOR","Entity Type
+Employment Sector",Employment_Sector_Rule_4_MRX,Employment Sector,Empl Sec <> = S1000_Other Service Activities,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_EMP_SECTOR,,,,,Cannot equals to value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldEmploymentSector","Entity Type
+Employment Sector",Employment_Sector_Rule_4_POR,Employment Sector,"Empl Sec <> = ""S1000"" (Other Service Activities)",,tblCustomers,tblCustomers.fldEmploymentSector,,,,,Cannot equals to value with Entity Type
+AMS,_,FLACM,FLACM.FLMBGC,Entity Type,EntTyp_Rule_1_AMS,Entity Type,Entity Type <> BLANK,,FLACM,FLACM.FLMBGC,,,,,Cannot be blank
+CLS,_,CFMAST,CFMAST.CFCOD2,Entity Type,EntTyp_Rule_1_CLS,Entity Type,Entity Type <> BLANK,,CFMAST,CFMAST.CFCOD2,,,,,Cannot be blank
+CPR,_,"FTDWM601
+FTDWD613","FTDWM601.CB_ENTITY_TYPE
+FTDWD601.CB_ENTITY_TYPE
+FTDWD613.CO_ENTITY_TYP",Entity Type,EntTyp_Rule_1_CPR,Entity Type,Entity Type <> BLANK,,"FTDWM601
+FTDWD613","FTDWD601.CB_ENTITY_TYPE
+FTDWD613.CO_ENTITY_TYP",,,,,Cannot be blank
+EAM,_,CLMST,CLMST.C1TYPE,Entity Type,EntTyp_Rule_1_EAM,Entity Type,Entity Type <> BLANK,,CLMST,CLMST.C1TYPE,,,,,Cannot be blank
+MAS,_,CLMST,CLMST.C1TYPE,Entity Type,EntTyp_Rule_1_MAS,Entity Type,Entity Type <> BLANK,,CLMST,CLMST.C1TYPE,,,,,Cannot be blank
+MRX,_,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CUST_TYPE,Entity Type,EntTyp_Rule_1_MRX,Entity Type,Entity Type <> BLANK,,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CUST_TYPE,,,,,Cannot be blank
+POR,_,tblCustomers,tblCustomers.fldEntityType,Entity Type,EntTyp_Rule_1_POR,Entity Type,Entity Type <> BLANK,,tblCustomers,tblCustomers.fldEntityType,,,,,Cannot be blank
+TCS,Loan and Deposit,MIS004,MIS004.MI004_CUSTOMER_TYPE,Entity Type,EntTyp_Rule_1_TCS,Entity Type,Entity Type <> BLANK,,MIS004,MIS004.MI004_CUSTOMER_TYPE,,,,,Cannot be blank
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.Company Code",Entity Type,EntTyp_Rule_1_Tomswin,Entity Type,Entity Type <> BLANK,,TMS_Customers,TMS_Customers.CUSTOMER_TYPE_CODE,,,,,Cannot be blank
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMGD1/FLMGD2
+FLACM.FLMNI1/FLMNI2
+FLACM.FLMTT1/FLMTT2","Entity Type
+Gender
+Id Type =New IC
+Id Number = New IC",Gender_Rule_2_AMS,Gender,If ID type = '06' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',"Gender/ID Type/ID Number detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for Gender/ID Type/ID Number
+
+Id type is stored in FLMTT1/FLMTT2 in char 3_4 (it's a shared field in source system)",FLACM,"FLACM.FLMGD1,FLACM.FLMGD2",FLACM,"FLACM.FLMNI1,FLACM.FLMNI2,FLACM.FLMTT1,FLACM.FLMTT2",,,Equals value A if column = value & last digit else value B with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFCSEX
+CFMAST.CFSSCD","Entity Type
+Gender
+Id Type =New IC",Gender_Rule_2_CLS,Gender,If ID type= 'AMK' or 'APR' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',,CFMAST,CFMAST.CFCSEX,CFMAST,CFMAST.CFSSCD,,,Equals value A if column = value & last digit else value B with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_SEX
+FTDWM601.CB_NEW_IC_NO
+FTDWM601.CB_NEW_ICNO_ID_TYPE","Entity Type
+Gender
+Id Type =New IC
+Id Number = New IC",Gender_Rule_2_CPR,Gender,If ID type = '0006' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',,FTDWM601,FTDWM601.CB_SEX,FTDWM601,"FTDWM601.CB_NEW_IC_NO,FTDWM601.CB_NEW_ICNO_ID_TYPE",,,Equals value A if column = value & last digit else value B with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_GENDER
+TRN_CPDF_DBF.M_ID_TYPE","Entity Type
+Gender
+Id Type =New IC",Gender_Rule_2_MRX,Gender,If ID type = '0006' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',,TRN_CPDF_DBF,TRN_CPDF_DBF.M_GENDER,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ID_TYPE,,,Equals value A if column = value & last digit else value B with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldGender
+tblCustomers.fldPrimeIdentificationType
+tblCustomers.fldNewNRICNum","Entity Type
+Gender
+Id Type =New IC",Gender_Rule_2_POR,Gender,If ID type = '0006' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',,tblCustomers,tblCustomers.fldGender,tblCustomers,"tblCustomers.fldPrimeIdentificationType,tblCustomers.fldNewNRICNum",,,Equals value A if column = value & last digit else value B with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_SEX_CODE
+MI004_ID_TYPE
+MI004_CUSVDD_ID1","Entity Type
+Gender
+Id Type =New IC",Gender_Rule_2_TCS,Gender,If ID type = '0006' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',,MIS004,"MI004_SEX_CODE
+",MIS004,"MI004_ID_TYPE,MI004_CUSVDD_ID1",,,Equals value A if column = value & last digit else value B with Entity Type
+WMS,_,DL_CIF,"DL_CIF.CIF_GENDER_CODE
+DL_CIF.CIF_ID_TYPE
+DL_CIF.CIF_CLIENT_ID","Entity Type = IDV
+Gender
+Id Type =New IC
+Id Number",Gender_Rule_2_WMS,Gender,If ID type = '1' (NRIC) & last digits is an odd Num then Gender must be 'Male' Else 'Female',,DL_CIF,DL_CIF.CIF_GENDER_CODE,DL_CIF,"DL_CIF.CIF_ID_TYPE,DL_CIF.CIF_CLIENT_ID",,,
+CLS,_,"CFMAST
+CFEMPH","CFMAST.CFCOD2
+CFEMPH.CFEICM
+CFEMPH.CFETCD
+CFEMPH.CFESEC","Entity Type
+Income
+Employment Type
+Employment Sector",Gross_Income_Rule_1_CLS,Gross Income,"Gross income <> 0.00 or 'BLANK"" If Empl type not = to 'Unemployed' 
+(120, 200 & 003) & Empl Sec <> Blank & Occupation <> Blank",,CFEMPH,CFEMPH.CFEICM,CFEMPH,"CFEMPH.CFETCD,CFEMPH.CFESEC",,,Cannot be zero or blank when some columns = values or not equals value with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_MTH_BASIC_SALARY
+FTDWM601.CB_EMP_TYPE","Entity Type
+Salary
+Employment Type",Gross_Income_Rule_1_CPR,Gross Income,"Gross income <> 0.00 or 'BLANK"" If Empl type not = to 'Unemployed' (120, 200, 116 & 003) & Empl Sec <> 'BLANK' & Occupation <> 'BLANK'",,FTDWM601,FTDWM601.CB_MTH_BASIC_SALARY,FTDWM601,FTDWM601.CB_EMP_TYPE,,,Cannot be zero or blank when some columns = values or not equals value with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_GROSS_INCOME
+TRN_CPDF_DBF.M_EMP_TYPE","Entity Type
+Gross Income
+Employment Type",Gross_Income_Rule_1_MRX,Gross Income,"Gross income <> 0.00 or 'BLANK"" If Empl type not = to 'Unemployed' (120, 200, 116 & 003) & Empl Sec <> 'BLANK' & Occupation <> 'BLANK'",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_GROSS_INCOME,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE,TRN_CPDF_DBF.M_EMP_TYPE",,,Cannot be zero or blank when some columns = values or not equals value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldGrossIncome
+tblCustomers.fldEmploymentType
+
+","Entity Type
+Gross Income
+Employment Type",Gross_Income_Rule_1_POR,Gross Income,"Gross income <> 0.00 or 'BLANK"" If Empl type not = to 'Unemployed' 
+(120, 200 & 003) & Empl Sec <> 'BLANK' & Occupation <> 'BLANK'",,tblCustomers,tblCustomers.fldGrossIncome,tblCustomers,"tblCustomers.fldEntityType,tblCustomers.fldEmploymentType",,,Cannot be zero or blank when some columns = values or not equals value with Entity Type
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_CUDD_TOT_INCOME
+MIS004.MI004_EMPLOYMENT_TYPE","Entity Type
+Income (yearly)
+Employment Type",Gross_Income_Rule_1_TCS,Gross Income,"Gross income <> 0.00 or 'BLANK"" If Empl type not = to 'Unemployed' (120, 200, 116 & 003) & Empl Sec <> 'BLANK' & Occupation <> 'BLANK'",,MIS004,MIS004.MI004_CUDD_TOT_INCOME,MIS004,"MIS004.MI004_CUSTOMER_TYPE,MIS004.MI004_EMPLOYMENT_TYPE",,,Cannot be zero or blank when some columns = values or not equals value with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC 
+FLACM.FLMNI1
+FLACM.FLMNI2
+FLACM.FLMTT1
+FLACM.FLMTT2","Entity Type
+Id Number 
+Id Type",IDNum_Rule_1_AMS,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',"ID type and ID number detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for ID type and ID number
+
+Id type is stored in FLMTT1/FLMTT2 in char 3_4 (it's a shared field in source system)",FLACM,"FLACM.FLMNI1,FLACM.FLMNI2
+",FLACM,"FLACM.FLMTT1,FLACM.FLMTT2",,,Cannot be blank or contain some values with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFSSNO
+CFMAST.CFSSCD","Entity Type
+Id Number 
+Id Type
+",IDNum_Rule_1_CLS,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,CFMAST,"CFMAST.CFSSNO
+",CFMAST,CFMAST.CFSSCD,,,Cannot be blank or contain some values with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY _TYPE
+FTDWM601.CB_POLICE_IC_NO
+FTDWM601.CB_ARMY_IC_NO
+FTDWM601.CB_BNM_ASG_ID
+FTDWM601.CB_OLD_IC_NO
+FTDWM601.CB_NEW_IC_NO
+FTDWM601.CB_PASSP_NO","Entity Type
+Id Number = All",IDNum_Rule_1_CPR,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,FTDWM601,"FTDWM601.CB_POLICE_IC_NO,FTDWM601.CB_ARMY_IC_NO,FTDWM601.CB_BNM_ASG_ID,FTDWM601.CB_OLD_IC_NO,FTDWM601.CB_NEW_IC_NO,FTDWM601.CB_PASSP_NO",,,,,Cannot be blank or contain some values with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.C1ICP#
+CLMST.MC1TYP","Entity Type
+Id Number 
+Id Type",IDNum_Rule_1_MAS,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,CLMST,CLMST.C1ICP#,CLMST,CLMST.MC1TYP,,,Cannot be blank or contain some values with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_IC","Entity Type
+Id Number 
+Id Type",IDNum_Rule_1_MRX,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CUST_IC,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ID_TYPE,,,Cannot be blank or contain some values with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldPrimeIdentificationType
+tblCustomers.fldNewNRICNum
+tblCustomers.fldOldNRICNum
+tblCustomers.fldBNMAssignedID
+tblCustomers.fldPassportNum","Entity Type
+Id Number = All
+Id Type = All",IDNum_Rule_1_POR,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,tblCustomers,"tblCustomers.fldNewNRICNum,tblCustomers.fldOldNRICNum,tblCustomers.fldBNMAssignedID,tblCustomers.fldPassportNum",tblCustomers,"tblCustomers.fldPrimeIdentificationType
+",,,Cannot be blank or contain some values with Entity Type
+TCS,Loan and Deposit,"MIS004,MIS015","MI004_CUSTOMER_TYPE
+MI004_ID_TYPE
+MI004_CUSVDD_ID1
+MI015_CUST_NO
+MI015_ID_TYPE  ","Entity Type
+Id Type = All
+Id Number
+Id number (maintainance history)
+Id type  (maintainance history)",IDNum_Rule_1_TCS,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,"MIS004,MIS015","MIS004.MI004_CUSVDD_ID1,MIS015.MI015_CUST_NO","MIS004,MIS015","MIS004.MI004_ID_TYPE,MIS015.MI015_ID_TYPE ",,,Cannot be blank or contain some values with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUS_ID_TYP","Entity Type
+Id Number = All
+Id Type = All",IDNum_Rule_1_Tomswin,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,TMS_Customers,TMS_Customers.CUS_ID_TYP,,,,,Cannot be blank or contain some values with Entity Type
+WMS,_,DL_CIF,"DL_CIF.CIF_CLIENT_ID
+DL_CIF.CIF_ID_TYPE","Id Number 
+Id Type",IDNum_Rule_1_WMS,ID Number,Id Type & Identification Num <> BLANK or contain 'DUMMY' or 'dummy' or 'Dummy',,DL_CIF,DL_CIF.CIF_CLIENT_ID,DL_CIF,DL_CIF.CIF_ID_TYPE,,,Cannot be blank or contain some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNP1/FLMNP2
+FLACM.FLMNI1/FLMNI2
+FLACM.FLMTT1/FLMTT2","Entity Type
+Nationality
+Id Type = New IC
+Id Number = New IC",IDNum_Rule_2_AMS,ID Number,Id type = to NRIC Num (06) then Citizen must be 'MY',"Nationality/ID type/ID Number detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for Nationality/ID type/ID Number
+
+Id type is stored in FLMTT1/FLMTT2 in char 3_4 (it's a shared field in source system)",FLACM,"FLACM.FLMNI1,FLACM.FLMNI2",FLACM,"FLACM.FLMNP1,FLACM.FLMNP2,FLACM.FLMNI1,FLACM.FLMNI2,FLACM.FLMTT1,FLACM.FLMTT2",,,Equals value if another column = value with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFSSNO
+CFMASTCFSSCD","Entity Type
+Id Number 
+Id Type
+",IDNum_Rule_2_CLS,ID Number,"Id type = to NRIC No (AMK, APR) then Citizen must be MY",,CFMAST,CFMAST.CFSSCD,CFMAST,CFMAST.CFSSNO,,,Equals value if another column = value with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY_TYPE
+FTDWM601.CB_NEW_ICNO
+FTDWM601.CB_NEW_ICNO_ID_TYPE","Entity Type
+Id Type = New IC
+Id Number = New IC",IDNum_Rule_2_CPR,ID Number,Id type = to NRIC (0006) then Citizen must be 'MY',,FTDWM601,FTDWM601.CB_NEW_ICNO,FTDWM601,FTDWM601.CB_NEW_ICNO_ID_TYPE,,,Equals value if another column = value with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_IC","Entity Type
+Id Type = New IC
+Id Number = New IC",IDNum_Rule_2_MRX,ID Number,Id type = to NRIC (0006) then Citizen must be 'MY',,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CUST_IC,TRN_CPDF_DBF,TRN_CPDF_DBF.M_ID_TYPE,,,Equals value if another column = value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldPrimeIdentificationType
+tblCustomers.fldNewNRICNum
+tblCustomers.fldNationality
+","Entity Type
+Id Type = New IC
+Id Number = New IC
+Nationality",IDNum_Rule_2_POR,ID Number,Id type = to NRIC (0006) then Citizen must be 'MY',,tblCustomers,tblCustomers.fldNewNRICNum,tblCustomers,"tblCustomers.fldNationality,tblCustomers.fldPrimeIdentificationType",,,Equals value if another column = value with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_ID_TYPE
+MI004_CUSVDD_ID1","Entity Type
+Id Type = New IC
+Id Number = New IC",IDNum_Rule_2_TCS,ID Number,Id type = to NRIC (0006) then Citizen must be 'MY',,MIS004,MIS004.MI004_CUSVDD_ID1,MIS004,MIS004.MI004_ID_TYPE,,,Equals value if another column = value with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUS_ID_TYP
+TMS_Customers.NATIONALITY_CODE","Entity Type
+Id Type = New IC
+Id Number = New IC
+",IDNum_Rule_2_Tomswin,ID Number,Id type = to NRIC (0006) then Citizen must be 'MY',,TMS_Customers,TMS_Customers.NATIONALITY_CODE,TMS_Customers,TMS_Customers.CUS_ID_TYP,,,Equals value if another column = value with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1IDTP
+CLMST.C1ICP#","Entity Type
+Id Type
+ID number = 0006 (New IC), 0007 (Army Identity Card)",IDNum_Rule_3_EAM,ID Number,"If Ctzn='MY', then Id type must be NRIC Num (0006)",,CLMST,CLMST.C1ICP#,CLMST,CLMST.C1IDTP,,,Equals value if another column = value with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_IC
+TRN_CPDF_DBF.M_UDF_CNTRY","Entity Type
+Id Type/ID number = 0006 (New IC), 0007 (Army Identity Card)
+Nationality",IDNum_Rule_3_MRX,ID Number,"If Ctzn='MY', then Id type must be NRIC Num (0006)",,TRN_CPDF_DBF,TRN_CPDF_DBF.M_CUST_IC,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ID_TYPE,TRN_CPDF_DBF.M_UDF_CNTRY",,,Equals value if another column = value with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUS_ID_TYP
+TMS_Customers.NATIONALITY_CODE","Entity Type
+Id Type
+ID number = 0006 (New IC) 0007 (Army Identity Card)",IDNum_Rule_3_Tomswin,ID Number,"If Ctzn='MY', then Id type must be NRIC Num (0006)",,TMS_Customers,TMS_Customers.NATIONALITY_CODE,TMS_Customers,TMS_Customers.CUS_ID_TYP,,,Equals value if another column = value with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNI1
+FLACM.FLMNI2
+FLACM.FLMTT1
+FLACM.FLMTT2",Id Type / Id Number = All,IDNum_Rule_4_AMS,ID Number,"Cannot hv > 1 Cust with same ID Num/ID type
+GCIF ONLY","ID type/ ID numberr detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for ID type/ ID number
+
+Id type is stored in FLMTT1/FLMTT2 in char 3_4 (it's a shared field in source system)",FLACM,"FLACM.FLMBGC,FLACM.FLMNI1,FLACM.FLMNI2,FLACM.FLMTT1,FLACM.FLMTT2",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFSSNO
+CFMASTCFSSCD
+","Entity Type
+Id Number 
+Id Type
+
+",IDNum_Rule_4_CLS,ID Number,"Cannot hv > 1 Cust with same ID Num/ID type
+GCIF ONLY",,CFMAST,"CFMAST.CFSSNO,CFMASTCFSSCD",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+CPR,_,"FTDWM601
+FTDWD613","For Individual
+FTDWM601.CB_CUSTOMER_IDNO
+FTDWM601.CB_POLICE_IC_NO
+FTDWM601.CB_ARMY_IC_NO
+FTDWM601.CB_BNM_ASG_ID
+FTDWM601.CB_OLD_IC_NO
+FTDWM601.CB_NEW_IC_NO
+FTDWM601.CB_PASSP_NO
+FTDWM601.CB_NEW_ICNO_ID_TYPE
+FTDWM601.CB_OLD_ICNO_ID_TYPE
+FTDWM601.CB_PASSP_NO_ID_TYPE
+FTDWM601.CB_ARMY_IC_NO_ID_TYPE
+FTDWM601.CB_POLICE_IC_NO_ID_TYPE
+FTDWM601.CB_BNM_ASG_ID_TYPE
+
+For ORG
+FTDWD613.CO_CORPORATE_ID
+FTDWD613.CO_COMP_REG_NO
+FTDWD613.CO_COMP_REG_NO2
+FTDWD613.CO_BNM_ASG_ID_TYPE
+FTDWD613.CO_COMP_REG_NO_ID_TYPE
+FTDWD613.CO_COMP_REG_NO2_ID_TYPE",Id Type / Id Number = All,IDNum_Rule_4_CPR,ID Number,"Cannot hv > 1 Cust with same ID Num/ID type
+GCIF ONLY",,"FTDWM601,FTDWD613","FTDWM601.CB_CUSTOMER_IDNO,FTDWM601.CB_POLICE_IC_NO,FTDWM601.CB_ARMY_IC_NO,FTDWM601.CB_BNM_ASG_ID,FTDWM601.CB_OLD_IC_NO,FTDWM601.CB_NEW_IC_NO,FTDWM601.CB_PASSP_NO,FTDWM601.CB_NEW_ICNO_ID_TYPE,FTDWM601.CB_OLD_ICNO_ID_TYPE,FTDWM601.CB_PASSP_NO_ID_TYPE,FTDWM601.CB_ARMY_IC_NO_ID_TYPE,FTDWM601.CB_POLICE_IC_NO_ID_TYPE,FTDWM601.CB_BNM_ASG_ID_TYPE&&FTDWD613.CO_CORPORATE_ID,FTDWD613.CO_COMP_REG_NO,FTDWD613.CO_COMP_REG_NO2,FTDWD613.CO_BNM_ASG_ID_TYPE,FTDWD613.CO_COMP_REG_NO_ID_TYPE,FTDWD613.CO_COMP_REG_NO2_ID_TYPE",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+EAM,_,CLMST,"CLMST.C1IDTP
+CLMST.C1ICP#",Id Type / Id Number = All,IDNum_Rule_4_EAM,ID Number,"Cannot > 1 Cust with same ID Num & type
+FOR GCIF ONLY",,CLMST,"CLMST.C1IDTP,CLMST.C1ICP#",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+MAS,_,CLMST,"CLMST.MC1TYP
+CLMST.C1ICP#",Id Type / Id Number = All,IDNum_Rule_4_MAS,ID Number,"Cannot > 1 Cust with same ID Num & type
+FOR GCIF ONLY",,CLMST,"CLMST.C1IDTP,CLMST.C1ICP#",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_IC
+TRN_CPDF_DBF.M_CUST_REG",Id Type / Id Number = All,IDNum_Rule_4_MRX,ID Number,"Cannot hv > 1 Cust with same ID Num/ID type
+GCIF ONLY",,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ID_TYPE,TRN_CPDF_DBF.M_CUST_IC,TRN_CPDF_DBF.M_CUST_REG",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldPrimeIdentificationType
+tblCustomers.fldCompanyRegNum
+tblCustomers.fldNewNRICNum
+tblCustomers.fldOldNRICNum
+tblCustomers.fldBNMAssignedID
+tblCustomers.fldPassportNum",Id Type / Id Number = All,IDNum_Rule_4_POR,ID Number,"Cannot hv > 1 Cust with same ID Num/ID type
+GCIF ONLY",,tblCustomers,"tblCustomers.fldEntityType,tblCustomers.fldPrimeIdentificationType,tblCustomers.fldCompanyRegNum,tblCustomers.fldNewNRICNum,tblCustomers.fldOldNRICNum,tblCustomers.fldBNMAssignedID,tblCustomers.fldPassportNum",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.CUS_ID_TYP
+","Entity Type
+Id Type
+Id Number = All",IDNum_Rule_4_Tomswin,ID Number,"Cannot hv > 1 Cust with same ID Num/ID type
+GCIF ONLY",,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE,TMS_Customers.CUS_ID_TYP",,,,,Cannot have more than 1 customers with same values for 2 columns with Entity Type
+EAM,_,CLMST,"CLMST.C1IDTP
+CLMST.C1ICP#
+CLMST.C1TYPE
+","Entity Type
+Id Type / Id Number",IDNum_Rule_5_EAM,ID Number,'Id Type'!A1,,CLMST,CLMST.C1ICP#,CLMST,CLMST.C1IDTP,,,Cannot be blank or null with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.MC1TYP
+CLMST.C1ICP#","Entity Type
+Id Type
+Id Number",IDNum_Rule_5_MAS,ID Number,'Id Type'!A1,,CLMST,CLMST.C1ICP#,CLMST,CLMST.C1IDTP,,,Cannot be blank or null with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNI1
+FLACM.FLMNI2
+FLACM.FLMTT1
+FLACM.FLMTT2
+FLACM.FLMSTC","Entity Type
+Id Type = Biz Reg (12)
+Id Number
+State  = Sabah & S'wak",IDNum_Rule_6_AMS,ID Number,"For ID Type/Id Num = 12 (Biz Reg_Registered With East M'sia Dist Office), to valiDt against Addr at least one State must be Sabah or Sarawak","ID type/ ID number detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for ID type/ ID number
+
+Id type is stored in FLMTT1/FLMTT2 in char 3_4 (it's a shared field in source system)",FLACM,"FLACM.FLMNI1,FLACM.FLMNI2,FLACM.FLMTT1,FLACM.FLMTT2",FLACM,FLACM.FLMSTC,,,State specific check involving 2 or more state columns must be a value when another column = value
+CLS,_,"CFMAST
+CFADDR","CFMAST.CFCOD2
+CFMAST.CFSSCD
+CFMAST.CFSSNO
+CFADDR.CFSTAT","Entity Type
+Id Type = Biz Reg (CEM)
+Id Number
+State  = Sabah & S'wak",IDNum_Rule_6_CLS,ID Number,"For ID Type/Id Num = CEM (Biz Reg_Registered With East M'sia Dist Office), to valiDt against Addr at least one State must be Sabah or Sarawak",,CFMAST,"CFMAST.CFSSCD,CFMAST.CFSSNO",CFADDR,CFADDR.CFSTAT,,,State specific check involving 2 or more state columns must be a value when another column = value
+CPR,_,"FTDWM601
+FTDWD613","FTDWD613.CO_ENTITY_TYP
+FTDWD613.CO_REG_IND
+FTDWM601.CB_BILL_ADDR_CD
+FTDWM601.CB_HOME_STATE
+FTDWM601.CB_CO_STATE
+FTDWM601.CB_ALT1_BILL_ADDR_STATE","Entity Type
+Id Number = Registered in Sabah/Swak
+State",IDNum_Rule_6_CPR,ID Number,"For ID Type/Id Num = 0012 (Biz Reg_Registered With East M'sia Dist Office), to valiDt against Addr at least one State must be Sabah or Sarawak",,"FTDWM601,FTDWD613","FTDWD613.CO_REG_IND,FTDWM601.CB_BILL_ADDR_CD",FTDWM601,"FTDWM601.CB_HOME_STATE,FTDWM601.CB_CO_STATE,FTDWM601.CB_ALT1_BILL_ADDR_STATE",,,State specific check involving 2 or more state columns must be a value when another column = value
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_REG
+TRN_CPDF_DBF.M_STCODE","Entity Type
+Id Type
+Id Number = Biz Reg (0012)
+State  = Sabah & S'wak",IDNum_Rule_6_MRX,ID Number,"For ID Type/Id Num = 0012 (Biz Reg_Registered With East M'sia Dist Office), to valiDt against Addr at least one State must be Sabah or Sarawak",,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_ID_TYPE,TRN_CPDF_DBF.M_CUST_REG",TRN_CPDF_DBF,TRN_CPDF_DBF.M_STCODE,,,State specific check involving 2 or more state columns must be a value when another column = value
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldPrimeIdentificationType
+tblCustomers.fldCompanyRegNum
+tblCustomers.fldPermState
+tblCustomers.fldCorrState","Entity Type
+Id Type = Biz Reg (0012)
+Id Number
+Permenant State  = Sabah & S'wak
+Correspondence State  = Sabah & S'wak",IDNum_Rule_6_POR,ID Number,"For ID Type/Id Num = 0012 (Biz Reg_Registered With East M'sia Dist Office), to valiDt against Addr at least one State must be Sabah or Sarawak",,tblCustomers,"tblCustomers.fldPrimeIdentificationType,tblCustomers.fldCompanyRegNum",tblCustomers,"tblCustomers.fldPermState,tblCustomers.fldCorrState",,,State specific check involving 2 or more state columns must be a value when another column = value
+TCS,Loan and Deposit,MIS004,"MIS004.MI004_CUSTOMER_TYPE
+MIS004.MI004_ID_TYPE
+MIS004.MI004_CUSVDD_ID1
+MIS004.MI004_CUSVAA_STATE_CODE","Entity Type
+Id Type = Biz Reg (0012)
+Id Number
+State  = Sabah & S'wak",IDNum_Rule_6_TCS,ID Number,"For ID Type/Id Num = 0012 (Biz Reg_Registered With East M'sia Dist Office), to valiDt against all Addr at least one State must be Sabah or Sarawak",,MIS004,"MIS004.MI004_ID_TYPE,MIS004.MI004_CUSVDD_ID1",MIS004,MIS004.MI004_CUSVAA_STATE_CODE,,,State specific check involving 2 or more state columns must be a value when another column = value
+TCS,Loan and Deposit,"MIS004,MIS007","MI004_CUSTOMER_TYPE
+MI004_NATONALITY_CD
+MI007_PAYROLL_FLAG
+MI004_EMPLOYER_NAME
+MI004_VISA_TYPE","Entity Type
+Ctzn/Nationality
+Payroll Flag
+Employer Name
+Visa Type",CTZN_Rule_2_TCS,Nationality,"If Ctzn = to sanction ctry, then Employer name <> blank or Payroll = 'Y'  OR Visa type = 'MM2H' (Malysia my Second Home) or Student Visa or Dependant Pass",,MIS004,"MI004.MI004_NATONALITY_CD
+",MIS004,"MIS004.MI007_PAYROLL_FLAG,MIS004.MI004_EMPLOYER_NAME,MIS004.MI004_VISA_TYPE",,,3 main columns values when another column = some values with Entity Type
+AMS,_,FLACM,"FLACM.FLMBGC
+FLACM.FLMNP1
+FLACM.FLMNP2","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_AMS,Nationality,Citizen <> 'OT' (OTHERS),"Nationality detail for customer for join account is separated into different fields
+eg. Borrower 1 detail 1 field, Borrower 2 details another 1 field
+
+If individual account, only take the first field for Nationality",FLACM,"FLACM.FLMNP1,FLACM.FLMNP2 ",,,,,Cannot equals to value with Entity Type
+CLS,_,CFMAST,"CFMAST.CFCOD2
+CFMAST.CFCITZ","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_CLS,Nationality,Citizen <> 'OT' (OTHERS),,CFMAST,CFMAST.CFCITZ,,,,,Cannot equals to value with Entity Type
+CPR,_,FTDWM601,"FTDWM601.CB_ENTITY
+FTDWM601.CB_NATIONALITY
+FTDWM601.CB_BNM_ASG_ID
+FTDWM601.CB_NEW_ICNO
+FTDWM601.CB_OLD_ICNO
+FTDWM601.CB_PASSP_NO
+FTDWM601.CB_ARMY_IC_NO
+FTDWM601.CB_POLICE_IC_NO","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_CPR,Nationality,Citizen <> 'OT' (OTHERS),,FTDWM601,FTDWM601.CB_NATIONALITY,,,,,Cannot equals to value with Entity Type
+EAM,_,CLMST,"CLMST.C1TYPE
+CLMST.C1NLTY","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_EAM,Nationality,Citizen <> 'OT' (OTHERS),,CLMST,CLMST.C1NLTY,,,,,Cannot equals to value with Entity Type
+MAS,_,CLMST,"CLMST.C1TYPE
+CLMST.MC1TYP
+CLMST.C1ICP#
+CLMST.C1NLTY","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_MAS,Nationality,Citizen <> 'OT' (OTHERS),,CLMST,CLMST.C1NLTY,,,,,Cannot equals to value with Entity Type
+MRX,_,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_CUST_TYPE
+TRN_CPDF_DBF.M_UDF_CNTRY
+TRN_CPDF_DBF.M_ID_TYPE
+TRN_CPDF_DBF.M_CUST_IC","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_MRX,Nationality,Citizen <> 'OT' (OTHERS),,TRN_CPDF_DBF,"TRN_CPDF_DBF.M_UDF_CNTRY,TRN_CPDF_DBF.M_ID_TYPE,TRN_CPDF_DBF.M_CUST_IC",,,,,Cannot equals to value with Entity Type
+POR,_,tblCustomers,"tblCustomers.fldEntityType
+tblCustomers.fldNationality","Entity Type
+Ctzn/Nationality",CTZN_Rule_4_POR,Nationality,Citizen <> '174' (OTHER),,tblCustomers,tblCustomers.fldNationality,,,,,Cannot equals to value with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_ID_TYPE
+MI004_ID_DOC_TYP
+MI004_NATONALITY_CD","Entity Type
+Id Type = Other (0005)
+Document Type
+Nationality",CTZN_Rule_4_TCS,Nationality,If Ctzn = 'OT' (OTHERS) then 'Document Type'must be '0005 = MyPR Stateless' or '0008 = MyKAS Stateless',,MIS004,MIS004.MI004_NATONALITY_CD,MIS004,"MI004_ID_TYPE,MIS004.MI004_ID_DOC_TYP",,,Cannot equals to value with Entity Type
+Tomswin,_,TMS_Customers,"TMS_Customers.CUSTOMER_TYPE_CODE
+TMS_Customers.NATIONALITY_CODE","Entity Type
+Ctzn/Nationalit",CTZN_Rule_4_Tomswin,Nationality,Citizen <> 'OT' (OTHERS),,TMS_Customers,TMS_Customers.NATIONALITY_CODE,,,,,Cannot equals to value with Entity Type
+TCS,Loan and Deposit,MIS004,"MI004_CUSTOMER_TYPE
+MI004_ID_TYPE
+MI004_ID_DOC_TYP
+MI004_NATONALITY_CD","Entity Type
+Id Type = Other (0005)
+Document Type
+Nationality",CTZN_Rule_5_TCS,Nationality,"If Ctzn = 'Non M'sia' & ID type ='Other_0005' , then 
+'Document Type' must be below value :
+_ 012 _ Borang W Reg of Birth_By M'sia High Commission
+_ 013 _ Child Adoption_Non_MY'
+_ 014 _ Child Adoption Certificate_My
+_ 015 _ Child Adoption Certificate_Stateless
+_ 016 _ 016_ Court Order /Grant of Probate / Letter of Administration _ Deceased
+_ 018_ Others – Duplicate ID",,MIS004,MIS004.MI004_NATONALITY_CD,MIS004,"MIS004.MI004_ID_TYPE,MIS004.MI004_ID_DOC_TYP
+",,,Equals some values when column 1 = value 1 and column 2 = value 2
+MAS,_,"CLMST
+MCGD1","CLMST.C1TYPE 
+MCGD1.MC1ESC
+","Entity Type
+Employment Sector",Employment_Sector_Rule_4_MAS,,"Empl Sec <> = ""S1000"" (Other Service Activities)",,MCGD1,MCGD1.MC1ESC,,,,,Cannot equals to value with Entity Type
+AMS,_,"FLACM
+FLATX","FLACM.FLMBGC
+FLATX.FAXTX$","Entity Type
+Txn_Amount",Txn_Amt_1_AMS,Transaction Amount,Trxn amt <> '0',,FLATX,FLATX.FAXTX$,,,,,Cannot be zero with Entity Type
+CLS,_,"CFMAST
+LNDHIS","CFMAST.CFCOD2
+LNDHIS.LHCAMT","Entity Type
+Transaction Amount",Txn_Amt_1_CLS,Transaction Amount,Trxn amt <> '0',,LNDHIS,LNDHIS.LHCAMT,,,,,Cannot be zero with Entity Type
+EAM,_,CLHST,"CLMST.C1TYPE
+CLHST.CSTX$","Entity Type
+Txn_Amount",Txn_Amt_1_EAM,Transaction Amount,Trxn amt <> '0',,CLHST,CLHST.CSTX$,,,,,Cannot be zero with Entity Type
+EMC,_,FRTRXTBL,FRTRXTBL.F9_FRTRXTBL_TRX_AMT,Txn_Amount,Txn_Amt_1_EMC,Transaction Amount,Trxn amt <> '0',,FRTRXTBL,FRTRXTBL.F9_FRTRXTBL_TRX_AMT,,,,,Cannot be zero with Entity Type
+POR,_,mtf,"mtf.total_amount
+mtf.repo_amount
+mtf.trade_amount
+mtf.funded_amount
+mtf.unfunded_amount","Entity Type
+Txn_Amount",Txn_Amt_1_POR,Transaction Amount,Trxn amt <> '0',,mtf,"mtf.total_amount,mtf.repo_amount,mtf.trade_amount,mtf.funded_amount,mtf.unfunded_amount",,,,,Cannot be zero with Entity Type
+TCS,Loan,MIS099,"MI099_AMOUNT
+MI099_TRN_TYPE","Entity Type
+Transaction Amount
+Transaction Type",Txn_Amt_1_TCS_1,Transaction Amount,"Trxn amt <> 0, when Trn type=001 (fin Txn) & 025 (pymt)",,MIS099,MIS099.MI099_AMOUNT,MIS099,MIS099.MI099_TRN_TYPE,,,Cannot be zero when another column = some values
+TCS,Deposit,MIS100,"MI100_AMOUNT
+MI100_TRN_TYPE","Entity Type
+Transaction Amount
+Transaction Type",Txn_Amt_1_TCS_2,Transaction Amount,"Trxn amt <> 0, when Trn type=001 (fin Txn) & 025 (pymt)",,MIS100,MIS100.MI100_AMOUNT,,MIS100.MI100_TRN_TYPE,,,Cannot be zero when another column = some values
+AMS,_,"FLACM
+FLATX","FLACM.FLMBGC
+FLATX.FAXTDT","Entity Type
+Transaction Date",Txn_Dt_1_AMS,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,FLATX,FLATX.FAXTDT,,,,,Cannot be blank and follow source date format with Entity Type
+CLS,_,"CFMAST
+LNDHIS","CFMAST.CFCOD2
+LNDHIS.LHPSTD
+LNDHIS.LHPST6","Entity Type
+Transaction Date",Txn_Dt_1_CLS,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,LNDHIS,"LNDHIS.LHPSTD,LNDHIS.LHPST6",,,,,Cannot be blank and follow source date format with Entity Type
+CPR,_,FTDWD603,"FTDWD603.CT_TRXN_DATE
+FTDWD603.CT_POST_DATE","Entity Type
+Transaction Date",Txn_Dt_1_CPR,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,FTDWD603,"FTDWD603.CT_TRXN_DATE,FTDWD603.CT_POST_DATE",,,,,Cannot be blank and follow source date format with Entity Type
+EAM,_,CLHST,"CLMST.C1TYPE
+CLHST.CSTXDT","Entity Type
+Transaction Date",Txn_Dt_1_EAM,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,CLHST,CLHST.CSTXDT,,,,,Cannot be blank and follow source date format with Entity Type
+EMC,_,FRTRXTBL,FRTRXTBL.F9_FRTRXTBL_TRX_DT,Transaction Date,Txn_Dt_1_EMC,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,FRTRXTBL,FRTRXTBL.F9_FRTRXTBL_TRX_DT,,,,,Cannot be blank and follow source date format with Entity Type
+MRX,_,MRX_TRANS_D,MRX_TRANS_D.TRANS_DT,"Entity Type
+Transaction Date",Txn_Dt_1_MRX,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,MRX_TRANS_D,MRX_TRANS_D.TRANS_DT,,,,,Cannot be blank and follow source date format with Entity Type
+POR,_,"mtf
+POR_TRANSACTIONS","mtf.tran_date
+POR_TRANSACTIONS.TXN_DATE","Entity Type
+Transaction Date",Txn_Dt_1_POR,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,POR_TRANSACTIONS,POR_TRANSACTIONS.TXN_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+TCS,Loan,MIS099,MI099_TRAN_DATE,"Entity Type
+Transaction Date",Txn_Dt_1_TCS_1,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,MIS099,MIS099.MI099_TRAN_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+TCS,Deposit,MIS100,MI100_TRAN_DATE,"Entity Type
+Transaction Date",Txn_Dt_1_TCS_2,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,MIS100,MIS100.MI100_TRAN_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+Tomswin,_,TMS_Transactions,TMS_Transactions.POSTING_DATE,Transaction Date,Txn_Dt_1_Tomswin,Transaction Date,Trxn Dt <> blank & must follow SRC Dt format,,TMS_Transactions,TMS_Transactions.POSTING_DATE,,,,,Cannot be blank and follow source date format with Entity Type
+CLS,_,CFCOLD,CFCOLD.CCCIFN  ,Guarantor ID Number,Coll_Grntor_ID_1_CLS,Guarantor ID Number,Guarantor ID <> blank,,CFCOLD,CFCOLD.CCCIFN  ,,,,,Cannot be blank
+TCS,Loan,MIS006,MIS006.MI006_GAURANTOR_ID_NO,Guarantor ID Number,Coll_Grntor_ID_1_TCS,Guarantor ID Number,Guarantor ID <> blank,,MIS006,MIS006.MI006_GAURANTOR_ID_NO,,,,,Cannot be blank
+CLS,_,CFCOLD,"CFCOLD.CCCIFN
+CFMAST.CFSSCD","Guarantor ID Number
+Id Type",Coll_Grntor_ID_3_CLS,Guarantor ID Number,"If ID Type = '0006' (NRIC), format is 12N",,CFCOLD,CFCOLD.CCCIFN,CFCOLD,CFMAST.CFSSCD,,,Regex: digits if another column = value
