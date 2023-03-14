@@ -1,0 +1,65 @@
+-- Cannot be blank if another column has value with Entity Type
+UPDATE raw_zone_dummy.dummy_mis006
+SET `_dq_error_code_mandatory` = 'rule_code'
+WHERE mi006_bois_ccris_fclty_typ IN (
+  SELECT t1.mi006_bois_ccris_fclty_typ
+  FROM dummy_mis006 t1
+  JOIN dummy_tcs_jfacif t2 ON t1.`_uuid` = t2.`_uuid`
+);
+
+-- Cannot be blank if another column has value with Entity Type
+UPDATE raw_zone_dummy.dummy_mis006
+SET `_dq_error_code_mandatory` = 'rule_code'
+WHERE (`M_STCODE` = "") and 
+((`M_POSTCODE`) and (`POSTCODE`))
+
+
+
+-- Mandatory when another column = null/blank or zero with Collateral Type
+UPDATE `dbSchema`.`main_table`
+SET `main_table`.`dq_error_code_mandatory` = 'rule_code'
+where `sub_column` is not null or `sub_column` !='' or `sub_column`> 0;
+
+-- Larger than a value when another column = value
+UPDATE `dbSchema`.`main_table`
+SET `main_table`.`dq_error_code_mandatory` = 'rule_code'
+where `main_column` <= 'value' and `sub_column` = 'value';
+
+-- Not equals value if another column = some values
+UPDATE `dbSchema`.`main_table`
+SET `main_table`.`dq_error_code_mandatory` = 'rule_code'
+WHERE `main_column` = 'values'
+  AND `sub_column` is not null;
+
+-- Cannot equals to value with Entity Type
+UPDATE `dbSchema`.`main_table`
+SET `main_table`.`dq_error_code_mandatory` = 'rule_code'
+WHERE `main_column` = `sub_column`; 
+
+-- Cannot be blank groups
+UPDATE `dbSchema`.`main_table`
+SET `main_table`.`dq_error_code_mandatory` = 'rule_code'
+WHERE `main_column` = ''
+AND `sub_column` is not null
+AND `dependency_column` = (select cd_column from code_decode_table);
+
+-- Cannot be blank 
+UPDATE `dbSchema`.`main_table`
+WHERE `main_column` = ''
+AND `sub_column` is not null;
+
+
+WHERE (`M_STCODE` = "") and 
+((`M_POSTCODE`) and (`POSTCODE`))
+
+
+UPDATE `dbSchema`.`main_table`
+SET `main_table`.`dq_error_code_mandatory` = 'rule_code'
+where 
+(`main_table`.`main_column1` = "") and (`main_table`.`main_column2` = "")
+and
+`_uuid` in (select `subTable`.`_uuid` from `dbSchema`.`subTable` where `subTable`.`subcolumn` is not null or `subTable`.`subcolumn` != "")
+
+
+
+
