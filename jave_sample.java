@@ -76,4 +76,7 @@ if (dependencyQuery != null || dependencyQuery != "") {
 } 
 
 String updateQuery = "update "+dbSchema+"."+currentTableName+" where "+conditionQuery + "";
-System.out.println("updateQuery: "+updateQuery);
+System.out.println("updateQuery: "+updateQuery); 
+
+
+// Testing on this using github
