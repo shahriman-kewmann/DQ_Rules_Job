@@ -24,6 +24,7 @@ def RC_SCPB(dbSchema, source_name, currentTableName, error_code_option, rule_cod
             temp_column[-1] = "`"+temp_column[-1]+"`"
             column = ".".join(temp_column)
             tempColumns.append(column)
+            
         tempQuery = []
         for i in range(len(mainColumns)):
             tempQuery.append(main_query)
